@@ -25,7 +25,7 @@ Damit das XSLT noch einfacher wird wären folgende Änderungen sehr hilfreich:
 1. keine unnötigen Leerzeichen im Text.
 1. sauberes Einrücken mit TAB im XML, VC Dokument formatieren
 1. :: + CF vor Codeblöcken
-
+1. Umbrüchen in der HTML-Ausgabe eine Chance geben und in Codezeilen Leerzeichen einfügen.
 
 
 <xsl:template match="structs | InputParameter | OutputParameter">
