@@ -1,0 +1,2498 @@
+<!ELEMENT PluginListing (structs, functions)>
+<!ATTLIST PluginListing
+          Luaname CDATA #REQUIRED
+          name CDATA #REQUIRED
+          version CDATA #REQUIRED>
+<!ELEMENT structs (dXVAR, dRECT, dRECT_CTR, dCIRCLE, drotRECT, dLINE, dPT, MESSAGE)>
+<!ELEMENT dXVAR (M_value, M_scale, M_meaning)>
+<!ATTLIST dXVAR
+          name CDATA #REQUIRED>
+<!ELEMENT M_value (hint)>
+<!ATTLIST M_value
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT hint (col | row | angle | hight | width | color1 | color2 | color3 | color4 | color5 | color6 | color7 | color8)+>
+<!ELEMENT M_scale (hint)>
+<!ATTLIST M_scale
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M_meaning (hint)>
+<!ATTLIST M_meaning
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT dRECT (M__x1, M__y1, M__x2, M__y2)>
+<!ATTLIST dRECT
+          name CDATA #REQUIRED>
+<!ELEMENT M__x1 (hint)>
+<!ATTLIST M__x1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__y1 (hint)>
+<!ATTLIST M__y1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__x2 (hint)>
+<!ATTLIST M__x2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__y2 (hint)>
+<!ATTLIST M__y2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT dRECT_CTR (M__ctrColX, M__ctrRowY, M__width, M__height)>
+<!ATTLIST dRECT_CTR
+          name CDATA #REQUIRED>
+<!ELEMENT M__ctrColX (hint)>
+<!ATTLIST M__ctrColX
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__ctrRowY (hint)>
+<!ATTLIST M__ctrRowY
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__width (hint)>
+<!ATTLIST M__width
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__height (hint)>
+<!ATTLIST M__height
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT dCIRCLE (M__dCenterC, M__dCenterR, M__dAngle)>
+<!ATTLIST dCIRCLE
+          name CDATA #REQUIRED>
+<!ELEMENT M__dCenterC (hint)>
+<!ATTLIST M__dCenterC
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__dCenterR (hint)>
+<!ATTLIST M__dCenterR
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__dAngle (hint)>
+<!ATTLIST M__dAngle
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT drotRECT (M__dCenterC, M__dCenterR, M__dAngle, M__dWidth, M__dHeight)>
+<!ATTLIST drotRECT
+          name CDATA #REQUIRED>
+<!ELEMENT M__dWidth (hint)>
+<!ATTLIST M__dWidth
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__dHeight (hint)>
+<!ATTLIST M__dHeight
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT dLINE (M__x1, M__y1, M__x2, M__y2)>
+<!ATTLIST dLINE
+          name CDATA #REQUIRED>
+<!ELEMENT dPT (M__c, M__r)>
+<!ATTLIST dPT
+          name CDATA #REQUIRED>
+<!ELEMENT M__c (hint)>
+<!ATTLIST M__c
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__r (hint)>
+<!ATTLIST M__r
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT MESSAGE (M__iErr, M__szMsg)>
+<!ATTLIST MESSAGE
+          name CDATA #REQUIRED>
+<!ELEMENT M__iErr (hint)>
+<!ATTLIST M__iErr
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__szMsg (hint)>
+<!ATTLIST M__szMsg
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #IMPLIED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT functions (FindCircle, tcNozzleDozzle, MeasureFocus, FindEdgeCircle, FindSegmentEdgeCircle, CircleFromNpts, EllipseFromNpts, FindLine, FindLineInCircle, FindSegment, BinFilter, GrayFilter, AutoContrast, IlluminationCorrection, SharpenGauss, Threshold, AdaptiveThreshold, MeanDevGrayValue, Blob, Blob2, ProjectionPtLine, IntersectionLines, Calibrate, WriteCalData, ReadCalData, TransPixel2World, TransWorld2Pixel, GetVersion, OpenLogFile, LogText, CloseLogFile, ResetOverlay, ResetWorkingImage, ResetStitchedImage, ResetAlgoErrorMem, GetAlgoErrorMem, SetAlgoErrorMem, SetAlgoErrorMem2, CopyStitchedImage, LoadImg, SaveImg, DrawText, DrawCircle, DrawLine, DrawCross, DrawRectangle, DrawRectangleID, GetScheibenDicke, OpcGetImage, OpcSendOverlay, SetPFOmm2Hex, SetPFO2Wait, Output, OutputN1, OutputNTemp1, OutputArray2, OutputNTemp2, OutputTransfer2Array1, GetValuesFromBufferWithType, CreateArray, StartTime, GetDiffTime, Sleep)>
+<!ELEMENT FindCircle (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindCircle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT InputParameter (M__szLogInfo | M_iXVarOffset | M_iNumOfVars | M_iTimeInMS | M_iThreshold | M_iPresetGrayValue | M_iNumValues | M_dXvar1 | M_dScale1 | M_dXvar2 | M_dScale2 | M_dXvar3 | M_dScale3 | M_dXvar4 | M_dScale4 | M_dXvar5 | M_dScale5 | M_dXvar6 | M_dScale6 | M_dXvar7 | M_dScale7 | M_dXvar8 | M_dScale8 | M_dXvar9 | M_dScale9 | M_dXvar10 | M_dScale10 | M_dXVAR1 | M_dXVAR2 | M_dXVAR3 | M_dXVAR4 | M_dXVAR5 | M_dXVAR6 | M_dXVAR7 | M_dXVAR8 | M_dXVAR9 | M_dXVAR10 | M_iModePolarity | M_iMethod | M_iLogging | M_iLoggingMaxSize | M__szDirName | M_iDaemonNum | M_iLenArray | M_dTableX | M_dTableY | M_iFilterType | M_iKernelSize | M_iColourSegement | M_iModeCriteria | M_drotRectRoi | M_iBright | M_iBlocksize | M_dConstantSubMeanVal | M_iBlurBlocksize | M_iThresholdMode | M_dThreshold | M_dCircleCtr | M_dWorldPt | M_dTolForLeftRightRadius | M_iLocalMinTol | M_iSaveImgs | M_szFilename | M_dTableIn | M_dLowerPercentage | M_dUpperPercentage | M_dLine1 | M_dLine2 | M_dLine | M_dProjPt | M_dImagePt | M_dClipLimit | M_iKernelSizeV | M_iKernelSizeH | M_dCenter | M_dAngle | M_dScaleC | M_dScaleR | M_dAlpha | M_dSigma | M_dRectRoi | M_iImg | M_dDistC | M_dDistR | M_iStep | M_iFocusOperator | M_iSmoothing | M_iNumPyramidLevels | M_dEdgeThreshold | M_dMinRadius | M_dMaxRadius | M_bSubPixel | M_iSearchRays | M_dSearchrayWidth | M_dEdgeLimit | M_dAngleTolerance | M_dEdgeSmooth | M_DistanceErrorThreshold | HistogramDisplay | M_dTargetWidth | M_dTargetWidthTolerance | M_iModeBlob | M_dMinSize | M_dMaxSize | M_ideleteBoderBlobs | M_iUnite | M_iOverlayMode | M__szfileName | M_imgMode | M__szTextToBeDrawn | M_dPt | M_iSize | M_iColor | M_iThickness | M_bSizeInPixel | M_bCenterInPixel | M_iID | M_iCamNum | M_dScanPosX | M_dScanPosY | M_dScanPosZ | M_dScanPosDefocus | M_tiMode | M_iInputImage | M_iExpT | M_dGain | M_sFlash | M_bLowPrio | M_tiCamNum | M_bWithOutCal | M_bCoordinatesInPixel | M__szMsg | M__iErr)+>
+<!ATTLIST InputParameter
+          internal_name CDATA #IMPLIED
+          text CDATA #IMPLIED
+          typ CDATA #IMPLIED>
+<!ELEMENT M_dRectRoi (hint)>
+<!ATTLIST M_dRectRoi
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT row (#PCDATA)>
+<!ELEMENT col (#PCDATA)>
+<!ELEMENT hight (#PCDATA)>
+<!ELEMENT width (#PCDATA)>
+<!ELEMENT M_iNumPyramidLevels (hint)>
+<!ATTLIST M_iNumPyramidLevels
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeThreshold (hint)>
+<!ATTLIST M_dEdgeThreshold
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dMinRadius (hint)>
+<!ATTLIST M_dMinRadius
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dMaxRadius (hint)>
+<!ATTLIST M_dMaxRadius
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_bSubPixel (hint)>
+<!ATTLIST M_bSubPixel
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iOverlayMode (hint)>
+<!ATTLIST M_iOverlayMode
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OutputParameter (M_dCircleCtr | M_dCircle | M_iLenArray | M_dTableX | M_dTableY | M_iWidth | M_iHeight | M_iVersion | M_iVersionMajor | M_iVersionMinor | M_iResult | M_iAnzFoundHCircle | M_iAnzFoundVCircle | M_dRadiusH1 | M_dRadiusV1 | M_dRadiusH2 | M_dRadiusV2 | M_dRadiusH3 | M_dRadiusV3 | M_drotRECTEllipse | M_dcalcThresh | M_iNumBlob | M_dCenter | M_dWorldPt | M_dTableValues | M_dTableNames | M_dTableOut1 | M_dTableOut2 | M_dVal | M_dProjPt | M_dDistance | M_dOuterCircleCtr | M_dOuterCircleRad | M_dInnerCircleCtr | M_dInnerCircleRad | M_dMean | M_dDeviation | M_dLine1 | M_dLine2 | M_dEdgeStrength1 | M_dEdgeStrength2 | M_dLine | M_dInterPt | M_dAngle | M_dScaleC | M_dScaleR | M_dArea | M_drotRectRoi | M_dEdgeStrength | M_dImagePt | M_dFocusVal | M_dDiffTime | M_dCircleRad | M__State | M__message)+>
+<!ELEMENT M_dCircleCtr (hint)>
+<!ATTLIST M_dCircleCtr
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dCircleRad (hint)>
+<!ATTLIST M_dCircleRad
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M__State (hint)>
+<!ATTLIST M__State
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M__message (hint)>
+<!ATTLIST M__message
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT tcNozzleDozzle (hint, InputParameter, OutputParameter)>
+<!ATTLIST tcNozzleDozzle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iThreshold (hint)>
+<!ATTLIST M_iThreshold
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dOuterCircleCtr (hint)>
+<!ATTLIST M_dOuterCircleCtr
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dOuterCircleRad (hint)>
+<!ATTLIST M_dOuterCircleRad
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dInnerCircleCtr (hint)>
+<!ATTLIST M_dInnerCircleCtr
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dInnerCircleRad (hint)>
+<!ATTLIST M_dInnerCircleRad
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT MeasureFocus (hint, InputParameter, OutputParameter)>
+<!ATTLIST MeasureFocus
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iStep (hint)>
+<!ATTLIST M_iStep
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iFocusOperator (hint)>
+<!ATTLIST M_iFocusOperator
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iSmoothing (hint)>
+<!ATTLIST M_iSmoothing
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dFocusVal (hint)>
+<!ATTLIST M_dFocusVal
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT FindEdgeCircle (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindEdgeCircle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iModePolarity (hint)>
+<!ATTLIST M_iModePolarity
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iModeCriteria (hint)>
+<!ATTLIST M_iModeCriteria
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iSearchRays (hint)>
+<!ATTLIST M_iSearchRays
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dSearchrayWidth (hint)>
+<!ATTLIST M_dSearchrayWidth
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeLimit (hint)>
+<!ATTLIST M_dEdgeLimit
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dAngleTolerance (hint)>
+<!ATTLIST M_dAngleTolerance
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeSmooth (hint)>
+<!ATTLIST M_dEdgeSmooth
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_DistanceErrorThreshold (hint)>
+<!ATTLIST M_DistanceErrorThreshold
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT HistogramDisplay (hint)>
+<!ATTLIST HistogramDisplay
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dCircle (hint)>
+<!ATTLIST M_dCircle
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT FindSegmentEdgeCircle (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindSegmentEdgeCircle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iLenArray (hint)>
+<!ATTLIST M_iLenArray
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableX (hint)>
+<!ATTLIST M_dTableX
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableY (hint)>
+<!ATTLIST M_dTableY
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT CircleFromNpts (hint, InputParameter, OutputParameter)>
+<!ATTLIST CircleFromNpts
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT EllipseFromNpts (hint, InputParameter, OutputParameter)>
+<!ATTLIST EllipseFromNpts
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_drotRECTEllipse (hint)>
+<!ATTLIST M_drotRECTEllipse
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT angle (#PCDATA)>
+<!ELEMENT FindLine (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindLine
+          executionText CDATA #REQUIRED
+          helpImg CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_drotRectRoi (hint)>
+<!ATTLIST M_drotRectRoi
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iCamNum (hint)>
+<!ATTLIST M_iCamNum
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iInputImage (hint)>
+<!ATTLIST M_iInputImage
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dLine (hint)>
+<!ATTLIST M_dLine
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeStrength (hint)>
+<!ATTLIST M_dEdgeStrength
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT FindLineInCircle (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindLineInCircle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dAngle (hint)>
+<!ATTLIST M_dAngle
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT FindSegment (hint, InputParameter, OutputParameter)>
+<!ATTLIST FindSegment
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iColourSegement (hint)>
+<!ATTLIST M_iColourSegement
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTargetWidth (hint)>
+<!ATTLIST M_dTargetWidth
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTargetWidthTolerance (hint)>
+<!ATTLIST M_dTargetWidthTolerance
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dLine1 (hint)>
+<!ATTLIST M_dLine1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dLine2 (hint)>
+<!ATTLIST M_dLine2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeStrength1 (hint)>
+<!ATTLIST M_dEdgeStrength1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dEdgeStrength2 (hint)>
+<!ATTLIST M_dEdgeStrength2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT BinFilter (hint, InputParameter, OutputParameter)>
+<!ATTLIST BinFilter
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iFilterType (hint)>
+<!ATTLIST M_iFilterType
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iKernelSize (hint)>
+<!ATTLIST M_iKernelSize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT GrayFilter (hint, InputParameter, OutputParameter)>
+<!ATTLIST GrayFilter
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iKernelSizeV (hint)>
+<!ATTLIST M_iKernelSizeV
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iKernelSizeH (hint)>
+<!ATTLIST M_iKernelSizeH
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iImg (hint)>
+<!ATTLIST M_iImg
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_tiCamNum (hint)>
+<!ATTLIST M_tiCamNum
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT AutoContrast (hint, InputParameter, OutputParameter)>
+<!ATTLIST AutoContrast
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dLowerPercentage (hint)>
+<!ATTLIST M_dLowerPercentage
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dUpperPercentage (hint)>
+<!ATTLIST M_dUpperPercentage
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT IlluminationCorrection (hint, InputParameter, OutputParameter)>
+<!ATTLIST IlluminationCorrection
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dClipLimit (hint)>
+<!ATTLIST M_dClipLimit
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT SharpenGauss (hint, InputParameter, OutputParameter)>
+<!ATTLIST SharpenGauss
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dAlpha (hint)>
+<!ATTLIST M_dAlpha
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dSigma (hint)>
+<!ATTLIST M_dSigma
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Threshold (hint, InputParameter, OutputParameter)>
+<!ATTLIST Threshold
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iBright (hint)>
+<!ATTLIST M_iBright
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iThresholdMode (hint)>
+<!ATTLIST M_iThresholdMode
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dThreshold (hint)>
+<!ATTLIST M_dThreshold
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dcalcThresh (hint)>
+<!ATTLIST M_dcalcThresh
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT AdaptiveThreshold (hint, InputParameter, OutputParameter)>
+<!ATTLIST AdaptiveThreshold
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iMethod (hint)>
+<!ATTLIST M_iMethod
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iBlocksize (hint)>
+<!ATTLIST M_iBlocksize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dConstantSubMeanVal (hint)>
+<!ATTLIST M_dConstantSubMeanVal
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iBlurBlocksize (hint)>
+<!ATTLIST M_iBlurBlocksize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT MeanDevGrayValue (hint, InputParameter, OutputParameter)>
+<!ATTLIST MeanDevGrayValue
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dMean (hint)>
+<!ATTLIST M_dMean
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dDeviation (hint)>
+<!ATTLIST M_dDeviation
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Blob (hint, InputParameter, OutputParameter)>
+<!ATTLIST Blob
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iModeBlob (hint)>
+<!ATTLIST M_iModeBlob
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dMinSize (hint)>
+<!ATTLIST M_dMinSize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dMaxSize (hint)>
+<!ATTLIST M_dMaxSize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_ideleteBoderBlobs (hint)>
+<!ATTLIST M_ideleteBoderBlobs
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iNumBlob (hint)>
+<!ATTLIST M_iNumBlob
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dArea (hint)>
+<!ATTLIST M_dArea
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dCenter (hint)>
+<!ATTLIST M_dCenter
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Blob2 (hint, InputParameter, OutputParameter)>
+<!ATTLIST Blob2
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iUnite (hint)>
+<!ATTLIST M_iUnite
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT ProjectionPtLine (hint, InputParameter, OutputParameter)>
+<!ATTLIST ProjectionPtLine
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dProjPt (hint)>
+<!ATTLIST M_dProjPt
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dDistance (hint)>
+<!ATTLIST M_dDistance
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT IntersectionLines (hint, InputParameter, OutputParameter)>
+<!ATTLIST IntersectionLines
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dInterPt (hint)>
+<!ATTLIST M_dInterPt
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Calibrate (hint, InputParameter, OutputParameter)>
+<!ATTLIST Calibrate
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dDistC (hint)>
+<!ATTLIST M_dDistC
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dDistR (hint)>
+<!ATTLIST M_dDistR
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScaleC (hint)>
+<!ATTLIST M_dScaleC
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScaleR (hint)>
+<!ATTLIST M_dScaleR
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT WriteCalData (hint, InputParameter, OutputParameter)>
+<!ATTLIST WriteCalData
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT ReadCalData (hint, InputParameter, OutputParameter)>
+<!ATTLIST ReadCalData
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT TransPixel2World (hint, InputParameter, OutputParameter)>
+<!ATTLIST TransPixel2World
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dImagePt (hint)>
+<!ATTLIST M_dImagePt
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dWorldPt (hint)>
+<!ATTLIST M_dWorldPt
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT TransWorld2Pixel (hint, InputParameter, OutputParameter)>
+<!ATTLIST TransWorld2Pixel
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT GetVersion (hint, InputParameter, OutputParameter)>
+<!ATTLIST GetVersion
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iVersion (hint)>
+<!ATTLIST M_iVersion
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iVersionMajor (hint)>
+<!ATTLIST M_iVersionMajor
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iVersionMinor (hint)>
+<!ATTLIST M_iVersionMinor
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OpenLogFile (hint, InputParameter, OutputParameter)>
+<!ATTLIST OpenLogFile
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iLogging (hint)>
+<!ATTLIST M_iLogging
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iLoggingMaxSize (hint)>
+<!ATTLIST M_iLoggingMaxSize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M__szDirName (hint)>
+<!ATTLIST M__szDirName
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M_iDaemonNum (hint)>
+<!ATTLIST M_iDaemonNum
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT LogText (hint, InputParameter, OutputParameter)>
+<!ATTLIST LogText
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M__szLogInfo (hint)>
+<!ATTLIST M__szLogInfo
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT CloseLogFile (hint, InputParameter, OutputParameter)>
+<!ATTLIST CloseLogFile
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT ResetOverlay (hint, InputParameter, OutputParameter)>
+<!ATTLIST ResetOverlay
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT ResetWorkingImage (hint, InputParameter, OutputParameter)>
+<!ATTLIST ResetWorkingImage
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT ResetStitchedImage (hint, InputParameter, OutputParameter)>
+<!ATTLIST ResetStitchedImage
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iPresetGrayValue (hint)>
+<!ATTLIST M_iPresetGrayValue
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT ResetAlgoErrorMem (hint, InputParameter, OutputParameter)>
+<!ATTLIST ResetAlgoErrorMem
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT GetAlgoErrorMem (hint, InputParameter, OutputParameter)>
+<!ATTLIST GetAlgoErrorMem
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT SetAlgoErrorMem (hint, InputParameter, OutputParameter)>
+<!ATTLIST SetAlgoErrorMem
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT SetAlgoErrorMem2 (hint, InputParameter, OutputParameter)>
+<!ATTLIST SetAlgoErrorMem2
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT CopyStitchedImage (hint, InputParameter, OutputParameter)>
+<!ATTLIST CopyStitchedImage
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT LoadImg (hint, InputParameter, OutputParameter)>
+<!ATTLIST LoadImg
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M__szfileName (hint)>
+<!ATTLIST M__szfileName
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M_iWidth (hint)>
+<!ATTLIST M_iWidth
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iHeight (hint)>
+<!ATTLIST M_iHeight
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT SaveImg (hint, InputParameter, OutputParameter)>
+<!ATTLIST SaveImg
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_imgMode (hint)>
+<!ATTLIST M_imgMode
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT DrawText (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawText
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M__szTextToBeDrawn (hint)>
+<!ATTLIST M__szTextToBeDrawn
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M_dPt (hint)>
+<!ATTLIST M_dPt
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iColor (hint)>
+<!ATTLIST M_iColor
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #IMPLIED
+          dihalogtyp CDATA #IMPLIED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT color1 (#PCDATA)>
+<!ELEMENT color2 (#PCDATA)>
+<!ELEMENT color3 (#PCDATA)>
+<!ELEMENT color4 (#PCDATA)>
+<!ELEMENT color5 (#PCDATA)>
+<!ELEMENT color6 (#PCDATA)>
+<!ELEMENT color7 (#PCDATA)>
+<!ELEMENT color8 (#PCDATA)>
+<!ELEMENT DrawCircle (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawCircle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iThickness (hint)>
+<!ATTLIST M_iThickness
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_bCoordinatesInPixel (hint)>
+<!ATTLIST M_bCoordinatesInPixel
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT DrawLine (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawLine
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT DrawCross (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawCross
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iSize (hint)>
+<!ATTLIST M_iSize
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_bSizeInPixel (hint)>
+<!ATTLIST M_bSizeInPixel
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_bCenterInPixel (hint)>
+<!ATTLIST M_bCenterInPixel
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT DrawRectangle (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawRectangle
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_bWithOutCal (hint)>
+<!ATTLIST M_bWithOutCal
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT DrawRectangleID (hint, InputParameter, OutputParameter)>
+<!ATTLIST DrawRectangleID
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iID (hint)>
+<!ATTLIST M_iID
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT GetScheibenDicke (hint, InputParameter, OutputParameter)>
+<!ATTLIST GetScheibenDicke
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dTolForLeftRightRadius (hint)>
+<!ATTLIST M_dTolForLeftRightRadius
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iLocalMinTol (hint)>
+<!ATTLIST M_iLocalMinTol
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iSaveImgs (hint)>
+<!ATTLIST M_iSaveImgs
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_szFilename (hint)>
+<!ATTLIST M_szFilename
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          password CDATA #REQUIRED
+          readonly CDATA #REQUIRED
+          size CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED
+          visible CDATA #REQUIRED>
+<!ELEMENT M_iAnzFoundHCircle (hint)>
+<!ATTLIST M_iAnzFoundHCircle
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_iAnzFoundVCircle (hint)>
+<!ATTLIST M_iAnzFoundVCircle
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusH1 (hint)>
+<!ATTLIST M_dRadiusH1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusV1 (hint)>
+<!ATTLIST M_dRadiusV1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusH2 (hint)>
+<!ATTLIST M_dRadiusH2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusV2 (hint)>
+<!ATTLIST M_dRadiusV2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusH3 (hint)>
+<!ATTLIST M_dRadiusH3
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dRadiusV3 (hint)>
+<!ATTLIST M_dRadiusV3
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OpcGetImage (hint, InputParameter, OutputParameter)>
+<!ATTLIST OpcGetImage
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iExpT (hint)>
+<!ATTLIST M_iExpT
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dGain (hint)>
+<!ATTLIST M_dGain
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_sFlash (hint)>
+<!ATTLIST M_sFlash
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_bLowPrio (hint)>
+<!ATTLIST M_bLowPrio
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OpcSendOverlay (hint, InputParameter, OutputParameter)>
+<!ATTLIST OpcSendOverlay
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dScanPosX (hint)>
+<!ATTLIST M_dScanPosX
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScanPosY (hint)>
+<!ATTLIST M_dScanPosY
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScanPosZ (hint)>
+<!ATTLIST M_dScanPosZ
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScanPosDefocus (hint)>
+<!ATTLIST M_dScanPosDefocus
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_tiMode (hint)>
+<!ATTLIST M_tiMode
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT SetPFOmm2Hex (hint, InputParameter, OutputParameter)>
+<!ATTLIST SetPFOmm2Hex
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT SetPFO2Wait (hint, InputParameter, OutputParameter)>
+<!ATTLIST SetPFO2Wait
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iResult (hint)>
+<!ATTLIST M_iResult
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Output (hint, InputParameter, OutputParameter)>
+<!ATTLIST Output
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iNumValues (hint)>
+<!ATTLIST M_iNumValues
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar1 (hint)>
+<!ATTLIST M_dXvar1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale1 (hint)>
+<!ATTLIST M_dScale1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar2 (hint)>
+<!ATTLIST M_dXvar2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale2 (hint)>
+<!ATTLIST M_dScale2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar3 (hint)>
+<!ATTLIST M_dXvar3
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale3 (hint)>
+<!ATTLIST M_dScale3
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar4 (hint)>
+<!ATTLIST M_dXvar4
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale4 (hint)>
+<!ATTLIST M_dScale4
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar5 (hint)>
+<!ATTLIST M_dXvar5
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale5 (hint)>
+<!ATTLIST M_dScale5
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar6 (hint)>
+<!ATTLIST M_dXvar6
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale6 (hint)>
+<!ATTLIST M_dScale6
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar7 (hint)>
+<!ATTLIST M_dXvar7
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale7 (hint)>
+<!ATTLIST M_dScale7
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar8 (hint)>
+<!ATTLIST M_dXvar8
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale8 (hint)>
+<!ATTLIST M_dScale8
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar9 (hint)>
+<!ATTLIST M_dXvar9
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale9 (hint)>
+<!ATTLIST M_dScale9
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXvar10 (hint)>
+<!ATTLIST M_dXvar10
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dScale10 (hint)>
+<!ATTLIST M_dScale10
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OutputN1 (hint, InputParameter, OutputParameter)>
+<!ATTLIST OutputN1
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dXVAR1 (hint)>
+<!ATTLIST M_dXVAR1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR2 (hint)>
+<!ATTLIST M_dXVAR2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR3 (hint)>
+<!ATTLIST M_dXVAR3
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR4 (hint)>
+<!ATTLIST M_dXVAR4
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR5 (hint)>
+<!ATTLIST M_dXVAR5
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR6 (hint)>
+<!ATTLIST M_dXVAR6
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR7 (hint)>
+<!ATTLIST M_dXVAR7
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR8 (hint)>
+<!ATTLIST M_dXVAR8
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR9 (hint)>
+<!ATTLIST M_dXVAR9
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dXVAR10 (hint)>
+<!ATTLIST M_dXVAR10
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT OutputNTemp1 (hint, InputParameter, OutputParameter)>
+<!ATTLIST OutputNTemp1
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT OutputArray2 (hint, InputParameter, OutputParameter)>
+<!ATTLIST OutputArray2
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT OutputNTemp2 (hint, InputParameter, OutputParameter)>
+<!ATTLIST OutputNTemp2
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT OutputTransfer2Array1 (hint, InputParameter, OutputParameter)>
+<!ATTLIST OutputTransfer2Array1
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iXVarOffset (hint)>
+<!ATTLIST M_iXVarOffset
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT GetValuesFromBufferWithType (hint, InputParameter, OutputParameter)>
+<!ATTLIST GetValuesFromBufferWithType
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iNumOfVars (hint)>
+<!ATTLIST M_iNumOfVars
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableValues (hint)>
+<!ATTLIST M_dTableValues
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableNames (hint)>
+<!ATTLIST M_dTableNames
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT CreateArray (hint, InputParameter, OutputParameter)>
+<!ATTLIST CreateArray
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          level CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dTableIn (hint)>
+<!ATTLIST M_dTableIn
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableOut1 (hint)>
+<!ATTLIST M_dTableOut1
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dTableOut2 (hint)>
+<!ATTLIST M_dTableOut2
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT M_dVal (hint)>
+<!ATTLIST M_dVal
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT StartTime (hint, InputParameter, OutputParameter)>
+<!ATTLIST StartTime
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT GetDiffTime (hint, InputParameter, OutputParameter)>
+<!ATTLIST GetDiffTime
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_dDiffTime (hint)>
+<!ATTLIST M_dDiffTime
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>
+<!ELEMENT Sleep (hint, InputParameter, OutputParameter)>
+<!ATTLIST Sleep
+          executionText CDATA #REQUIRED
+          icon CDATA #REQUIRED
+          klasse CDATA #REQUIRED
+          name CDATA #REQUIRED
+          text CDATA #REQUIRED>
+<!ELEMENT M_iTimeInMS (hint)>
+<!ATTLIST M_iTimeInMS
+          allowed CDATA #REQUIRED
+          default CDATA #REQUIRED
+          dialogtyp CDATA #REQUIRED
+          internal_name CDATA #REQUIRED
+          max CDATA #REQUIRED
+          min CDATA #REQUIRED
+          text CDATA #REQUIRED
+          typ CDATA #REQUIRED>

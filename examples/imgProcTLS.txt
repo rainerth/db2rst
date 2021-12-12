@@ -1,0 +1,2837 @@
+
+  
+    
+      
+        
+      
+      
+        
+      
+      
+        
+      
+    
+    
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+    
+    
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+    
+    
+      
+        
+      
+      
+        
+      
+      
+        
+      
+    
+    
+      
+        Row: Position X-Value in mm
+      
+      
+         Col: Position Y-Value in mm
+      
+      
+         Angle: Angle in Degree
+      
+      
+         Width: Size in mm
+      
+      
+         Hight: Size in mm
+      
+    
+    
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+    
+    
+      
+        x or column
+      
+      
+        y or row
+      
+    
+    
+      
+        the number of the message
+      
+      
+        the text of the returned message
+      
+    
+  
+  
+    
+      This function finds circle contours in the image. Output is the working image with edges and the found circle. (27.09.2021 TLS563RE)
+      
+      Col,Row,Radius,iErr,szMsg = imgProcTLS.FindCircle(
+        Col,
+        Row,
+        Width,
+        Hight,
+        NumPyramidLevels,
+        Edge Threshold,
+        Min Radius,
+        Max Radius,
+        Sub Pixel,
+        modeDrawOverlay
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          2:means that search will start from a 2 times subsampled image; original image size: 656x494 pixels; 2times subsampled:164x124 Pixels
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          lower limit for found circles
+        
+        
+          upper limit for found circles
+        
+        
+          1: subpixel accuracy for found circles is activated
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+                
+        
+          radius of found circle
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds the inner circle of a damage contour. Output is an overlay image with edges, found inner and outer circle.
+      
+      
+      
+        
+          threshold to determine edge of jet
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          outer circle center point: column/horizontal X and row/vertical Y coordinate
+        
+        
+          radius of found outer circle
+        
+        
+          inner circle center point: column/horizontal X and row/vertical Y coordinate
+        
+        
+          radius of found circle
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function determines a focus value. This value has a maximum when the same object is in focus. Different objects have different values. (27.09.2021 TLS563RE)
+      
+      dFocusVal,iErr,szMsg=imgProcTLS.MeasureFocus(
+        Col,
+        Row,
+        Width,
+        Hight,
+        iStep,
+        iFocusOperator,
+        iSmoothing
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+                
+        
+          Which neighbor will be taken:<BR>&nbsp;1: left and right neighbor<BR>&nbsp;5: 5 pixels to the left and 5 pixels to the right
+        
+        
+          Operator to be chosen:<BR>&nbsp;0: modified Laplace<BR>&nbsp;1: 3x3 Sobel
+        
+        
+          Reduce Image Noise:<BR>&nbsp;0: none/off<BR>&nbsp;1: medium <BR>&nbsp;2: High
+        
+      
+      
+        
+          focus value; different object have different values; don't modify object to receive maximum value in focus
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a circle with the circle approximation of number of searchrays with a given center point. Output is the working image with found edge, region and histogram of edges along search direction.  (27.09.2021 TLS563RE)
+      
+      Col,Row,Radius,iDetectedPoints,iErr,szMsg = imgProcTLS.FindEdgeCircle(
+        Polarity,
+        Criteria,
+        Col,
+        Row,
+        Min Radius,
+        Max Radius,
+        nSearchRays,
+        dRectangleWidth,
+        Threshold,
+        Angle Tolerance,
+        Smoothing,
+        dDistanceErrorThreshold,
+        iHistogramDisplay,
+        Overlay
+        )
+      
+      
+        
+          Polarity of the edge along search direction<BR>&nbsp;0: black/white<BR>&nbsp;1: white/black<BR>&nbsp;2: both
+        
+        
+          Edge criteria<BR>&nbsp;0: strongest<BR>&nbsp;1: first<BR>&nbsp;2: last
+        
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+                
+        
+          lower limit for found circles
+        
+        
+          upper limit for found circles
+        
+        
+          Number of Searchrays; Minimum: 4 Maximum depends on radius
+        
+        
+          Width of search ray
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          tolerance of edge found [0;+/-10]
+        
+        
+          smoothes edge histogram along search direction [0..3]
+        
+        
+          gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered
+        
+        
+          displays Histogramm for Searchrays in the overlay Image. OverlayMode must be activated<BR>&nbsp;0: no Histogramm<BR>&nbsp;1..Number Searchray: corresponding histogramm<BR>&nbsp;> Number Searchray: all Histograms will be drawn in the overlay image
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+           
+        
+          circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a circle with the circle approximation of number of searchrays with a given center point. Output is the working image with found edge, region and histogram of edges along search direction. (27.09.2021 TLS563RE)
+      
+        
+          Polarity of the edge along search direction<BR>&nbsp;0: black/white<BR>&nbsp;1: white/black<BR>&nbsp;2: both
+        
+        
+          Edge criteria<BR>&nbsp;0: strongest<BR>&nbsp;1: first<BR>&nbsp;2: last
+        
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+                
+        
+          lower limit for found circles
+        
+        
+          upper limit for found circles
+        
+        
+          Number of Searchrays; Minimum: 4 Maximum depends on radius
+        
+        
+          Width of search ray
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          tolerance of edge found [0;+/-10]
+        
+        
+          smoothes edge histogram along search direction [0..3]
+        
+        
+          gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered
+        
+        
+          displays Histogramm for Searchrays in the overlay Image. OverlayMode must be activated<BR>&nbsp;0: no Histogramm<BR>&nbsp;1..Number Searchray: corresponding histogramm<BR>&nbsp;> Number Searchray: all Histograms will be drawn in the overlay image
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius
+        
+        
+          Length of Table/Array including found circle points
+        
+        
+          Array of X/Column coordinates
+        
+        
+          Array of Y/Row coordinates
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a circle from a x/col and a y/rowTable. (27.09.2021 TLS563RE)
+      
+      circleX,circley,circleRad,iErr,szMsg= imgProcTLS.CircleFromNpts (
+        iArrayLength,
+        dXArray,
+        dYArray,
+        dDistanceErrorThreshold
+        )
+      
+      
+        
+          Length of Table/Array including found circle points
+        
+        
+          Array of X/Column coordinates
+        
+        
+          Array of Y/Row coordinates
+        
+        
+          gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered
+        
+      
+      
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+           
+        
+          circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds an ellipse from a x/col and a y/rowTable. (27.09.2021 TLS563RE)
+      
+      ctrX,ctrY,elliAngle,elliW,elliH,iErr,szMsg = imgProcTLS.EllipseFromNpts (
+        iArrayLength,
+        dXArray,
+        dYArray
+        )
+      
+      
+        
+          Length of Table/Array including found circle points
+        
+        
+          Array of X/Column coordinates
+        
+        
+          Array of Y/Row coordinates
+        
+      
+      
+        
+          circle center point: column/horizontal X + row/vertical Y coordinate and oritneation and bounding box width and height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: of bounding box<BR>&nbsp;
+          Width: of bounding box<BR>&nbsp;
+          
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a line contours in a given region in the image. Output is the working image with found edge, region and histogram of edges along search direction. Parameter 12 is optional. (27.09.2021 TLS563RE)
+      
+      L1P1Col,L1P1Row,L1P2Col,L1P2Row,QualityL1,iErr,szMsg = imgProcTLS.FindLine(
+        Polarity,
+        Criteria,
+        Col,
+        Row,
+        Angle,
+        Width,
+        Hight,
+        Threshold,
+        Angle Tolerance,
+        Smoothing,
+        [iCamNum],
+        Overlay,
+        [Image]
+        )
+      
+      
+        
+          Polarity of the edge along search direction<BR>&nbsp;0: black/white<BR>&nbsp;1: white/black<BR>&nbsp;2: both
+        
+        
+          Edge criteria<BR>&nbsp;0: strongest<BR>&nbsp;1: first<BR>&nbsp;2: last
+        
+        
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          tolerance of edge found [0;+/-10]
+        
+        
+          smoothes edge histogram along search direction [0..3]
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+        
+          Number of Camera. [Optional Value]
+        
+        
+          Optional Parameter. Default 1.defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+        
+        
+          Strength of line
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a line contours in around a circle. Output is the working image with found edge, region and histogram of edges along search direction. (27.09.2021 TLS563RE)
+      
+        
+          Polarity of the edge along search direction<BR>&nbsp;0: black/white<BR>&nbsp;1: white/black<BR>&nbsp;2: both
+        
+        
+          Edge criteria<BR>&nbsp;0: strongest<BR>&nbsp;1: first<BR>&nbsp;2: last
+        
+        
+          circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+          lower limit for found circles
+        
+        
+          upper limit for found circles
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          tolerance of edge found [0;+/-10]
+        
+        
+          smoothes edge histogram along search direction [0..3]
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+                
+        
+          angle of line
+        
+        
+          Strength of line
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds a segment in a given region in the image. Output is the working image with found edges, region and histogram of edges along search direction. Parameter 11,12,14,15 is optional. (27.09.2021 TLS563RE)
+      
+      L1P1Col,L1P1Row,L1P2Col,L1P2Row,  L2P1Col,L2P1Row,L2P2Col,L2P2Row,  QualityL1,QualityL2,iErr,szMsg = imgProcTLS.FindSegment(
+        Polarity,
+        Criteria,
+        Col,
+        Row,
+        Angle,
+        Width,
+        Hight,
+        Threshold,
+        Angle Tolerance,
+        Smoothing,
+        [TargetWidth],
+        [TargetWidthTolerance],
+        Overlay,
+        [Image],
+        [iCamNum]
+        )
+      
+      
+        
+          Colour of the segment along search direction<BR>&nbsp;0: white<BR>&nbsp;1: black<BR>&nbsp;2: any
+        
+        
+          Segment criteria<BR>&nbsp;0: strongest<BR>&nbsp;1: widest<BR>&nbsp;2: Narrowest<BR>&nbsp;3: Widest Contigous
+        
+        
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          minimum edge strength that will be considered
+        
+        
+          tolerance of edge found [0;+/-10]
+        
+        
+          smoothes edge histogram along search direction [0..3]
+        
+        
+          Target distance between the two lines. Segment with closest result will be used
+        
+        
+          Maximum distance +- between the segment lines referenced to the Target Width 
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+        
+          Optional Parameter. Default 1.defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+        
+          Number of Camera. [Optional Value]
+        
+      
+      
+        
+          1st segment line; starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+        
+        
+          2nd segment line; starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+        
+        
+          Strength of first line
+        
+        
+          Strength of second line
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function applies a morphological operation on a binarized image (values 0:black to 255:white). Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.BinFilter(
+        iFilter,
+        iKernelSize
+        )
+      
+      
+        
+          Type of morphological filter:<BR>&nbsp;
+          0: erosion<BR>&nbsp;
+          1: dilation<BR>&nbsp;
+          2: Opening<BR>&nbsp;
+          3: Closing
+        
+        
+          iKernelSize in Pixel<BR>&nbsp;0: 3x3<BR>&nbsp;1: 5x5<BR>&nbsp;2: 7x7
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function applies a morphological operation on a gray image (all values between 0:black and 255:white). Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.GrayFilter(
+        iFilter,
+        iKernelSizeV,
+        iKernelSizeH,
+        imgMode,
+        [tiCamNum]
+        )
+      
+      
+        
+          Type of morphological filter:<BR>&nbsp;
+          0: median<BR>&nbsp;
+          1: Gauss<BR>&nbsp;
+          2: erosion<BR>&nbsp;
+          3: dilation<BR>&nbsp;
+          4: Opening<BR>&nbsp;
+          5: Closing<BR>&nbsp;
+          6: HighPass<BR>&nbsp;
+          7: Sharpen<BR>&nbsp;
+          8: Histogramm Streching
+        
+        
+          iKernelSizeH in Pixel<BR>&nbsp;0: 3x3<BR>&nbsp;1: 5x5<BR>&nbsp;...;<BR>&nbsp;10: 21x21;
+        
+        
+          iKernelSizeH in Pixel<BR>&nbsp;0: 3x3<BR>&nbsp;1: 5x5<BR>&nbsp;...;<BR>&nbsp;10: 21x21;
+        
+        
+          &nbsp;0: camera image<BR>&nbsp;1: working image
+        
+        
+          ?
+                
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This filter applies a brightness equalization. Bright areas will moved to white and dark areas to black. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.AutoContrast(
+        dPercentageLower,
+        dPercentageUpper,
+        imgMode,
+        [tiCamNum]
+        )
+      
+      
+        
+          Determines lower Percentage of darkest pixels inside an image will be of gray value 0 (=black)<BR>&nbsp;0.1: very small fraction of dark pixels will be moved to black color<BR>&nbsp;25:very big fraction of dark pixels will be moved to black color ;
+        
+        
+          Determines upper Percentage of brighest pixels inside an image will be of gray value 255 (=white)<BR>&nbsp;0.1: very small fraction of bright pixels will be moved to white color<BR>&nbsp;25:very big fraction of bright pixels will be moved to white color ;
+        
+        
+          &nbsp;0: camera image<BR>&nbsp;1: working image
+        
+        
+          ?
+                
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Adaptive histogram equalization is used (CLAHE). The image is divided into small blocks called "tiles" (tileSize is 8x8 by default). Then each of these blocks are histogram equalized as usual. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.IlluminationCorrection(
+        dClipLimit,
+        iKernelSizeV,
+        iKernelSizeH,
+        imgMode
+        )
+      
+      
+        
+          Limits the amplification by clipping the histogram at a predefined value before computing the histogram.
+        
+        
+          Vertical Tile Size  in Pixel<BR>&nbsp;8: nx8<BR>&nbsp;10: nx10;
+        
+        
+          Horizontal Tile Size  in Pixel<BR>&nbsp;8: 8xn<BR>&nbsp;10: 10xn;
+        
+        
+          &nbsp;0: camera image<BR>&nbsp;1: working image
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Gauss smoothed image will be subtracted from the original image. The resulting image will be added with the weighing factor alpha to the original image. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization.(29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.SharpenGauss(
+        dAlpha,
+        dSigma,
+        [Col],
+        [Row],
+        [Width],
+        [Hightt],
+        [iCamNum]
+        )
+      
+      
+        
+          Limits the amplification by clipping the histogram at a predefined value before computing the histogram.
+        
+        
+          Extent of the filter. 
+        
+         
+          Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm [Optional Value]<BR>&nbsp;
+          Col:   Position Y-Value in mm [Optional Value]<BR>&nbsp;
+          Hight: Size in mm [Optional Value]<BR>&nbsp;
+          Width: Size in mm [Optional Value]<BR>&nbsp;
+          
+        
+        
+          &nbsp;0: camera image<BR>&nbsp;1: working image
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function binarize the gray value image (values 0:black to 255:white). Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (28.09.2021 TLS563RE)
+
+      dcalcThresh,iErr,szMsg = imgProcTLS.Threshold(
+        ibBright,
+        iThreshMode,
+        dThresholdLow,
+        Image
+        )
+      
+      
+        
+          Foreground Mode:<BR>&nbsp;0: Black is foreground<BR>&nbsp;1: White is foreground
+        
+        
+          automatic Binarization limit<BR>&nbsp;0: OFF; fixed Limit<BR>&nbsp;1: automatic
+        
+        
+          Threshold limit for iThresholdMode=0
+        
+        
+          defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+      
+      
+        
+          for iThresholdMode=1 automatically calculated; for iThresholdMode=0: input dThresholdLow
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function binarize the gray value image (values 0:black to 255:white) locally with automatic Threshold. Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (28.09.2021 TLS563RE)
+
+      iErr,szMsg = imgProcTLS.AdaptiveThreshold(
+        iMethod,
+        ibBright,
+        iBlocksize,
+        dConstantSubMeanVal,
+        iBlurBlocksize,
+        Image
+        )
+        
+      
+        
+          Binarization Mode:<BR>&nbsp;0: Mean_C<BR>&nbsp;1: Gaussian_C
+        
+        
+          Foreground Mode:<BR>&nbsp;0: Black is foreground<BR>&nbsp;1: White is foreground
+        
+        
+          neighborhood/local environment<BR>&nbsp;1: 2*1+1=3x3<BR>&nbsp;2: 2*2+1=5x5
+        
+        
+          Constant subtracted from the mean or weighted mean Default 3; -15..15
+        
+        
+          neighborhood/local environment<BR>&nbsp;0: none; blurring switched off<BR>&nbsp;1: 2*1+1=3x3<BR>&nbsp;2: 2*2+1=5x5
+        
+        
+          defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function calculates mean gray value and its deviation. Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (29.09.2021 TLS563RE)
+      
+      dMean,dDeviation,iErr,szMsg=imgProcTLS.MeanDevGrayValue(
+        Col,
+        Row,
+        Angle,
+        Width,
+        Hightt,
+        iImg
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+      
+      
+        
+          mean gray value from the image
+        
+        
+          deviation frrom mean gray value of the image
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds connected white regions in a binarized image. The image must be binarized with a Threshold opeator. (27.09.2021 TLS563RE)
+      
+      iNumBlob,Area,Col,Row,Angle,iErr,szMsg = imgProcTLS.Blob(
+        Col,
+        Row,
+        Width,
+        Hight,
+        ModeBlob,
+        MinSize,
+        MaxSize,
+        deleteBorderBlobs,
+        Overlay
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+                
+        
+          searches for smallest/biggest Area:<BR>&nbsp;0: biggest Area<BR>&nbsp;1: smallest Area
+        
+        
+          Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.
+        
+        
+          Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.
+        
+        
+          1: Areas that borders to the edge of a image will not be considered
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          number of all found blobs
+        
+        
+          area of biggest/smallest blob
+        
+        
+          blob center point: column/horizontal X and row/vertical Y coordinate
+            <BR>&nbsp;
+            Row:   Position X-Value in mm<BR>&nbsp;
+            Col:   Position Y-Value in mm<BR>&nbsp;
+            Angle: Angle in Degree<BR>&nbsp;
+          
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds connected white regions in a binarized image in a rotated input region. The input image must be a grey value image. Binarization is done in this operator. (27.09.2021 TLS563RE)
+      
+      iNumBlob,Col,Row,Angle,ScaleCol,ScaleRow,Area,iErr,szMsg = imgProcTLS.Blob2(
+        Col,
+        Row,
+        Angle,
+        Width,
+        Hight,
+        BlobColor,
+        ThreshMode,
+        ThresholdLow,
+        MinSize,
+        MaxSize,
+        deleteBorderBlobs,
+        Unite,
+        Overlay,
+        Image
+        )
+      
+      
+      
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          Foreground Mode:<BR>&nbsp;0: Black is foreground<BR>&nbsp;1: White is foreground
+        
+        
+          automatic Binarization limit<BR>&nbsp;0: OFF; fixed Limit<BR>&nbsp;1: automatic
+        
+        
+          Threshold limit for iThresholdMode=0
+        
+        
+          Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.
+        
+        
+          Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.
+        
+        
+          1: Areas that borders to the edge of a image will not be considered
+        
+        
+          Unites foreground areas.<BR>&nbsp;0: OFF; biggest area is chosen<BR>&nbsp;1: unites all areas within Min .. Max Area
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+        
+          defines Input Image<BR>&nbsp;0: unchanged camera image<BR>&nbsp;1: modified working image
+        
+      
+      
+        
+          for iThresholdMode=1 automatically calculated; for iThresholdMode=0: input dThresholdLow
+        
+        
+          number of all found blobs
+        
+        
+          area of biggest/smallest blob
+        
+        
+          blob center point: column/horizontal X and row/vertical Y coordinate
+            <BR>&nbsp;
+            Row:   Position X-Value in mm<BR>&nbsp;
+            Col:   Position Y-Value in mm<BR>&nbsp;
+            Angle: Angle in Degree<BR>&nbsp;
+          
+        
+        
+          angle of blob (principal axis transformation
+        
+        
+          center Point (column and row) of the rotated (angle) rectangle with Width and Height of the resulting bounding box
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Determines projection of a points towards a line. (27.09.2021 TLS563RE)
+      
+      dProjC,dProjR,dDist,iErr,szMsg=imgProcTLS.ProjectionPtLine(
+        dLineC1,
+        dLineR1,
+        dLineC2,
+        dLineR2,
+        dPointC,
+        dPointR
+        )
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+                    
+        
+          column/horizontal X and row/vertical Y coordinate
+          lt;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+      
+      
+        
+          column/horizontal X and row/vertical Y coordinate of projection on Line
+          lt;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+          perpendicular distance of point to line
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Determines of 2 lines.  (27.09.2021 TLS563RE)
+      
+      InterX,InterY,dAngle,iErr,szMsg=imgProcTLS.IntersectionLines(
+        L1P1Col,
+        L1P1Row,
+        L1P2Col,
+        L1P2Row,
+        L2P1Col,
+        L2P1Row,
+        L2P2Col,
+        L2P2Row,
+        modeDrawOverlay
+        )
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+        
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          column/horizontal X and row/vertical Y coordinate
+          lt;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+          Angle between lines
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function finds 9 connected white regions in a binarized image. Calibration factors will be derived with the center of each blob. The image must be binarized with a Threshold opeator. An extra big blob can be used to determine positive coordinate axis. (28.09.2021 TLS563RE)
+      
+      iNumBlob,dCenterC,dCenterR,dAngle,dScaleC,dScaleR,dArea,iErr,szMsg=imgProcTLS.Calibrate(
+        Col,
+        Row,
+        Width,
+        Hight,
+        dDistC,
+        dDistR,
+        iMinSize,
+        iMaxSize,
+        bdeleteBorderBlobs,
+        bBiggestDotForOrientation
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          horizontal distance between blobs in mm
+        
+        
+          vertical distance between blobs in mm
+        
+        
+          Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.
+        
+        
+          Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.
+        
+        
+          1: Areas that borders to the edge of a image will not be considered
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          number of all found blobs
+        
+        
+          center point for Scaling: column/horizontal X and row/vertical Y coordinate
+        
+        
+          orientation Angle ind radian
+        
+        
+          horizontal scaling in mm/pixel
+        
+        
+          verticalscaling in mm/pixel
+        
+        
+          area of biggest/smallest blob
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Saves calibration data found by Calibrate function. This saves only the calibration data in the lib file, not in the application!  (28.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.WriteCalData(
+        Col,
+        Row,
+        dAngle,
+        dScaleC,
+        dScaleR
+        )
+      
+      
+        
+          center point for Scaling: column/horizontal X and row/vertical Y coordinate
+        
+        
+          orientation Angle ind radian
+        
+        
+          horizontal scaling in mm/pixel
+        
+        
+          verticalscaling in mm/pixel
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Reads saved calibration data. (28.09.2021 TLS563RE)
+      
+      dCenterC,dCenterR,dAngle,dScaleC,dScaleR,iErr,szMsg=imgProcTLS.ReadCalData()
+      
+      
+      
+        
+          center point for Scaling: column/horizontal X and row/vertical Y coordinate
+        
+        
+          orientation Angle ind radian
+        
+        
+          horizontal scaling in mm/pixel
+        
+        
+          verticalscaling in mm/pixel
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function transforms coordinates from MM Scale to Pixels/ from machine coordinate system to image processing system. (30.09.2021 TLS563RE)
+      
+      ColumnX,RowY,iErr,szMsg=imgProcTLS.TransPixel2World(
+        Col,
+        Row,
+        iCamNum
+        )
+      
+      
+        
+          Image Processing point: column/horizontal X and row/vertical Y coordinatelt;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+      
+      
+        
+          world point: column/horizontal X and row/vertical Y coordinate;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function transforms coordinates from Pixels to MM Scale/ from image processing system to machine coordinate system. (30.09.2021 TLS563RE)
+      
+      ColumnX,RowY,iErr,szMsg=imgProcTLS.TransWorld2Pixel(
+        Col,
+        Row,
+        iCamNum
+        )
+      
+      
+        
+          world point: column/horizontal X and row/vertical Y coordinate;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+      
+      
+        
+          Image Processing point: column/horizontal X and row/vertical Y coordinate;BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function gets the internal owned Algorithm Error Memory parameter. (30.09.2021 TLS563RE)
+      
+      iVersion;iMajorVersion,iMinorVersion,ierr,szMsg=imgProcTLS.GetVersion()
+      
+      
+      
+        
+          version number consists out of year month and date
+        
+        
+          major version of Panel Version
+        
+        
+          minor version of Panel Version
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function opens a debug file for detailed algorithm debug infos.
+      
+        
+          0: disable 1:only specific 2:everything
+        
+        
+          maximum Size of log file; if file size exceeds limit file will be copied to filename.0 
+        
+        
+          Name of Directory; Filename is created automatically including date and time and loggingTRU.txt
+        
+        
+          adds integer to filename
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function opens a debug file for detailed algorithm debug infos. (29.09.2021 TLS563RE)
+
+      ierr,szMsg=imgProcTLS.LogText(
+        "Text"
+        )
+      
+      
+        
+          Writes logging information into the damon log file.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function closes a debug file for detailed algorithm debug infos.
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Resets overlay image. (30.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.ResetOverlay()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Resets working image. All pixels have value 0. (30.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.ResetWorkingImage()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Resets stichting image. All pixels will be set to the input value. (30.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.ResetStitchedImage(
+        dGrayValue
+        )
+      
+      
+        
+          Gray value for all pixels (0-255).
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Global Error flag will be set to 0 (=error free). (30.09.2021 TLS563RE)
+      
+      iErr,szMsg= imgProcTLS.ResetAlgoErrorMem ()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function gets the internal owned Algorithm Error Memory parameter. (30.09.2021 TLS563RE)
+      
+      ierr,szMsg=imgProcTLS.GetAlgoErrorMem()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Global Error flag will be set to an unspecifeid Error General. (30.09.2021 TLS563RE)
+      
+      iErr,szMsg= imgProcTLS.SetAlgoErrorMem ()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Global Error flag will be set to an unspecifeid Error General. Values should be greater than 1025 (30.09.2021 TLS563RE)
+      
+      iE,szM=imgProcTLS.SetAlgoErrorMem2(
+        sErrortext,
+        idErrorNumber
+        )
+      
+      
+        
+          error message
+        
+        
+          the number of the error. Please choose value between 1025 and 1279
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Copies working image into stitching image. (30.09.2021 TLS563RE)
+      
+      
+      iErr,szMsg= imgProcTLS.CopyStitchedImage(
+        dGrayValue
+        )
+      
+      
+        
+          Gray value for all pixels.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function loads a bitmap image.  (30.09.2021 TLS563RE)
+      
+      iW,iH,iErr,szMsg=imgProcTLS.LoadImg(
+        "Path/File"
+        [tiCamNum]
+        )
+      
+      
+        
+          filename including pathname
+        
+        
+          ?
+                
+      
+      
+        
+          Width of the image
+        
+        
+          Height of the image
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function saves a bitmap image. (30.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.SaveImg(
+        "C:/tmp/image.BMP",
+        imgMode,
+        [tiCamNum]
+        )
+      
+      
+        
+          filename including pathname
+        
+        
+          type of image:<BR>&nbsp;0: camera<BR>&nbsp;1: working image<BR>&nbsp;2: Overlays<BR>&nbsp;3:Camera Image with Overlays<BR>&nbsp;4: working image with Overlays<BR>&nbsp;5: stitched image
+        
+        
+          ?
+                  
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Draws a given text into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.DrawText(
+        Text,
+        Col,
+        Row,
+        Color,
+        Scaling,
+        Line with,
+        Camera Number
+        )
+      
+        
+          Text to be drawn (27.09.2021 TLS563RE)
+        
+        
+          column/horizontal X and row/vertical Y coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          
+        
+        
+          4: color of the text 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Draws a given circle with radius into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.DrawCircle(
+        Col,
+        Row,
+        Radius,
+        Color,
+        iThicknessPix,
+        bRadInPixel,
+        bCenterInPixel
+        )
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+            
+        
+          4: color of the graphic 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+        
+          thickness of circle line in pixel
+        
+        
+          1 if coordinates in Pixel or 0 scaled Coordinates in mm
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Draws a given line with start and end point into an overlay with a chosen color. (27.09.2021 TLS563RE)
+
+      iErr,szMsg=imgProcTLS.DrawLine(
+        Col,
+        Row,
+        Col,
+        Row,
+        Color,
+        bSizeInPixel,
+        bSizeInPixel
+        )
+      
+      
+        
+          starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+          <BR>&nbsp;<BR>&nbsp;
+          Row Point1:   Position X-Value of Point1 in mm<BR>&nbsp;
+          Col Point1:   Position Y-Value of Point1 in mm<BR>&nbsp;
+          Row Point2:   Position X-Value of Point2 in mm<BR>&nbsp;
+          Col Point2:   Position Y-Value of Point2 in mm<BR>&nbsp;
+          
+            
+        
+          4: color of the graphic 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+        
+          thickness of circle line in pixel
+        
+        
+          1 if Coordinates in Pixel or 0 scaled Coordinates in mm
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Draws a given line with start and end point into an overlay with a chosen color. (27.09.2021 TLS563RE)
+
+      iErr,szMsg=imgProcTLS.DrawCross(
+        Col,
+        Row,
+        Size,
+        Color,
+        iThicknessPix,
+        bCoordinatesInPixel,
+        Camera Number
+        )
+      
+      
+        
+          Poit to draw the Cross<BR>&nbsp;1: column/horizontal X coordinate<BR>&nbsp;2: row/vertical Y coordinate
+        
+        
+          3: Size of cross line in pixel or mm
+        
+        
+          4: color of the graphic 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+        
+          5: 1 if size in Pixel or 0 scaled size in mm
+        
+        
+          6: 1 if center in Pixel or 0 scaled size in mm
+        
+      
+      
+        
+          0 if operation succeeded
+        
+        
+          error text
+        
+      
+    
+    
+      10th parameter is optional. Default=0.Draws a given rectangle with size (width/height)into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+
+      iErr,szMsg=imgProcTLS.Rectangle(
+        Col,
+        Row,
+        Angle,
+        Width,
+        Hight,
+        Color,
+        iThicknessPix,
+        bSizeInPixel,
+        bCenterInPixel,
+        bWithOutCal,
+        Camera Number
+        )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          4: color of the graphic 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+        
+          thickness of circle line in pixel
+        
+        
+          1 if size in Pixel or 0 scaled size in mm
+        
+        
+          1 if center point in Pixel or 0 scaled center point in mm
+        
+        
+          calibration is not considered.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Draws a given rectangle with size (width/height)into an overlay at position Point pt with a chosen color and an identification number of the rectangle. (27.09.2021 TLS563RE)
+ 
+      Err,szMsg=imgProcTLS.DrawRectangleID(
+          Row,
+          Col,
+          Angle,
+          Hight,
+          Width,
+          Color,
+          size in Pixel,
+          Center in Pixel,
+          ID,
+          Camera Number
+          )
+      
+      
+        
+          Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+          <BR>&nbsp;<BR>&nbsp;
+          Row:   Position X-Value in mm<BR>&nbsp;
+          Col:   Position Y-Value in mm<BR>&nbsp;
+          Angle: Angle in Degree<BR>&nbsp;
+          Hight: Size in mm<BR>&nbsp;
+          Width: Size in mm<BR>&nbsp;
+          
+        
+        
+          color of the graphic 0..254<BR>&nbsp;
+          1: green<BR>&nbsp;
+           2: red<BR>&nbsp;
+           3: blau<BR>&nbsp;
+           4: pink<BR>&nbsp;
+           5: cyan<BR>&nbsp;
+           6: yellow<BR>&nbsp;
+           7: light red<BR>&nbsp;
+           8: purple<BR>&nbsp;
+        
+        
+          1 if label on Corner <BR>&nbsp;
+          0 label in center
+        
+        
+          1 if center point in Pixel or 0 scaled center point in mm
+        
+        
+          Number of ROI.
+        
+        
+          Number of Camera. [Optional Value]
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      this function evaluates thickness of a disc
+      
+        
+          radius horiontally to the left and right / vertically above and below will be found; the center point will be determine independandly; if left and right radius are about the same a right radius will be a result; default value=15Pix
+        
+        
+          tolerance for local minumum; default:10
+        
+        
+          Edge criteria<BR>&nbsp;0: deactivated<BR>&nbsp;1: activated
+        
+        
+          start of filename without ".bmp" including pathname
+        
+        
+          defines appearance of output overlay<BR>&nbsp;0: OFF; no overlay created<BR>&nbsp;1: take over overlay from former operators <BR>&nbsp;2: erases former overlays and displays only Find Line Overlays
+        
+      
+      
+        
+          Number of found horizontal circles
+        
+        
+          Number of found verticalcircles
+        
+        
+          first radius of horizontal projection 
+        
+        
+          first radius of vertical projection 
+        
+        
+          second radius of horizontal projection 
+        
+        
+          second radius of vertical projection 
+        
+        
+          third radius of horizontal projection 
+        
+        
+          third radius of vertical projection 
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Get an Image via OPC from Computer Vision GUI (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.OpcGetImage(
+        iCamNum,
+        iExposureTime,
+        dGain,
+        [sFlash],
+        [bLowPrio],
+        [tiCamNum]
+        )
+      
+      
+        
+          Camera Number set in Computer Vision GUI
+        
+        
+          Exposure Time of chosen camera via OPC.
+        
+        
+          Gain of chosen camera via OPC.
+        
+        
+        
+          ?
+        
+        
+          ?
+        
+        
+          ?
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Get an Image via OPC from Computer Vision GUI (29.09.2021 TLS563RE)
+      
+      iErr,szMsg=imgProcTLS.OpcSendOverlay(
+        iCamNum,
+        [dScanPosX],
+        [dScanPosY],
+        [dScanPosZ],
+        [dScanPosDefocus],
+        [tiMode]
+        )
+      
+      
+        
+          Camera Number set in Computer Vision GUI
+        
+        
+          Scan PosX [Optional Value]
+        
+        
+          Scan PosY [Optional Value]
+        
+        
+          Scan PosZ [Optional Value]
+        
+        
+          Scan Pos Defocus [Optional Value]
+        
+        
+          tiMode [Optional Value]
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Prepares PFO coordinates. Transforms coordinates from mm to 10µm and HEX Values and build result string. Absolutely necessary before SetPFO2Wait. Must have at least 2 parameter x/y. Can have up to 4 parameters x,y,z,defocus. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.SetPFOmm2Hex(
+        dScanPosX,
+        dScanPosY,
+        dScanPosZ,
+        dScanPosDefocus
+        )
+      
+      
+        
+          Scanner Position X. Minimum and Maximum values depends on used optic.
+        
+        
+          Scanner Position Y. Minimum and Maximum values depends on used optic.
+        
+        
+          Scanner Position Z. Minimum and Maximum values depends on used optic. Only considered when PFO-3D used, other neglected.
+        
+        
+          Scanner Position Defocus. Minimum and Maximum values depends on used optic. Only considered when PFO-3D used, other neglected.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      To be used only in conjunction with SetPFOmm2Hex. Hex Values will be send to the Laser Control Unit and wait for an answer. Script execution will be interruptes as lng as an answer will be received from laser control unit. Uses of this function is blocked in the GUI. (30.09.2021 TLS563RE)
+      
+      bOK=imgProcTLS.SetPFO2Wait()
+      
+      
+      
+        
+          Result<BR>&nbsp;0: Error; Script execution will be stopped and a error will be sent toi the laser control unit<BR>&nbsp;1: successful
+        
+      
+    
+    
+      OldVersion:Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determine number of values beginning at XVAR1. Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string . iE,internResultString=imgProcTLS.Output(0) if no variable should be transfered. Resets the whole buffer. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.Output(
+        iFirstIndex,
+        dValue,
+        dScaleFactor,
+        dValue,
+        dScaleFactor,
+        .
+        .
+        .
+        dValue,
+        dScaleFactor
+        )
+      
+      
+        
+          Start Number of XVARS. XVAR offset.
+        
+        
+          Result Variable 1.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 2.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 3.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 4.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 5.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 6. 
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 7.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 8.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 9.
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+        
+          Result Variable 10. 
+        
+        
+          Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Writes to 1st Buffer.Resets Buffer. Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.OutputN1(
+        iFirstIndex,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        .
+        .
+        .
+        dValue,
+        dScaleFactor,
+        gResNameTable
+        )
+      
+      
+        
+          Start Number of XVARS. XVAR offset.
+        
+        
+          Result Variable 1. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 2. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 3. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 4. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 5. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 6. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 7. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 8. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 9. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 10. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Writes to 1st Buffer. Buffer is not reset!! Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string.  (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.OutputNTemp1(
+        iFirstIndex,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        .
+        .
+        .
+        dValue,
+        dScaleFactor,
+        gResNameTable
+        )
+        
+      
+        
+          Start Number of XVARS. XVAR offset.
+        
+        
+          Result Variable 1. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 2. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 3. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 4. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 5. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 6. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 7. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 8. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 9. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 10. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Writes to 2nd Buffer.Resets Buffer. Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.OutputArray2(
+        iFirstIndex,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        .
+        .
+        .
+        dValue,
+        dScaleFactor,
+        gResNameTable
+        )
+      
+      
+        
+          Start Number of XVARS. XVAR offset.
+        
+        
+          Result Variable 1. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 2. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 3. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 4. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 5. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 6. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 7. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 8. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 9. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 10. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Writes to 2nd Buffer. Buffer is not reset!! Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.OutputNTemp1(
+        iFirstIndex,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        dValue,
+        dScaleFactor,
+        gResNameTable,
+        .
+        .
+        .
+        dValue,
+        dScaleFactor,
+        gResNameTable
+        )
+      
+      
+        
+          Start Number of XVARS. XVAR offset.
+        
+        
+          Result Variable 1. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 2. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 3. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 4. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 5. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 6. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 7. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 8. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 9. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+        
+          Result Variable 10. <BR>&nbsp;Value: in mm. <BR>&nbsp;Scaling: 100 in case of x/y translation. <BR>&nbsp;Scaling: 65536/360 in case of angles <BR>&nbsp;Scaling: 1 in other case <BR>&nbsp;Meaning of variable for plausibilty checks in MulitScripting.
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      This function transfers 2nd value buffer to 1st buffer. Offset value means starting address of 2nd buffer. Values will be copield to 1st XVAR of 1st buffer. (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.OutputTransfer2Array1(
+        iXVarOffset
+        )
+      
+      
+        
+          Starting address of 2nd buffer to be copied always 64 values from 2nd buffer to 1st buffer
+        
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Read out n values stored in the XVAR result buffer and stores value in tmpVal table and meaning in the tmpName table (30.09.2021 TLS563RE)
+            
+      tmpVal,tmpName,iErr,szMsg=imgProcTLS.GetValuesFromBufferWithType(
+        iXVarOffset,
+        iNumOfVars
+        )
+      
+      
+        
+          Starting address of reading XVAR buffer (1st one)
+        
+        
+          number of vars to be read
+        
+      
+      
+        
+          Table of Values read from the XVAR buffer. Tables are not supported yet.
+        
+        
+          Table of Names read from the XVAR buffer for plausibilty check. Tables are not supported yet.
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Creates Example Table
+      
+        
+          Table as a variable
+        
+      
+      
+        
+          Table as a variable
+        
+        
+          Table as a variable
+        
+        
+          demo double Val
+        
+      
+    
+    
+      Starts Timer. (29.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.StartTime()
+      
+      
+      
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Get differntial Time since last Start of Time. Timer has to be started before. (30.09.2021 TLS563RE)
+      
+      dDiffTime,iErr,internResultString=imgProcTLS.GetDiffTime()
+      
+      
+      
+        
+          Differntial Time since last Start of Time
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+    
+      Sleeps/Delays for x ms.  (30.09.2021 TLS563RE)
+      
+      iErr,internResultString=imgProcTLS.Sleep(
+        dTime
+        )
+      
+      
+        
+          Sleep time in ms.
+        
+      
+      
+        
+          Differntial Time since last Start of Time
+        
+        
+           0 if operation succeeded<BR>&nbsp;
+          1 if operation failed
+        
+        
+           no text if operation succeeded<BR>&nbsp;
+          error text if operation failed
+        
+      
+    
+  

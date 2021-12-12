@@ -1,0 +1,4245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="PluginListing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="structs"/>
+        <xs:element ref="functions"/>
+      </xs:sequence>
+      <xs:attribute name="Luaname" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="structs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dXVAR"/>
+        <xs:element ref="dRECT"/>
+        <xs:element ref="dRECT_CTR"/>
+        <xs:element ref="dCIRCLE"/>
+        <xs:element ref="drotRECT"/>
+        <xs:element ref="dLINE"/>
+        <xs:element ref="dPT"/>
+        <xs:element ref="MESSAGE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dXVAR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M_value"/>
+        <xs:element ref="M_scale"/>
+        <xs:element ref="M_meaning"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_value">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hint">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="col" type="xs:string"/>
+        <xs:element name="row" type="xs:string"/>
+        <xs:element name="angle" type="xs:string"/>
+        <xs:element name="hight" type="xs:string"/>
+        <xs:element name="width" type="xs:string"/>
+        <xs:element name="color1" type="xs:string"/>
+        <xs:element name="color2" type="xs:string"/>
+        <xs:element name="color3" type="xs:string"/>
+        <xs:element name="color4" type="xs:string"/>
+        <xs:element name="color5" type="xs:string"/>
+        <xs:element name="color6" type="xs:string"/>
+        <xs:element name="color7" type="xs:string"/>
+        <xs:element name="color8" type="xs:string"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_scale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_meaning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dRECT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__x1"/>
+        <xs:element ref="M__y1"/>
+        <xs:element ref="M__x2"/>
+        <xs:element ref="M__y2"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__x1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__y1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__x2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__y2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dRECT_CTR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__ctrColX"/>
+        <xs:element ref="M__ctrRowY"/>
+        <xs:element ref="M__width"/>
+        <xs:element ref="M__height"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__ctrColX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__ctrRowY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__width">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__height">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dCIRCLE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__dCenterC"/>
+        <xs:element ref="M__dCenterR"/>
+        <xs:element ref="M__dAngle"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__dCenterC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__dCenterR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__dAngle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="drotRECT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__dCenterC"/>
+        <xs:element ref="M__dCenterR"/>
+        <xs:element ref="M__dAngle"/>
+        <xs:element ref="M__dWidth"/>
+        <xs:element ref="M__dHeight"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__dWidth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__dHeight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dLINE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__x1"/>
+        <xs:element ref="M__y1"/>
+        <xs:element ref="M__x2"/>
+        <xs:element ref="M__y2"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__c"/>
+        <xs:element ref="M__r"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__c">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__r">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MESSAGE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="M__iErr"/>
+        <xs:element ref="M__szMsg"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__iErr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__szMsg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="functions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FindCircle"/>
+        <xs:element ref="tcNozzleDozzle"/>
+        <xs:element ref="MeasureFocus"/>
+        <xs:element ref="FindEdgeCircle"/>
+        <xs:element ref="FindSegmentEdgeCircle"/>
+        <xs:element ref="CircleFromNpts"/>
+        <xs:element ref="EllipseFromNpts"/>
+        <xs:element ref="FindLine"/>
+        <xs:element ref="FindLineInCircle"/>
+        <xs:element ref="FindSegment"/>
+        <xs:element ref="BinFilter"/>
+        <xs:element ref="GrayFilter"/>
+        <xs:element ref="AutoContrast"/>
+        <xs:element ref="IlluminationCorrection"/>
+        <xs:element ref="SharpenGauss"/>
+        <xs:element ref="Threshold"/>
+        <xs:element ref="AdaptiveThreshold"/>
+        <xs:element ref="MeanDevGrayValue"/>
+        <xs:element ref="Blob"/>
+        <xs:element ref="Blob2"/>
+        <xs:element ref="ProjectionPtLine"/>
+        <xs:element ref="IntersectionLines"/>
+        <xs:element ref="Calibrate"/>
+        <xs:element ref="WriteCalData"/>
+        <xs:element ref="ReadCalData"/>
+        <xs:element ref="TransPixel2World"/>
+        <xs:element ref="TransWorld2Pixel"/>
+        <xs:element ref="GetVersion"/>
+        <xs:element ref="OpenLogFile"/>
+        <xs:element ref="LogText"/>
+        <xs:element ref="CloseLogFile"/>
+        <xs:element ref="ResetOverlay"/>
+        <xs:element ref="ResetWorkingImage"/>
+        <xs:element ref="ResetStitchedImage"/>
+        <xs:element ref="ResetAlgoErrorMem"/>
+        <xs:element ref="GetAlgoErrorMem"/>
+        <xs:element ref="SetAlgoErrorMem"/>
+        <xs:element ref="SetAlgoErrorMem2"/>
+        <xs:element ref="CopyStitchedImage"/>
+        <xs:element ref="LoadImg"/>
+        <xs:element ref="SaveImg"/>
+        <xs:element ref="DrawText"/>
+        <xs:element ref="DrawCircle"/>
+        <xs:element ref="DrawLine"/>
+        <xs:element ref="DrawCross"/>
+        <xs:element ref="DrawRectangle"/>
+        <xs:element ref="DrawRectangleID"/>
+        <xs:element ref="GetScheibenDicke"/>
+        <xs:element ref="OpcGetImage"/>
+        <xs:element ref="OpcSendOverlay"/>
+        <xs:element ref="SetPFOmm2Hex"/>
+        <xs:element ref="SetPFO2Wait"/>
+        <xs:element ref="Output"/>
+        <xs:element ref="OutputN1"/>
+        <xs:element ref="OutputNTemp1"/>
+        <xs:element ref="OutputArray2"/>
+        <xs:element ref="OutputNTemp2"/>
+        <xs:element ref="OutputTransfer2Array1"/>
+        <xs:element ref="GetValuesFromBufferWithType"/>
+        <xs:element ref="CreateArray"/>
+        <xs:element ref="StartTime"/>
+        <xs:element ref="GetDiffTime"/>
+        <xs:element ref="Sleep"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InputParameter">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="M__szLogInfo"/>
+        <xs:element ref="M_iXVarOffset"/>
+        <xs:element ref="M_iNumOfVars"/>
+        <xs:element ref="M_iTimeInMS"/>
+        <xs:element ref="M_iThreshold"/>
+        <xs:element ref="M_iPresetGrayValue"/>
+        <xs:element ref="M_iNumValues"/>
+        <xs:element ref="M_dXvar1"/>
+        <xs:element ref="M_dScale1"/>
+        <xs:element ref="M_dXvar2"/>
+        <xs:element ref="M_dScale2"/>
+        <xs:element ref="M_dXvar3"/>
+        <xs:element ref="M_dScale3"/>
+        <xs:element ref="M_dXvar4"/>
+        <xs:element ref="M_dScale4"/>
+        <xs:element ref="M_dXvar5"/>
+        <xs:element ref="M_dScale5"/>
+        <xs:element ref="M_dXvar6"/>
+        <xs:element ref="M_dScale6"/>
+        <xs:element ref="M_dXvar7"/>
+        <xs:element ref="M_dScale7"/>
+        <xs:element ref="M_dXvar8"/>
+        <xs:element ref="M_dScale8"/>
+        <xs:element ref="M_dXvar9"/>
+        <xs:element ref="M_dScale9"/>
+        <xs:element ref="M_dXvar10"/>
+        <xs:element ref="M_dScale10"/>
+        <xs:element ref="M_dXVAR1"/>
+        <xs:element ref="M_dXVAR2"/>
+        <xs:element ref="M_dXVAR3"/>
+        <xs:element ref="M_dXVAR4"/>
+        <xs:element ref="M_dXVAR5"/>
+        <xs:element ref="M_dXVAR6"/>
+        <xs:element ref="M_dXVAR7"/>
+        <xs:element ref="M_dXVAR8"/>
+        <xs:element ref="M_dXVAR9"/>
+        <xs:element ref="M_dXVAR10"/>
+        <xs:element ref="M_iModePolarity"/>
+        <xs:element ref="M_iMethod"/>
+        <xs:element ref="M_iLogging"/>
+        <xs:element ref="M_iLoggingMaxSize"/>
+        <xs:element ref="M__szDirName"/>
+        <xs:element ref="M_iDaemonNum"/>
+        <xs:element ref="M_iLenArray"/>
+        <xs:element ref="M_dTableX"/>
+        <xs:element ref="M_dTableY"/>
+        <xs:element ref="M_iFilterType"/>
+        <xs:element ref="M_iKernelSize"/>
+        <xs:element ref="M_iColourSegement"/>
+        <xs:element ref="M_iModeCriteria"/>
+        <xs:element ref="M_drotRectRoi"/>
+        <xs:element ref="M_iBright"/>
+        <xs:element ref="M_iBlocksize"/>
+        <xs:element ref="M_dConstantSubMeanVal"/>
+        <xs:element ref="M_iBlurBlocksize"/>
+        <xs:element ref="M_iThresholdMode"/>
+        <xs:element ref="M_dThreshold"/>
+        <xs:element ref="M_dCircleCtr"/>
+        <xs:element ref="M_dWorldPt"/>
+        <xs:element ref="M_dTolForLeftRightRadius"/>
+        <xs:element ref="M_iLocalMinTol"/>
+        <xs:element ref="M_iSaveImgs"/>
+        <xs:element ref="M_szFilename"/>
+        <xs:element ref="M_dTableIn"/>
+        <xs:element ref="M_dLowerPercentage"/>
+        <xs:element ref="M_dUpperPercentage"/>
+        <xs:element ref="M_dLine1"/>
+        <xs:element ref="M_dLine2"/>
+        <xs:element ref="M_dLine"/>
+        <xs:element ref="M_dProjPt"/>
+        <xs:element ref="M_dImagePt"/>
+        <xs:element ref="M_dClipLimit"/>
+        <xs:element ref="M_iKernelSizeV"/>
+        <xs:element ref="M_iKernelSizeH"/>
+        <xs:element ref="M_dCenter"/>
+        <xs:element ref="M_dAngle"/>
+        <xs:element ref="M_dScaleC"/>
+        <xs:element ref="M_dScaleR"/>
+        <xs:element ref="M_dAlpha"/>
+        <xs:element ref="M_dSigma"/>
+        <xs:element ref="M_dRectRoi"/>
+        <xs:element ref="M_iImg"/>
+        <xs:element ref="M_dDistC"/>
+        <xs:element ref="M_dDistR"/>
+        <xs:element ref="M_iStep"/>
+        <xs:element ref="M_iFocusOperator"/>
+        <xs:element ref="M_iSmoothing"/>
+        <xs:element ref="M_iNumPyramidLevels"/>
+        <xs:element ref="M_dEdgeThreshold"/>
+        <xs:element ref="M_dMinRadius"/>
+        <xs:element ref="M_dMaxRadius"/>
+        <xs:element ref="M_bSubPixel"/>
+        <xs:element ref="M_iSearchRays"/>
+        <xs:element ref="M_dSearchrayWidth"/>
+        <xs:element ref="M_dEdgeLimit"/>
+        <xs:element ref="M_dAngleTolerance"/>
+        <xs:element ref="M_dEdgeSmooth"/>
+        <xs:element ref="M_DistanceErrorThreshold"/>
+        <xs:element ref="HistogramDisplay"/>
+        <xs:element ref="M_dTargetWidth"/>
+        <xs:element ref="M_dTargetWidthTolerance"/>
+        <xs:element ref="M_iModeBlob"/>
+        <xs:element ref="M_dMinSize"/>
+        <xs:element ref="M_dMaxSize"/>
+        <xs:element ref="M_ideleteBoderBlobs"/>
+        <xs:element ref="M_iUnite"/>
+        <xs:element ref="M_iOverlayMode"/>
+        <xs:element ref="M__szfileName"/>
+        <xs:element ref="M_imgMode"/>
+        <xs:element ref="M__szTextToBeDrawn"/>
+        <xs:element ref="M_dPt"/>
+        <xs:element ref="M_iSize"/>
+        <xs:element ref="M_iColor"/>
+        <xs:element ref="M_iThickness"/>
+        <xs:element ref="M_bSizeInPixel"/>
+        <xs:element ref="M_bCenterInPixel"/>
+        <xs:element ref="M_iID"/>
+        <xs:element ref="M_iCamNum"/>
+        <xs:element ref="M_dScanPosX"/>
+        <xs:element ref="M_dScanPosY"/>
+        <xs:element ref="M_dScanPosZ"/>
+        <xs:element ref="M_dScanPosDefocus"/>
+        <xs:element ref="M_tiMode"/>
+        <xs:element ref="M_iInputImage"/>
+        <xs:element ref="M_iExpT"/>
+        <xs:element ref="M_dGain"/>
+        <xs:element ref="M_sFlash"/>
+        <xs:element ref="M_bLowPrio"/>
+        <xs:element ref="M_tiCamNum"/>
+        <xs:element ref="M_bWithOutCal"/>
+        <xs:element ref="M_bCoordinatesInPixel"/>
+        <xs:element ref="M__szMsg"/>
+        <xs:element ref="M__iErr"/>
+      </xs:choice>
+      <xs:attribute name="internal_name" type="xs:string"/>
+      <xs:attribute name="text" type="xs:string"/>
+      <xs:attribute name="typ" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRectRoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iNumPyramidLevels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeThreshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dMinRadius">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dMaxRadius">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bSubPixel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iOverlayMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputParameter">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="M_dCircleCtr"/>
+        <xs:element ref="M_dCircle"/>
+        <xs:element ref="M_iLenArray"/>
+        <xs:element ref="M_dTableX"/>
+        <xs:element ref="M_dTableY"/>
+        <xs:element ref="M_iWidth"/>
+        <xs:element ref="M_iHeight"/>
+        <xs:element ref="M_iVersion"/>
+        <xs:element ref="M_iVersionMajor"/>
+        <xs:element ref="M_iVersionMinor"/>
+        <xs:element ref="M_iResult"/>
+        <xs:element ref="M_iAnzFoundHCircle"/>
+        <xs:element ref="M_iAnzFoundVCircle"/>
+        <xs:element ref="M_dRadiusH1"/>
+        <xs:element ref="M_dRadiusV1"/>
+        <xs:element ref="M_dRadiusH2"/>
+        <xs:element ref="M_dRadiusV2"/>
+        <xs:element ref="M_dRadiusH3"/>
+        <xs:element ref="M_dRadiusV3"/>
+        <xs:element ref="M_drotRECTEllipse"/>
+        <xs:element ref="M_dcalcThresh"/>
+        <xs:element ref="M_iNumBlob"/>
+        <xs:element ref="M_dCenter"/>
+        <xs:element ref="M_dWorldPt"/>
+        <xs:element ref="M_dTableValues"/>
+        <xs:element ref="M_dTableNames"/>
+        <xs:element ref="M_dTableOut1"/>
+        <xs:element ref="M_dTableOut2"/>
+        <xs:element ref="M_dVal"/>
+        <xs:element ref="M_dProjPt"/>
+        <xs:element ref="M_dDistance"/>
+        <xs:element ref="M_dOuterCircleCtr"/>
+        <xs:element ref="M_dOuterCircleRad"/>
+        <xs:element ref="M_dInnerCircleCtr"/>
+        <xs:element ref="M_dInnerCircleRad"/>
+        <xs:element ref="M_dMean"/>
+        <xs:element ref="M_dDeviation"/>
+        <xs:element ref="M_dLine1"/>
+        <xs:element ref="M_dLine2"/>
+        <xs:element ref="M_dEdgeStrength1"/>
+        <xs:element ref="M_dEdgeStrength2"/>
+        <xs:element ref="M_dLine"/>
+        <xs:element ref="M_dInterPt"/>
+        <xs:element ref="M_dAngle"/>
+        <xs:element ref="M_dScaleC"/>
+        <xs:element ref="M_dScaleR"/>
+        <xs:element ref="M_dArea"/>
+        <xs:element ref="M_drotRectRoi"/>
+        <xs:element ref="M_dEdgeStrength"/>
+        <xs:element ref="M_dImagePt"/>
+        <xs:element ref="M_dFocusVal"/>
+        <xs:element ref="M_dDiffTime"/>
+        <xs:element ref="M_dCircleRad"/>
+        <xs:element ref="M__State"/>
+        <xs:element ref="M__message"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dCircleCtr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dCircleRad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__State">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tcNozzleDozzle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iThreshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dOuterCircleCtr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dOuterCircleRad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dInnerCircleCtr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dInnerCircleRad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MeasureFocus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iStep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iFocusOperator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iSmoothing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dFocusVal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEdgeCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iModePolarity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iModeCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iSearchRays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dSearchrayWidth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dAngleTolerance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeSmooth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_DistanceErrorThreshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistogramDisplay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSegmentEdgeCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iLenArray">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CircleFromNpts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EllipseFromNpts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_drotRECTEllipse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="helpImg" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_drotRectRoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iCamNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iInputImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeStrength">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLineInCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dAngle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSegment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iColourSegement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTargetWidth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTargetWidthTolerance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dLine1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dLine2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeStrength1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dEdgeStrength2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BinFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iFilterType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iKernelSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrayFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iKernelSizeV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iKernelSizeH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iImg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_tiCamNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoContrast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dLowerPercentage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dUpperPercentage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IlluminationCorrection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dClipLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SharpenGauss">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dAlpha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dSigma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Threshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iBright">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iThresholdMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dThreshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dcalcThresh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdaptiveThreshold">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iBlocksize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dConstantSubMeanVal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iBlurBlocksize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MeanDevGrayValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dMean">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dDeviation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Blob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iModeBlob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dMinSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dMaxSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_ideleteBoderBlobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iNumBlob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dCenter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Blob2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iUnite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProjectionPtLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dProjPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dDistance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IntersectionLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dInterPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Calibrate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dDistC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dDistR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScaleC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScaleR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteCalData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadCalData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransPixel2World">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dImagePt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dWorldPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransWorld2Pixel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iVersionMajor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iVersionMinor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenLogFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iLogging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iLoggingMaxSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__szDirName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iDaemonNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__szLogInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseLogFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetOverlay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetWorkingImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetStitchedImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iPresetGrayValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetAlgoErrorMem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlgoErrorMem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAlgoErrorMem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAlgoErrorMem2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyStitchedImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadImg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__szfileName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iWidth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iHeight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveImg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_imgMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M__szTextToBeDrawn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iColor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string"/>
+      <xs:attribute name="dihalogtyp" type="xs:string"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iThickness">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bCoordinatesInPixel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawCross">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bSizeInPixel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bCenterInPixel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawRectangle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bWithOutCal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrawRectangleID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheibenDicke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTolForLeftRightRadius">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iLocalMinTol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iSaveImgs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_szFilename">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="password" type="xs:string" use="required"/>
+      <xs:attribute name="readonly" type="xs:string" use="required"/>
+      <xs:attribute name="size" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+      <xs:attribute name="visible" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iAnzFoundHCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iAnzFoundVCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusH1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusV1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusH2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusH3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dRadiusV3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpcGetImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iExpT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dGain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_sFlash">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_bLowPrio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpcSendOverlay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScanPosX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScanPosY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScanPosZ">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScanPosDefocus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_tiMode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPFOmm2Hex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPFO2Wait">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Output">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iNumValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar7">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale7">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar8">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale8">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar9">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale9">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXvar10">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dScale10">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputN1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR7">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR8">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR9">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dXVAR10">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputNTemp1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputArray2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputNTemp2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutputTransfer2Array1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iXVarOffset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValuesFromBufferWithType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iNumOfVars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateArray">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="level" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableOut1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dTableOut2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dVal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiffTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_dDiffTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sleep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+        <xs:element ref="InputParameter"/>
+        <xs:element ref="OutputParameter"/>
+      </xs:sequence>
+      <xs:attribute name="executionText" type="xs:string" use="required"/>
+      <xs:attribute name="icon" type="xs:string" use="required"/>
+      <xs:attribute name="klasse" type="xs:string" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="M_iTimeInMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hint"/>
+      </xs:sequence>
+      <xs:attribute name="allowed" type="xs:string" use="required"/>
+      <xs:attribute name="default" type="xs:string" use="required"/>
+      <xs:attribute name="dialogtyp" type="xs:string" use="required"/>
+      <xs:attribute name="internal_name" type="xs:string" use="required"/>
+      <xs:attribute name="max" type="xs:string" use="required"/>
+      <xs:attribute name="min" type="xs:string" use="required"/>
+      <xs:attribute name="text" type="xs:string" use="required"/>
+      <xs:attribute name="typ" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

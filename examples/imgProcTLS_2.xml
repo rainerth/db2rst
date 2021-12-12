@@ -1,0 +1,3021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginListing version="1.0" Luaname="imgProcTLS" name="imgProcTLS.dll">
+	<structs>
+		<dXVAR name="dXVAR">
+			<M_value password="false" default="0" typ="double" internal_name="value" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="value">
+				<hint />
+			</M_value>
+			<M_scale password="false" default="1.0" typ="double" internal_name="scale" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="scale">
+				<hint />
+			</M_scale>/
+			<M_meaning password="false" default="656" typ="TEXT" internal_name="szMeaning[BUFFLEN]" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Meaning">
+				<hint />
+			</M_meaning>
+		</dXVAR>
+		<dRECT name="dRECT">
+			<M__x1 password="false" default="0" typ="double" internal_name="x1" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="x1/c1">
+				<hint />
+			</M__x1>
+			<M__y1 password="false" default="0" typ="double" internal_name="y1" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="y1/r1">
+				<hint />
+			</M__y1>
+			<M__x2 password="false" default="656" typ="double" internal_name="x2" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="x2/c2">
+				<hint />
+			</M__x2>
+			<M__y2 password="false" default="494" typ="double" internal_name="y2" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="y2/r2">
+				<hint />
+			</M__y2>
+		</dRECT>
+		<dRECT_CTR name="dRECT_CTR">
+			<M__ctrColX password="false" default="0" typ="double" internal_name="ctrColX" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Center Column/X">
+				<hint />
+			</M__ctrColX>
+			<M__ctrRowY password="false" default="0" typ="double" internal_name="ctrRowY" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Center Row/Y">
+				<hint />
+			</M__ctrRowY>
+			<M__width password="false" default="656" typ="double" internal_name="width" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="ROI Width">
+				<hint />
+			</M__width>
+			<M__height password="false" default="494" typ="double" internal_name="height" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Roi Height">
+				<hint />
+			</M__height>
+		</dRECT_CTR>
+		<dCIRCLE name="dCIRCLE">
+			<M__dCenterC password="false" default="328" typ="double" internal_name="dCenterC" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="CenterC/X">
+				<hint />
+			</M__dCenterC>
+			<M__dCenterR password="false" default="247" typ="double" internal_name="dCenterR" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="CenterR/Y">
+				<hint />
+			</M__dCenterR>
+			<M__dAngle password="false" default="0" typ="double" internal_name="dAngle" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Angle/Orientation[°]">
+				<hint />
+			</M__dAngle>
+		</dCIRCLE>
+		<drotRECT name="drotRECT">
+			<M__dCenterC password="false" default="0" typ="double" internal_name="dCenterC" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="CenterC/X">
+				<hint>Row: Position X-Value in mm</hint>
+			</M__dCenterC>
+			<M__dCenterR password="false" default="0" typ="double" internal_name="dCenterR" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="CenterR/Y">
+				<hint> Col: Position Y-Value in mm</hint>
+			</M__dCenterR>
+			<M__dAngle password="false" default="0" typ="double" internal_name="dAngle" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Angle/Orientation[°]">
+				<hint> Angle: Angle in Degree</hint>
+			</M__dAngle>
+			<M__dWidth password="false" default="100" typ="double" internal_name="dWidth" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Width">
+				<hint> Width: Size in mm</hint>
+			</M__dWidth>
+			<M__dHeight password="false" default="200" typ="double" internal_name="dHeight" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="Width">
+				<hint> Hight: Size in mm</hint>
+			</M__dHeight>
+		</drotRECT>
+		<dLINE name="dLine">
+			<M__x1 password="false" default="0" typ="double" internal_name="x1" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="x1/c1">
+				<hint />
+			</M__x1>
+			<M__y1 password="false" default="0" typ="double" internal_name="y1" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="y1/r1">
+				<hint />
+			</M__y1>
+			<M__x2 password="false" default="656" typ="double" internal_name="x2" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="x2/c2">
+				<hint />
+			</M__x2>
+			<M__y2 password="false" default="494" typ="double" internal_name="y2" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="y2/r2">
+				<hint />
+			</M__y2>
+		</dLINE>
+		<dPT name="dPT">
+			<M__c password="false" default="0" typ="double" internal_name="c" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="x/c">
+				<hint>x or column</hint>
+			</M__c>
+			<M__r password="false" default="0" typ="double" internal_name="r" readonly="false" visible="true" dialogtyp="double" allowed="all" min="all" max="all" text="y/r">
+				<hint>y or row</hint>
+			</M__r>
+		</dPT>
+		<MESSAGE name="MESSAGE">
+			<M__iErr password="false" default="0" typ="INT32" internal_name="iErr" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="number">
+				<hint>the number of the message</hint>
+			</M__iErr>
+			<M__szMsg password="false" size="200" default="0" typ="TEXT" internal_name="szMsg[BUFFLEN]" readonly="true" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="text">
+				<hint>the text of the returned message</hint>
+			</M__szMsg>
+		</MESSAGE>
+	</structs>
+	<functions>
+		<FindCircle klasse="algorithm functions" icon="" name="FindCircle" text="Find Circle" executionText="circleX,circleY,circleRad,iErr,szMsg= imgProcTLS.FindCircle (0,0,xxxScale*656,xxxScale*494,2,50,0,xxxScale*247,0,1)">
+			<hint>This function finds circle contours in the image. Output is the working image with edges and the found circle. (27.09.2021 TLS563RE)
+
+	  Col,Row,Radius,iErr,szMsg = imgProcTLS.FindCircle(
+		Col,
+		Row,
+		Width,
+		Hight,
+		NumPyramidLevels,
+		Edge Threshold,
+		Min Radius,
+		Max Radius,
+		Sub Pixel,
+		modeDrawOverlay
+		)
+</hint>
+			<InputParameter>
+				<M_dRectRoi default="0" typ="dRECT_CTR" internal_name="dRectRoiCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dRectRoi>
+				<M_iNumPyramidLevels default="0" typ="INT32" internal_name="iNumPyramidLevels" dialogtyp="no_dialog" allowed="1,2,3" min="all" max="all" text="Subsampling">
+					<hint>2:means that search will start from a 2 times subsampled image; original image size: 656x494 pixels; 2times subsampled:164x124 Pixels</hint>
+				</M_iNumPyramidLevels>
+				<M_dEdgeThreshold default="0" typ="double" internal_name="dEdgeThreshold" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Threshold">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeThreshold>
+				<M_dMinRadius default="0" typ="double" internal_name="dMinRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Minimal Radius">
+					<hint>lower limit for found circles</hint>
+				</M_dMinRadius>
+				<M_dMaxRadius default="0" typ="double" internal_name="dMaxRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Maximum Radius">
+					<hint>upper limit for found circles</hint>
+				</M_dMaxRadius>
+				<M_bSubPixel default="0" typ="double" internal_name="bSubPixel" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Subpixel">
+					<hint>1: subpixel accuracy for found circles is activated</hint>
+				</M_bSubPixel>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dCircleRad default="0" typ="double" internal_name="dCircleRad" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="circle radius">
+					<hint>radius of found circle</hint>
+				</M_dCircleRad>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindCircle>
+		<tcNozzleDozzle klasse="L60 Algorithm" icon="" name="tcNozzleDozzle" text="tcNozzleDozzle" level="100" executionText="InnerCx,InnerRy,InnerRad,iErr,szMsg = imgProcTLS.tcNozzleDozzle (120,1)">
+			<hint>This function finds the inner circle of a damage contour. Output is an overlay image with edges, found inner and outer circle.
+
+</hint>
+			<InputParameter>
+				<M_iThreshold default="50" typ="INT32" internal_name="iThreshold" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="threshold">
+					<hint>threshold to determine edge of jet</hint>
+				</M_iThreshold>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dOuterCircleCtr default="0" typ="dPT" internal_name="dOuterCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Outer Circle Center">
+					<hint>outer circle center point: column/horizontal X and row/vertical Y coordinate</hint>
+				</M_dOuterCircleCtr>
+				<M_dOuterCircleRad default="0" typ="double" internal_name="dOuterCircleRad" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="outer circle radius">
+					<hint>radius of found outer circle</hint>
+				</M_dOuterCircleRad>
+				<M_dInnerCircleCtr default="0" typ="dPT" internal_name="dInnerCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Inner Circle Center">
+					<hint>inner circle center point: column/horizontal X and row/vertical Y coordinate</hint>
+				</M_dInnerCircleCtr>
+				<M_dInnerCircleRad default="0" typ="double" internal_name="dInnerCircleRad" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="inner circle radius">
+					<hint>radius of found circle</hint>
+				</M_dInnerCircleRad>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</tcNozzleDozzle>
+		<MeasureFocus klasse="calibration" icon="" name="MeasureFocus" text="Measure Focus" executionText="dFocusVal,iErr,szMsg= imgProcTLS.MeasureFocus (0,0,xxxScale*656,xxxScale*494,1,0,0)">
+			<hint>This function determines a focus value. This value has a maximum when the same object is in focus. Different objects have different values. (27.09.2021 TLS563RE)
+
+	  dFocusVal,iErr,szMsg=imgProcTLS.MeasureFocus(
+		Col,
+		Row,
+		Width,
+		Hight,
+		iStep,
+		iFocusOperator,
+		iSmoothing
+		)
+</hint>
+			<InputParameter>
+				<M_dRectRoi default="0" typ="dRECT_CTR" internal_name="dRectRoiCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dRectRoi>
+				<M_iStep default="0" typ="INT32" internal_name="iStep" dialogtyp="no_dialog" allowed="1,2,3,4,5" min="all" max="all" text="value of neigbor">
+					<hint>Which neighbor will be taken:&lt;BR&gt;&amp;nbsp;1: left and right neighbor&lt;BR&gt;&amp;nbsp;5: 5 pixels to the left and 5 pixels to the right</hint>
+				</M_iStep>
+				<M_iFocusOperator default="0" typ="INT32" internal_name="iFocusOperator" dialogtyp="no_dialog" allowed="modified Laplace,3x3 Sobel" min="all" max="all" text="Type of Operator">
+					<hint>Operator to be chosen:&lt;BR&gt;&amp;nbsp;0: modified Laplace&lt;BR&gt;&amp;nbsp;1: 3x3 Sobel</hint>
+				</M_iFocusOperator>
+				<M_iSmoothing default="0" typ="INT32" internal_name="iSmoothing" dialogtyp="no_dialog" allowed="none/off,medium,high" min="all" max="all" text="Image Smoothing">
+					<hint>Reduce Image Noise:&lt;BR&gt;&amp;nbsp;0: none/off&lt;BR&gt;&amp;nbsp;1: medium &lt;BR&gt;&amp;nbsp;2: High</hint>
+				</M_iSmoothing>
+			</InputParameter>
+			<OutputParameter>
+				<M_dFocusVal default="0" typ="double" internal_name="dFocusVal" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Focus value">
+					<hint>focus value; different object have different values; don't modify object to receive maximum value in focus</hint>
+				</M_dFocusVal>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</MeasureFocus>
+		<FindEdgeCircle klasse="algorithm functions" icon="" name="FindEdgeCircle2" text="Find EdgeCircle" executionText="circleX,circley,circleRad,iErr,szMsg= imgProcTLS.FindEdgeCircle (2,0,0,0,xxxScale*80,xxxScale*120,16,xxxScale*20,5,0,0.5,xxxScale*2.0,0,2)">
+			<hint>This function finds a circle with the circle approximation of number of searchrays with a given center point. Output is the working image with found edge, region and histogram of edges along search direction.  (27.09.2021 TLS563RE)
+
+	  Col,Row,Radius,iDetectedPoints,iErr,szMsg = imgProcTLS.FindEdgeCircle(
+		Polarity,
+		Criteria,
+		Col,
+		Row,
+		Min Radius,
+		Max Radius,
+		nSearchRays,
+		dRectangleWidth,
+		Threshold,
+		Angle Tolerance,
+		Smoothing,
+		dDistanceErrorThreshold,
+		iHistogramDisplay,
+		Overlay
+		)
+</hint>
+			<InputParameter>
+				<M_iModePolarity default="0" typ="INT32" internal_name="iModePolarity" dialogtyp="no_dialog" allowed="black/white,white/black,both" min="all" max="all" text="Polarity Mode">
+					<hint>Polarity of the edge along search direction&lt;BR&gt;&amp;nbsp;0: black/white&lt;BR&gt;&amp;nbsp;1: white/black&lt;BR&gt;&amp;nbsp;2: both</hint>
+				</M_iModePolarity>
+				<M_iModeCriteria default="0" typ="INT32" internal_name="iModeCriteria" dialogtyp="no_dialog" allowed=" strongest,first,last" min="all" max="all" text="Criteria">
+					<hint>Edge criteria&lt;BR&gt;&amp;nbsp;0: strongest&lt;BR&gt;&amp;nbsp;1: first&lt;BR&gt;&amp;nbsp;2: last</hint>
+				</M_iModeCriteria>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dMinRadius default="0" typ="double" internal_name="dMinRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Minimal Radius">
+					<hint>lower limit for found circles</hint>
+				</M_dMinRadius>
+				<M_dMaxRadius default="0" typ="double" internal_name="dMaxRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Maximum Radius">
+					<hint>upper limit for found circles</hint>
+				</M_dMaxRadius>
+				<M_iSearchRays default="0" typ="INT32" internal_name="iSearchRays" dialogtyp="no_dialog" allowed="all" min="4" max="30" text="Searchrays number">
+					<hint>Number of Searchrays; Minimum: 4 Maximum depends on radius</hint>
+				</M_iSearchRays>
+				<M_dSearchrayWidth default="10" typ="double" internal_name="dSearchrayWidth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Search Ray Width">
+					<hint>Width of search ray</hint>
+				</M_dSearchrayWidth>
+				<M_dEdgeLimit default="10" typ="double" internal_name="dEdgeLimit" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Limit">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeLimit>
+				<M_dAngleTolerance default="0" typ="double" internal_name="dAngleTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle Tolerance">
+					<hint>tolerance of edge found [0;+/-10]</hint>
+				</M_dAngleTolerance>
+				<M_dEdgeSmooth default="0" typ="double" internal_name="dEdgeSmooth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Smooth Edge">
+					<hint>smoothes edge histogram along search direction [0..3]</hint>
+				</M_dEdgeSmooth>
+				<M_DistanceErrorThreshold default="0" typ="double" internal_name="DistanceErrorThreshold" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Distance Error Threshold">
+					<hint>gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered</hint>
+				</M_DistanceErrorThreshold>
+				<HistogramDisplay default="0" typ="double" internal_name="HistogramDisplay" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Display Histogram">
+					<hint>displays Histogramm for Searchrays in the overlay Image. OverlayMode must be activated&lt;BR&gt;&amp;nbsp;0: no Histogramm&lt;BR&gt;&amp;nbsp;1..Number Searchray: corresponding histogramm&lt;BR&gt;&amp;nbsp;&gt; Number Searchray: all Histograms will be drawn in the overlay image</hint>
+				</HistogramDisplay>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dCircle default="0" typ="dCIRCLE" internal_name="dCircle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle ">
+					<hint>circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius</hint>
+				</M_dCircle>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindEdgeCircle>
+		<FindSegmentEdgeCircle klasse="algorithm functions" icon="" name="FindSegmentEdgeCircle2" text="Find Segment EdgeCircle" level="100" executionText="circleX,circley,circleRad,iArrayLength,dXArray,dYArray,iErr,szMsg= imgProcTLS.FindSegmentEdgeCircle (2,0,0,0,xxxScale*80,xxxScale*120,16,xxxScale*20,5,0,0.5,xxxScale*2.0,0,2)">
+			<hint>This function finds a circle with the circle approximation of number of searchrays with a given center point. Output is the working image with found edge, region and histogram of edges along search direction. (27.09.2021 TLS563RE)</hint>
+			<InputParameter>
+				<M_iModePolarity default="0" typ="INT32" internal_name="iModePolarity" dialogtyp="no_dialog" allowed="black/white,white/black,both" min="all" max="all" text="Polarity Mode">
+					<hint>Polarity of the edge along search direction&lt;BR&gt;&amp;nbsp;0: black/white&lt;BR&gt;&amp;nbsp;1: white/black&lt;BR&gt;&amp;nbsp;2: both</hint>
+				</M_iModePolarity>
+				<M_iModeCriteria default="0" typ="INT32" internal_name="iModeCriteria" dialogtyp="no_dialog" allowed="Strongest,First,Last" min="all" max="all" text="Criteria">
+					<hint>Edge criteria&lt;BR&gt;&amp;nbsp;0: strongest&lt;BR&gt;&amp;nbsp;1: first&lt;BR&gt;&amp;nbsp;2: last</hint>
+				</M_iModeCriteria>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dMinRadius default="0" typ="double" internal_name="dMinRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Minimal Radius">
+					<hint>lower limit for found circles</hint>
+				</M_dMinRadius>
+				<M_dMaxRadius default="0" typ="double" internal_name="dMaxRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Maximum Radius">
+					<hint>upper limit for found circles</hint>
+				</M_dMaxRadius>
+				<M_iSearchRays default="0" typ="INT32" internal_name="iSearchRays" dialogtyp="no_dialog" allowed="all" min="4" max="30" text="Searchrays number">
+					<hint>Number of Searchrays; Minimum: 4 Maximum depends on radius</hint>
+				</M_iSearchRays>
+				<M_dSearchrayWidth default="10" typ="double" internal_name="dSearchrayWidth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Search Ray Width">
+					<hint>Width of search ray</hint>
+				</M_dSearchrayWidth>
+				<M_dEdgeLimit default="10" typ="double" internal_name="dEdgeLimit" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Limit">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeLimit>
+				<M_dAngleTolerance default="0" typ="double" internal_name="dAngleTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle Tolerance">
+					<hint>tolerance of edge found [0;+/-10]</hint>
+				</M_dAngleTolerance>
+				<M_dEdgeSmooth default="0" typ="double" internal_name="dEdgeSmooth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Smooth Edge">
+					<hint>smoothes edge histogram along search direction [0..3]</hint>
+				</M_dEdgeSmooth>
+				<M_DistanceErrorThreshold default="0" typ="double" internal_name="DistanceErrorThreshold" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Distance Error Threshold">
+					<hint>gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered</hint>
+				</M_DistanceErrorThreshold>
+				<HistogramDisplay default="0" typ="double" internal_name="HistogramDisplay" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Display Histogram">
+					<hint>displays Histogramm for Searchrays in the overlay Image. OverlayMode must be activated&lt;BR&gt;&amp;nbsp;0: no Histogramm&lt;BR&gt;&amp;nbsp;1..Number Searchray: corresponding histogramm&lt;BR&gt;&amp;nbsp;&gt; Number Searchray: all Histograms will be drawn in the overlay image</hint>
+				</HistogramDisplay>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dCircle default="0" typ="dCIRCLE" internal_name="dCircle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle ">
+					<hint>circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius</hint>
+				</M_dCircle>
+				<M_iLenArray default="0" typ="INT32" internal_name="iLenArray" dialogtyp="no_dialog" allowed="all" min="4" max="30" text="Length Array">
+					<hint>Length of Table/Array including found circle points</hint>
+				</M_iLenArray>
+				<M_dTableX default="0" typ="doubleTable" internal_name="dTableX" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableX">
+					<hint>Array of X/Column coordinates</hint>
+				</M_dTableX>
+				<M_dTableY default="0" typ="doubleTable" internal_name="dTableY" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableY">
+					<hint>Array of Y/Row coordinates</hint>
+				</M_dTableY>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindSegmentEdgeCircle>
+		<CircleFromNpts klasse="algorithm functions" icon="" name="CircleFromNpts2" text="Circle FromN points" executionText="circleX,circley,circleRad,iErr,szMsg= imgProcTLS.CircleFromNpts (iArrayLength,dXArray,dYArray)">
+			<hint>This function finds a circle from a x/col and a y/rowTable. (27.09.2021 TLS563RE)
+
+	  circleX,circley,circleRad,iErr,szMsg= imgProcTLS.CircleFromNpts (
+		iArrayLength,
+		dXArray,
+		dYArray,
+		dDistanceErrorThreshold
+		)
+</hint>
+			<InputParameter>
+				<M_iLenArray default="0" typ="INT32" internal_name="iLenArray" dialogtyp="no_dialog" allowed="all" min="4" max="30" text="Length Array">
+					<hint>Length of Table/Array including found circle points</hint>
+				</M_iLenArray>
+				<M_dTableX default="0" typ="doubleTable" internal_name="dTableX" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableX">
+					<hint>Array of X/Column coordinates</hint>
+				</M_dTableX>
+				<M_dTableY default="0" typ="doubleTable" internal_name="dTableY" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableY">
+					<hint>Array of Y/Row coordinates</hint>
+				</M_dTableY>
+				<M_DistanceErrorThreshold default="2" typ="double" internal_name="DistanceErrorThreshold" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Distance Error Threshold">
+					<hint>gauge for circle approximation; if found edge is above distance of possible found circle center point, edge will not be considered</hint>
+				</M_DistanceErrorThreshold>
+			</InputParameter>
+			<OutputParameter>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dCircle default="0" typ="dCIRCLE" internal_name="dCircle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle ">
+					<hint>circle center point: column/horizontal X + row/vertical Y coordinate and corresponding circle radius</hint>
+				</M_dCircle>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</CircleFromNpts>
+		<EllipseFromNpts klasse="algorithm functions" icon="" name="EllipseFromNpts" text="Ellipse FromN points" executionText="ctrX,ctrY,elliAngle,elliW,elliH,iErr,szMsg = imgProcTLS.EllipseFromNpts (iArrayLength,dXArray,dYArray,2)">
+			<hint>This function finds an ellipse from a x/col and a y/rowTable. (27.09.2021 TLS563RE)
+
+	  ctrX,ctrY,elliAngle,elliW,elliH,iErr,szMsg = imgProcTLS.EllipseFromNpts (
+		iArrayLength,
+		dXArray,
+		dYArray
+		)
+</hint>
+			<InputParameter>
+				<M_iLenArray default="0" typ="INT32" internal_name="iLenArray" dialogtyp="no_dialog" allowed="all" min="4" max="30" text="Length Array">
+					<hint>Length of Table/Array including found circle points</hint>
+				</M_iLenArray>
+				<M_dTableX default="0" typ="doubleTable" internal_name="dTableX" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableX">
+					<hint>Array of X/Column coordinates</hint>
+				</M_dTableX>
+				<M_dTableY default="0" typ="doubleTable" internal_name="dTableY" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableY">
+					<hint>Array of Y/Row coordinates</hint>
+				</M_dTableY>
+			</InputParameter>
+			<OutputParameter>
+				<M_drotRECTEllipse default="0" typ="drotRECT" internal_name="drotRECTEllipse" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Ellipse">
+					<hint>
+						circle center point: column/horizontal X + row/vertical Y coordinate and oritneation and bounding box width and height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: of bounding box</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: of bounding box</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRECTEllipse>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</EllipseFromNpts>
+		<FindLine klasse="algorithm functions" icon="" name="FindLine2" helpImg="findLine.png" text="Find Line" executionText="l1LineStartX,l1LineStartY,l1LineEndX,l1LineEndY,l1EdgeStrength,iErr,szMsg=imgProcTLS.FindLine(2,0,0,0,0,xxxScale*50,xxxScale*100,10,10,0.5,1)">
+			<hint>This function finds a line contours in a given region in the image. Output is the working image with found edge, region and histogram of edges along search direction. Parameter 12 is optional. (27.09.2021 TLS563RE)
+
+	  L1P1Col,L1P1Row,L1P2Col,L1P2Row,QualityL1,iErr,szMsg = imgProcTLS.FindLine(
+		Polarity,
+		Criteria,
+		Col,
+		Row,
+		Angle,
+		Width,
+		Hight,
+		Threshold,
+		Angle Tolerance,
+		Smoothing,
+		[iCamNum],
+		Overlay,
+		[Image]
+		)
+</hint>
+			<InputParameter>
+				<M_iModePolarity default="0" typ="INT32" internal_name="iModePolarity" dialogtyp="no_dialog" allowed="black/white,white/black,both" min="all" max="all" text="Polarity Mode">
+					<hint>Polarity of the edge along search direction&lt;BR&gt;&amp;nbsp;0: black/white&lt;BR&gt;&amp;nbsp;1: white/black&lt;BR&gt;&amp;nbsp;2: both</hint>
+				</M_iModePolarity>
+				<M_iModeCriteria default="0" typ="INT32" internal_name="iModeCriteria" dialogtyp="no_dialog" allowed="Strongest,First,Last" min="all" max="all" text="Criteria">
+					<hint>Edge criteria&lt;BR&gt;&amp;nbsp;0: strongest&lt;BR&gt;&amp;nbsp;1: first&lt;BR&gt;&amp;nbsp;2: last</hint>
+				</M_iModeCriteria>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_dEdgeLimit default="10" typ="double" internal_name="dEdgeLimit" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Limit">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeLimit>
+				<M_dAngleTolerance default="0" typ="double" internal_name="dAngleTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle Tolerance">
+					<hint>tolerance of edge found [0;+/-10]</hint>
+				</M_dAngleTolerance>
+				<M_dEdgeSmooth default="0" typ="double" internal_name="dEdgeSmooth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Smooth Edge">
+					<hint>smoothes edge histogram along search direction [0..3]</hint>
+				</M_dEdgeSmooth>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+				<M_iCamNum default="1" typ="INT32" internal_name="iCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="[Camera Number]">
+					<hint>Number of Camera. [Optional Value]</hint>
+				</M_iCamNum>
+				<M_iInputImage default="0" typ="double" internal_name="iInputImage" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Input Image">
+					<hint>Optional Parameter. Default 1.defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+			</InputParameter>
+			<OutputParameter>
+				<M_dLine default="0" typ="dLINE" internal_name="dLine" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine>
+				<M_dEdgeStrength default="0" typ="double" internal_name="dEdgeStrength" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="EdgeStrength">
+					<hint>Strength of line</hint>
+				</M_dEdgeStrength>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindLine>
+		<FindLineInCircle klasse="algorithm functions" icon="" name="FindLineInCircle" text="Find Line in Circle" level="100" executionText="l1LineStartX,l1LineStartY,l1LineEndX,l1LineEndY,l1Angle,l1EdgeStrength,iErr,szMsg=imgProcTLS.FindLineInCircle(2,0,0,0,xxxScale*40,xxxScale*160,10,10,0.5,2)">
+			<hint>This function finds a line contours in around a circle. Output is the working image with found edge, region and histogram of edges along search direction. (27.09.2021 TLS563RE)</hint>
+			<InputParameter>
+				<M_iModePolarity default="0" typ="INT32" internal_name="iModePolarity" dialogtyp="no_dialog" allowed="black/white,white/black,both" min="all" max="all" text="Polarity Mode">
+					<hint>Polarity of the edge along search direction&lt;BR&gt;&amp;nbsp;0: black/white&lt;BR&gt;&amp;nbsp;1: white/black&lt;BR&gt;&amp;nbsp;2: both</hint>
+				</M_iModePolarity>
+				<M_iModeCriteria default="0" typ="INT32" internal_name="iModeCriteria" dialogtyp="no_dialog" allowed=" strongest,first,last" min="all" max="all" text="Criteria">
+					<hint>Edge criteria&lt;BR&gt;&amp;nbsp;0: strongest&lt;BR&gt;&amp;nbsp;1: first&lt;BR&gt;&amp;nbsp;2: last</hint>
+				</M_iModeCriteria>
+				<M_dCircleCtr default="0" typ="dPT" internal_name="dCircleCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Circle Center">
+					<hint>
+						circle center point: column/horizontal X and row/vertical Y coordinate; must be inside a possible circle
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCircleCtr>
+				<M_dMinRadius default="0" typ="double" internal_name="dMinRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Minimal Radius">
+					<hint>lower limit for found circles</hint>
+				</M_dMinRadius>
+				<M_dMaxRadius default="0" typ="double" internal_name="dMaxRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Maximum Radius">
+					<hint>upper limit for found circles</hint>
+				</M_dMaxRadius>
+				<M_dEdgeLimit default="10" typ="double" internal_name="dEdgeLimit" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Limit">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeLimit>
+				<M_dAngleTolerance default="0" typ="double" internal_name="dAngleTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle Tolerance">
+					<hint>tolerance of edge found [0;+/-10]</hint>
+				</M_dAngleTolerance>
+				<M_dEdgeSmooth default="0" typ="double" internal_name="dEdgeSmooth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Smooth Edge">
+					<hint>smoothes edge histogram along search direction [0..3]</hint>
+				</M_dEdgeSmooth>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dLine default="0" typ="dLINE" internal_name="dLine" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle">
+					<hint>angle of line</hint>
+				</M_dAngle>
+				<M_dEdgeStrength default="0" typ="double" internal_name="dEdgeStrength" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="EdgeStrength">
+					<hint>Strength of line</hint>
+				</M_dEdgeStrength>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindLineInCircle>
+		<FindSegment klasse="algorithm functions" icon="" name="FindSegment" text="Find Segment" executionText="l1LineStartX,l1LineStartY,l1LineEndX,l1LineEndY,l2LineStartX,l2LineStartY,l2LineEndX,l2LineEndY,l1EdgeStrength,l2EdgeStrength,iErr,szMsg=imgProcTLS.FindSegment(2,0,0,0,0,xxxScale*50,xxxScale*100,10,10,0.5,1)">
+			<hint>This function finds a segment in a given region in the image. Output is the working image with found edges, region and histogram of edges along search direction. Parameter 11,12,14,15 is optional. (27.09.2021 TLS563RE)
+
+	  L1P1Col,L1P1Row,L1P2Col,L1P2Row,  L2P1Col,L2P1Row,L2P2Col,L2P2Row,  QualityL1,QualityL2,iErr,szMsg = imgProcTLS.FindSegment(
+		Polarity,
+		Criteria,
+		Col,
+		Row,
+		Angle,
+		Width,
+		Hight,
+		Threshold,
+		Angle Tolerance,
+		Smoothing,
+		[TargetWidth],
+		[TargetWidthTolerance],
+		Overlay,
+		[Image],
+		[iCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M_iColourSegement default="0" typ="INT32" internal_name="iColourSegement" dialogtyp="no_dialog" allowed="white,black,any" min="all" max="all" text="Segment Colour">
+					<hint>Colour of the segment along search direction&lt;BR&gt;&amp;nbsp;0: white&lt;BR&gt;&amp;nbsp;1: black&lt;BR&gt;&amp;nbsp;2: any</hint>
+				</M_iColourSegement>
+				<M_iModeCriteria default="0" typ="INT32" internal_name="iModeCriteria" dialogtyp="no_dialog" allowed="strongest,widest,narrowest,widest contigous" min="all" max="all" text="Criteria">
+					<hint>Segment criteria&lt;BR&gt;&amp;nbsp;0: strongest&lt;BR&gt;&amp;nbsp;1: widest&lt;BR&gt;&amp;nbsp;2: Narrowest&lt;BR&gt;&amp;nbsp;3: Widest Contigous</hint>
+				</M_iModeCriteria>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_dEdgeLimit default="10" typ="double" internal_name="dEdgeLimit" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Edge Limit">
+					<hint>minimum edge strength that will be considered</hint>
+				</M_dEdgeLimit>
+				<M_dAngleTolerance default="0" typ="double" internal_name="dAngleTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle Tolerance">
+					<hint>tolerance of edge found [0;+/-10]</hint>
+				</M_dAngleTolerance>
+				<M_dEdgeSmooth default="0" typ="double" internal_name="dEdgeSmooth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Smooth Edge">
+					<hint>smoothes edge histogram along search direction [0..3]</hint>
+				</M_dEdgeSmooth>
+				<M_dTargetWidth default="0" typ="double" internal_name="dTargetWidth" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Target Width]">
+					<hint>Target distance between the two lines. Segment with closest result will be used</hint>
+				</M_dTargetWidth>
+				<M_dTargetWidthTolerance default="0" typ="double" internal_name="dTargetWidthTolerance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Target Width Tolerance]">
+					<hint>Maximum distance +- between the segment lines referenced to the Target Width</hint>
+				</M_dTargetWidthTolerance>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+				<M_iInputImage default="0" typ="double" internal_name="iInputImage" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="[Input Image]">
+					<hint>Optional Parameter. Default 1.defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+				<M_iCamNum default="1" typ="INT32" internal_name="iCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="[Camera Number]">
+					<hint>Number of Camera. [Optional Value]</hint>
+				</M_iCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M_dLine1 default="0" typ="dLINE" internal_name="dLine1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line1">
+					<hint>
+						1st segment line; starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine1>
+				<M_dLine2 default="0" typ="dLINE" internal_name="dLine2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line2">
+					<hint>
+						2nd segment line; starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine2>
+				<M_dEdgeStrength1 default="0" typ="double" internal_name="dEdgeStrength1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="EdgeStrength1">
+					<hint>Strength of first line</hint>
+				</M_dEdgeStrength1>
+				<M_dEdgeStrength2 default="0" typ="double" internal_name="dEdgeStrength2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="EdgeStrength2">
+					<hint>Strength of second line</hint>
+				</M_dEdgeStrength2>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</FindSegment>
+		<BinFilter klasse="filter" icon="" name="BinFilter" text="binary filter" executionText="iErr,szMsg=imgProcTLS.BinFilter(iFilter,dKernelSize)">
+			<hint>This function applies a morphological operation on a binarized image (values 0:black to 255:white). Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.BinFilter(
+		iFilter,
+		iKernelSize
+		)
+</hint>
+			<InputParameter>
+				<M_iFilterType default="0" typ="INT32" internal_name="iFilterType" dialogtyp="no_dialog" allowed="0,1,2,3" min="all" max="all" text="Filter type">
+					<hint>Type of morphological filter:&lt;BR&gt;&amp;nbsp;
+		  0: erosion&lt;BR&gt;&amp;nbsp;
+		  1: dilation&lt;BR&gt;&amp;nbsp;
+		  2: Opening&lt;BR&gt;&amp;nbsp;
+		  3: Closing</hint>
+				</M_iFilterType>
+				<M_iKernelSize default="0" typ="INT32" internal_name="iKernelSize" dialogtyp="no_dialog" allowed="0,1,2" min="all" max="all" text="Kernel Size">
+					<hint>iKernelSize in Pixel&lt;BR&gt;&amp;nbsp;0: 3x3&lt;BR&gt;&amp;nbsp;1: 5x5&lt;BR&gt;&amp;nbsp;2: 7x7</hint>
+				</M_iKernelSize>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</BinFilter>
+		<GrayFilter klasse="filter" icon="" name="GrayFilter" text="Gray filter" executionText="iErr,szMsg=imgProcTLS.GrayFilter(iFilter,iKernelSizeV,iKernelSizeH,imgMode,[tiCamNum])">
+			<hint>This function applies a morphological operation on a gray image (all values between 0:black and 255:white). Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.GrayFilter(
+		iFilter,
+		iKernelSizeV,
+		iKernelSizeH,
+		imgMode,
+		[tiCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M_iFilterType default="0" typ="INT32" internal_name="iFilterType" dialogtyp="no_dialog" allowed="0,1,2,3,4,5,6,7,8" min="all" max="all" text="Filter type">
+					<hint>Type of morphological filter:&lt;BR&gt;&amp;nbsp;
+		  0: median&lt;BR&gt;&amp;nbsp;
+		  1: Gauss&lt;BR&gt;&amp;nbsp;
+		  2: erosion&lt;BR&gt;&amp;nbsp;
+		  3: dilation&lt;BR&gt;&amp;nbsp;
+		  4: Opening&lt;BR&gt;&amp;nbsp;
+		  5: Closing&lt;BR&gt;&amp;nbsp;
+		  6: HighPass&lt;BR&gt;&amp;nbsp;
+		  7: Sharpen&lt;BR&gt;&amp;nbsp;
+		  8: Histogramm Streching</hint>
+				</M_iFilterType>
+				<M_iKernelSizeV default="0" typ="INT32" internal_name="iKernelSizeV" dialogtyp="no_dialog" allowed="0,1,2,3,4,5,6,7,8,9,10" min="all" max="all" text="vertical Kernel Size">
+					<hint>iKernelSizeH in Pixel&lt;BR&gt;&amp;nbsp;0: 3x3&lt;BR&gt;&amp;nbsp;1: 5x5&lt;BR&gt;&amp;nbsp;...;&lt;BR&gt;&amp;nbsp;10: 21x21;</hint>
+				</M_iKernelSizeV>
+				<M_iKernelSizeH default="0" typ="INT32" internal_name="iKernelSizeH" dialogtyp="no_dialog" allowed="0,1,2,3,4" min="all" max="all" text="horizontal Kernel Size">
+					<hint>iKernelSizeH in Pixel&lt;BR&gt;&amp;nbsp;0: 3x3&lt;BR&gt;&amp;nbsp;1: 5x5&lt;BR&gt;&amp;nbsp;...;&lt;BR&gt;&amp;nbsp;10: 21x21;</hint>
+				</M_iKernelSizeH>
+				<M_iImg default="0" typ="INT32" internal_name="iImg" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Image Source">
+					<hint>&amp;nbsp;0: camera image&lt;BR&gt;&amp;nbsp;1: working image</hint>
+				</M_iImg>
+				<M_tiCamNum default="0.5" typ="double" internal_name="tiCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="tiCamNum">
+					<hint>?</hint>
+				</M_tiCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GrayFilter>
+		<AutoContrast klasse="filter" icon="" name="AutoContrast" text="AutoContrast" executionText="iErr,szMsg=imgProcTLS.AutoContrast(dPercentageLower,dPercentageUpper,imgMode,[tiCamNum])">
+			<hint>This filter applies a brightness equalization. Bright areas will moved to white and dark areas to black. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.AutoContrast(
+		dPercentageLower,
+		dPercentageUpper,
+		imgMode,
+		[tiCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M_dLowerPercentage default="1" typ="double" internal_name="dLowerPercentage" dialogtyp="no_dialog" allowed="all" min="0.1" max="50" text="Lower Percentage">
+					<hint>Determines lower Percentage of darkest pixels inside an image will be of gray value 0 (=black)&lt;BR&gt;&amp;nbsp;0.1: very small fraction of dark pixels will be moved to black color&lt;BR&gt;&amp;nbsp;25:very big fraction of dark pixels will be moved to black color ;</hint>
+				</M_dLowerPercentage>
+				<M_dUpperPercentage default="1" typ="double" internal_name="dUpperPercentage" dialogtyp="no_dialog" allowed="all" min="0.1" max="50" text="UpperPercentage">
+					<hint>Determines upper Percentage of brighest pixels inside an image will be of gray value 255 (=white)&lt;BR&gt;&amp;nbsp;0.1: very small fraction of bright pixels will be moved to white color&lt;BR&gt;&amp;nbsp;25:very big fraction of bright pixels will be moved to white color ;</hint>
+				</M_dUpperPercentage>
+				<M_iImg default="0" typ="INT32" internal_name="iImg" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Image Source">
+					<hint>&amp;nbsp;0: camera image&lt;BR&gt;&amp;nbsp;1: working image</hint>
+				</M_iImg>
+				<M_tiCamNum default="0.5" typ="double" internal_name="tiCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="tiCamNum">
+					<hint>?</hint>
+				</M_tiCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</AutoContrast>
+		<IlluminationCorrection klasse="filter" icon="" name="IlluminationCorrection" text="IlluminationCorrection" executionText="iErr,szMsg=imgProcTLS.IlluminationCorrection(dClipLimit,iKernelSizeV,iKernelSizeH,imgMode)">
+			<hint>Adaptive histogram equalization is used (CLAHE). The image is divided into small blocks called "tiles" (tileSize is 8x8 by default). Then each of these blocks are histogram equalized as usual. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization. (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.IlluminationCorrection(
+		dClipLimit,
+		iKernelSizeV,
+		iKernelSizeH,
+		imgMode
+		)
+</hint>
+			<InputParameter>
+				<M_dClipLimit default="2.0" typ="double" internal_name="dClipLimit" dialogtyp="no_dialog" allowed="all" min="0.1" max="50" text="Clip Limit">
+					<hint>Limits the amplification by clipping the histogram at a predefined value before computing the histogram.</hint>
+				</M_dClipLimit>
+				<M_iKernelSizeV default="8" typ="INT32" internal_name="iKernelSizeV" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="vertical Kernel Size">
+					<hint>Vertical Tile Size  in Pixel&lt;BR&gt;&amp;nbsp;8: nx8&lt;BR&gt;&amp;nbsp;10: nx10;</hint>
+				</M_iKernelSizeV>
+				<M_iKernelSizeH default="8" typ="INT32" internal_name="iKernelSizeH" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="horizontal Kernel Size">
+					<hint>Horizontal Tile Size  in Pixel&lt;BR&gt;&amp;nbsp;8: 8xn&lt;BR&gt;&amp;nbsp;10: 10xn;</hint>
+				</M_iKernelSizeH>
+				<M_iImg default="0" typ="INT32" internal_name="iImg" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Image Source">
+					<hint>&amp;nbsp;0: camera image&lt;BR&gt;&amp;nbsp;1: working image</hint>
+				</M_iImg>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</IlluminationCorrection>
+		<SharpenGauss klasse="filter" icon="" name="SharpenGauss" text="SharpenGauss" executionText="iErr,szMsg=imgProcTLS.SharpenGauss(dAlpha,dSigma,[Col],[Row],[Width],[Hightt],[iCamNum])">
+			<hint>Gauss smoothed image will be subtracted from the original image. The resulting image will be added with the weighing factor alpha to the original image. Output is the working image with all possible gray values per pixel 0:background 255:foreground. This image can be used as a base for binarization.(29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.SharpenGauss(
+		dAlpha,
+		dSigma,
+		[Col],
+		[Row],
+		[Width],
+		[Hightt],
+		[iCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M_dAlpha default="100" typ="double" internal_name="dAlpha" dialogtyp="no_dialog" allowed="all" min="20" max="400" text="Alpha">
+					<hint>Limits the amplification by clipping the histogram at a predefined value before computing the histogram.</hint>
+				</M_dAlpha>
+				<M_dSigma default="10" typ="double" internal_name="dSigma" dialogtyp="no_dialog" allowed="all" min="1" max="20" text="Sigma">
+					<hint>Extent of the filter.</hint>
+				</M_dSigma>
+				<M_dRectRoi default="0" typ="dRECT_CTR" internal_name="dRectRoiCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Rect Roi [Optional Value]">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm [Optional Value]</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm [Optional Value]</col>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm [Optional Value]</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm [Optional Value]</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dRectRoi>
+				<M_iImg default="0" typ="INT32" internal_name="iImg" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Image Source [Optional Value]  ">
+					<hint>&amp;nbsp;0: camera image&lt;BR&gt;&amp;nbsp;1: working image</hint>
+				</M_iImg>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</SharpenGauss>
+		<Threshold klasse="algorithm functions" icon="" name="Threshold" text="binarization" executionText="iCalcThreshold,iErr,szMsg=imgProcTLS.Threshold(1,1,128,0)">
+			<hint>This function binarize the gray value image (values 0:black to 255:white). Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (28.09.2021 TLS563RE)
+
+	  dcalcThresh,iErr,szMsg = imgProcTLS.Threshold(
+		ibBright,
+		iThreshMode,
+		dThresholdLow,
+		Image
+		)
+</hint>
+			<InputParameter>
+				<M_iBright default="0" typ="INT32" internal_name="iBright" dialogtyp="no_dialog" allowed="Black,White" min="all" max="all" text="Foreground Type">
+					<hint>Foreground Mode:&lt;BR&gt;&amp;nbsp;0: Black is foreground&lt;BR&gt;&amp;nbsp;1: White is foreground</hint>
+				</M_iBright>
+				<M_iThresholdMode default="0" typ="INT32" internal_name="iThresholdMode" dialogtyp="no_dialog" allowed="Fixed,Auto" min="all" max="all" text="Threshold Mode">
+					<hint>automatic Binarization limit&lt;BR&gt;&amp;nbsp;0: OFF; fixed Limit&lt;BR&gt;&amp;nbsp;1: automatic</hint>
+				</M_iThresholdMode>
+				<M_dThreshold default="0" typ="double" internal_name="dThreshold" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="Threshold limit">
+					<hint>Threshold limit for iThresholdMode=0</hint>
+				</M_dThreshold>
+				<M_iInputImage default="0" typ="double" internal_name="iInputImage" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Input Image">
+					<hint>defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+			</InputParameter>
+			<OutputParameter>
+				<M_dcalcThresh default="0" typ="double" internal_name="dcalcThresh" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="calculated Threshold">
+					<hint>for iThresholdMode=1 automatically calculated; for iThresholdMode=0: input dThresholdLow</hint>
+				</M_dcalcThresh>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Threshold>
+		<AdaptiveThreshold klasse="algorithm functions" icon="" name="Threshold" text="adaptive binarization" executionText="iErr,szMsg=imgProcTLS.AdaptiveThreshold(0,1,7,3,1)">
+			<hint>This function binarize the gray value image (values 0:black to 255:white) locally with automatic Threshold. Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (28.09.2021 TLS563RE)
+
+	  iErr,szMsg = imgProcTLS.AdaptiveThreshold(
+		iMethod,
+		ibBright,
+		iBlocksize,
+		dConstantSubMeanVal,
+		iBlurBlocksize,
+		Image
+		)
+</hint>
+			<InputParameter>
+				<M_iMethod default="0" typ="INT32" internal_name="iMethod" dialogtyp="no_dialog" allowed="Fixed,Auto" min="all" max="all" text="Binarization Methode">
+					<hint>Binarization Mode:&lt;BR&gt;&amp;nbsp;0: Mean_C&lt;BR&gt;&amp;nbsp;1: Gaussian_C</hint>
+				</M_iMethod>
+				<M_iBright default="0" typ="INT32" internal_name="iBright" dialogtyp="no_dialog" allowed="Black,White" min="all" max="all" text="Foreground Type">
+					<hint>Foreground Mode:&lt;BR&gt;&amp;nbsp;0: Black is foreground&lt;BR&gt;&amp;nbsp;1: White is foreground</hint>
+				</M_iBright>
+				<M_iBlocksize default="0" typ="INT32" internal_name="iBlocksize" dialogtyp="no_dialog" allowed="all" min="0" max="70" text="Local Area">
+					<hint>neighborhood/local environment&lt;BR&gt;&amp;nbsp;1: 2*1+1=3x3&lt;BR&gt;&amp;nbsp;2: 2*2+1=5x5</hint>
+				</M_iBlocksize>
+				<M_dConstantSubMeanVal default="0" typ="double" internal_name="dConstantSubMeanVal" dialogtyp="no_dialog" allowed="all" min="-15" max="15" text="Constant Sub">
+					<hint>Constant subtracted from the mean or weighted mean Default 3; -15..15</hint>
+				</M_dConstantSubMeanVal>
+				<M_iBlurBlocksize default="0" typ="INT32" internal_name="iBlurBlocksize" dialogtyp="no_dialog" allowed="all" min="0" max="70" text="Local Area for Blurring">
+					<hint>neighborhood/local environment&lt;BR&gt;&amp;nbsp;0: none; blurring switched off&lt;BR&gt;&amp;nbsp;1: 2*1+1=3x3&lt;BR&gt;&amp;nbsp;2: 2*2+1=5x5</hint>
+				</M_iBlurBlocksize>
+				<M_iInputImage default="0" typ="double" internal_name="iInputImage" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Input Image">
+					<hint>defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</AdaptiveThreshold>
+		<MeanDevGrayValue klasse="misc" icon="" name="MeanDevGrayValue" text="MeanDevGrayValue" executionText="dMean,dDeviation,iErr,szMsg=imgProcTLS.MeanDevGrayValue(Col,Row,Angle,Width,Hightt,iImg)">
+			<hint>This function calculates mean gray value and its deviation. Output is the working image with two possible value per pixel 0:background 255:foreground. This image can be used as a base for the blob operator. (29.09.2021 TLS563RE)
+
+	  dMean,dDeviation,iErr,szMsg=imgProcTLS.MeanDevGrayValue(
+		Col,
+		Row,
+		Angle,
+		Width,
+		Hightt,
+		iImg
+		)
+</hint>
+			<InputParameter>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_iInputImage default="0" typ="INT32" internal_name="iInputImage" dialogtyp="no_dialog" allowed="CamImage,WorkImage" min="all" max="all" text="Input Image">
+					<hint>defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+			</InputParameter>
+			<OutputParameter>
+				<M_dMean default="0" typ="double" internal_name="dMean" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="mean gray value">
+					<hint>mean gray value from the image</hint>
+				</M_dMean>
+				<M_dDeviation default="0" typ="double" internal_name="dcalcThresh" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="calculated Threshold">
+					<hint>deviation frrom mean gray value of the image</hint>
+				</M_dDeviation>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</MeanDevGrayValue>
+		<Blob klasse="algorithm functions" icon="" name="Blob" text="Blob" executionText="iNumBlob,dArea,dCenterC,dCenterR,iErr,szMsg=imgProcTLS.Blob(0,0,xxxScale*656,xxxScale*494,1,0,0,0,1)">
+			<hint>This function finds connected white regions in a binarized image. The image must be binarized with a Threshold opeator. (27.09.2021 TLS563RE)
+
+	  iNumBlob,Area,Col,Row,Angle,iErr,szMsg = imgProcTLS.Blob(
+		Col,
+		Row,
+		Width,
+		Hight,
+		ModeBlob,
+		MinSize,
+		MaxSize,
+		deleteBorderBlobs,
+		Overlay
+		)
+</hint>
+			<InputParameter>
+				<M_dRectRoi default="0" typ="dRECT_CTR" internal_name="dRectRoiCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dRectRoi>
+				<M_iModeBlob default="0" typ="INT32" internal_name="iModeBlob" dialogtyp="no_dialog" allowed="Biggest Area,Smallest Area" min="all" max="all" text="Blob Mode">
+					<hint>searches for smallest/biggest Area:&lt;BR&gt;&amp;nbsp;0: biggest Area&lt;BR&gt;&amp;nbsp;1: smallest Area</hint>
+				</M_iModeBlob>
+				<M_dMinSize default="0" typ="double" internal_name="dMinSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="minimum Size">
+					<hint>Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.</hint>
+				</M_dMinSize>
+				<M_dMaxSize default="0" typ="double" internal_name="dMaxSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="maximum Size">
+					<hint>Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.</hint>
+				</M_dMaxSize>
+				<M_ideleteBoderBlobs default="0" typ="INT32" internal_name="ideleteBoderBlobs" dialogtyp="no_dialog" allowed="OFF,ON" min="all" max="all" text="delete Border Blobs">
+					<hint>1: Areas that borders to the edge of a image will not be considered</hint>
+				</M_ideleteBoderBlobs>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_iNumBlob default="0" typ="INT32" internal_name="iNumBlob" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Number blobs">
+					<hint>number of all found blobs</hint>
+				</M_iNumBlob>
+				<M_dArea default="0" typ="double" internal_name="dArea" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Area">
+					<hint>area of biggest/smallest blob</hint>
+				</M_dArea>
+				<M_dCenter default="0" typ="dPT" internal_name="dCenter" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Blob Center">
+					<hint>
+						blob center point: column/horizontal X and row/vertical Y coordinate
+			&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCenter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Blob>
+		<Blob2 klasse="algorithm functions" icon="" name="Blob2" text="Blob2" executionText="dcalcThresh,iNumBlob,dArea,dCenterC,dCenterR,dAngle,dRectC,dRectR,dRectA,dRectW,dRectH,iErr,szM=imgProcTLS.Blob2(0,0,xxxScale*656,xxxScale*494,1,0,0,0,0,1,1,2,1)">
+			<hint>This function finds connected white regions in a binarized image in a rotated input region. The input image must be a grey value image. Binarization is done in this operator. (27.09.2021 TLS563RE)
+
+	  iNumBlob,Col,Row,Angle,ScaleCol,ScaleRow,Area,iErr,szMsg = imgProcTLS.Blob2(
+		Col,
+		Row,
+		Angle,
+		Width,
+		Hight,
+		BlobColor,
+		ThreshMode,
+		ThresholdLow,
+		MinSize,
+		MaxSize,
+		deleteBorderBlobs,
+		Unite,
+		Overlay,
+		Image
+		)
+</hint>
+			<InputParameter>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_iBright default="0" typ="INT32" internal_name="iBright" dialogtyp="no_dialog" allowed="Black,White" min="all" max="all" text="Foreground Type">
+					<hint>Foreground Mode:&lt;BR&gt;&amp;nbsp;0: Black is foreground&lt;BR&gt;&amp;nbsp;1: White is foreground</hint>
+				</M_iBright>
+				<M_iThresholdMode default="0" typ="INT32" internal_name="iThresholdMode" dialogtyp="no_dialog" allowed="Fixed,Auto" min="all" max="all" text="Threshold Mode">
+					<hint>automatic Binarization limit&lt;BR&gt;&amp;nbsp;0: OFF; fixed Limit&lt;BR&gt;&amp;nbsp;1: automatic</hint>
+				</M_iThresholdMode>
+				<M_dThreshold default="0" typ="double" internal_name="dThreshold" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="Threshold limit">
+					<hint>Threshold limit for iThresholdMode=0</hint>
+				</M_dThreshold>
+				<M_dMinSize default="0" typ="double" internal_name="dMinSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="minimum Size">
+					<hint>Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.</hint>
+				</M_dMinSize>
+				<M_dMaxSize default="0" typ="double" internal_name="dMaxSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="maximum Size">
+					<hint>Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.</hint>
+				</M_dMaxSize>
+				<M_ideleteBoderBlobs default="0" typ="INT32" internal_name="ideleteBoderBlobs" dialogtyp="no_dialog" allowed="OFF,ON" min="all" max="all" text="delete Border Blobs">
+					<hint>1: Areas that borders to the edge of a image will not be considered</hint>
+				</M_ideleteBoderBlobs>
+				<M_iUnite default="0" typ="INT32" internal_name="iUniteMode" dialogtyp="no_dialog" allowed="OFF,ON" min="all" max="all" text="Unite Mode">
+					<hint>Unites foreground areas.&lt;BR&gt;&amp;nbsp;0: OFF; biggest area is chosen&lt;BR&gt;&amp;nbsp;1: unites all areas within Min .. Max Area</hint>
+				</M_iUnite>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+				<M_iInputImage default="0" typ="double" internal_name="iInputImage" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Input Image">
+					<hint>defines Input Image&lt;BR&gt;&amp;nbsp;0: unchanged camera image&lt;BR&gt;&amp;nbsp;1: modified working image</hint>
+				</M_iInputImage>
+			</InputParameter>
+			<OutputParameter>
+				<M_dcalcThresh default="0" typ="double" internal_name="dcalcThresh" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="calculated Threshold">
+					<hint>for iThresholdMode=1 automatically calculated; for iThresholdMode=0: input dThresholdLow</hint>
+				</M_dcalcThresh>
+				<M_iNumBlob default="0" typ="INT32" internal_name="iNumBlob" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Number blobs">
+					<hint>number of all found blobs</hint>
+				</M_iNumBlob>
+				<M_dArea default="0" typ="double" internal_name="dArea" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Area">
+					<hint>area of biggest/smallest blob</hint>
+				</M_dArea>
+				<M_dCenter default="0" typ="dPT" internal_name="dCenter" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Blob Center">
+					<hint>
+						blob center point: column/horizontal X and row/vertical Y coordinate
+			&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dCenter>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Area">
+					<hint>angle of blob (principal axis transformation</hint>
+				</M_dAngle>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectResultRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Result Rect Roi">
+					<hint>center Point (column and row) of the rotated (angle) rectangle with Width and Height of the resulting bounding box</hint>
+				</M_drotRectRoi>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Blob2>
+		<ProjectionPtLine klasse="geometry" icon="" name="ProjectionPtLine" text="ProjectionPtLine" executionText="dProjC,dProjR,dDist,iErr,szMsg=imgProcTLS.ProjectionPtLine(dLineC1,dLineR1,dLineC2,dLineR2,dPointC,dPointR)">
+			<hint>Determines projection of a points towards a line. (27.09.2021 TLS563RE)
+
+	  dProjC,dProjR,dDist,iErr,szMsg=imgProcTLS.ProjectionPtLine(
+		dLineC1,
+		dLineR1,
+		dLineC2,
+		dLineR2,
+		dPointC,
+		dPointR
+		)
+</hint>
+			<InputParameter>
+				<M_dLine default="0" typ="dLINE" internal_name="dLine" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine>
+				<M_dProjPt default="0" typ="dPT" internal_name="dPt" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Point">
+					<hint>
+						column/horizontal X and row/vertical Y coordinate
+		  lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dProjPt>
+			</InputParameter>
+			<OutputParameter>
+				<M_dProjPt default="0" typ="dPT" internal_name="dProjPt" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Projection Point">
+					<hint>
+						column/horizontal X and row/vertical Y coordinate of projection on Line
+		  lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dProjPt>
+				<M_dDistance default="0" typ="double" internal_name="dDistance" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Distance">
+					<hint>perpendicular distance of point to line</hint>
+				</M_dDistance>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ProjectionPtLine>
+		<IntersectionLines klasse="geometry" icon="" name="IntersectionLines" text="IntersectionLines" executionText="InterX,InterY,dAngle,iErr,szMsg = imgProcTLS.IntersectionLines (xxxScale*200,xxxScale*200,xxxScale*300,xxxScale*200,xxxScale*250,xxxScale*200,xxxScale*250,xxxScale*300,1)">
+			<hint>Determines of 2 lines.  (27.09.2021 TLS563RE)
+
+	  InterX,InterY,dAngle,iErr,szMsg=imgProcTLS.IntersectionLines(
+		L1P1Col,
+		L1P1Row,
+		L1P2Col,
+		L1P2Row,
+		L2P1Col,
+		L2P1Row,
+		L2P2Col,
+		L2P2Row,
+		modeDrawOverlay
+		)
+</hint>
+			<InputParameter>
+				<M_dLine1 default="0" typ="dLINE" internal_name="dLine1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line1">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine1>
+				<M_dLine2 default="0" typ="dLINE" internal_name="dLine2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line2">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine2>
+				<M_iOverlayMode default="0" typ="double" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_dInterPt default="0" typ="dPT" internal_name="dInterPt" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Intersection Point">
+					<hint>
+						column/horizontal X and row/vertical Y coordinate
+		  lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dInterPt>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Angle">
+					<hint>Angle between lines</hint>
+				</M_dAngle>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</IntersectionLines>
+		<Calibrate klasse="calibration" icon="" name="Calibrate" text="Calibrate" executionText="iNumBlob,dCenterC,dCenterR,dAngle,dScaleC,dScaleR,dArea,iErr,szMsg=imgProcTLS.Calibrate(xxxScale*2,xxxScale*1.5,xxxScale*50,0,1,1)">
+			<hint>This function finds 9 connected white regions in a binarized image. Calibration factors will be derived with the center of each blob. The image must be binarized with a Threshold opeator. An extra big blob can be used to determine positive coordinate axis. (28.09.2021 TLS563RE)
+
+	  iNumBlob,dCenterC,dCenterR,dAngle,dScaleC,dScaleR,dArea,iErr,szMsg=imgProcTLS.Calibrate(
+		Col,
+		Row,
+		Width,
+		Hight,
+		dDistC,
+		dDistR,
+		iMinSize,
+		iMaxSize,
+		bdeleteBorderBlobs,
+		bBiggestDotForOrientation
+		)
+</hint>
+			<InputParameter>
+				<M_dRectRoi default="0" typ="dRECT_CTR" internal_name="dRectRoiCtr" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) and corresponding Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dRectRoi>
+				<M_dDistC default="2" typ="double" internal_name="dDistC" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="horizontal distance [mm]">
+					<hint>horizontal distance between blobs in mm</hint>
+				</M_dDistC>
+				<M_dDistR default="1.5" typ="double" internal_name="dDistR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="vertical distance [mm]">
+					<hint>vertical distance between blobs in mm</hint>
+				</M_dDistR>
+				<M_dMinSize default="0" typ="double" internal_name="dMinSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="minimum Size">
+					<hint>Specifies the minimum number of pixels the region must contain. The default value nMinimumPointsPerRegion = 0 means that no lower bound is checked.</hint>
+				</M_dMinSize>
+				<M_dMaxSize default="0" typ="double" internal_name="dMaxSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="maximum Size">
+					<hint>Specifies the maximum number of pixels the region may contain. The default value nMaximumPointsPerRegion = 0 means that no upper bound is checked.</hint>
+				</M_dMaxSize>
+				<M_ideleteBoderBlobs default="0" typ="INT32" internal_name="ideleteBoderBlobs" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="delete Border Blobs">
+					<hint>1: Areas that borders to the edge of a image will not be considered</hint>
+				</M_ideleteBoderBlobs>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_iNumBlob default="0" typ="INT32" internal_name="iNumBlob" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Number blobs">
+					<hint>number of all found blobs</hint>
+				</M_iNumBlob>
+				<M_dCenter default="0" typ="dPT" internal_name="dCenter" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="True Center [Pix]">
+					<hint>center point for Scaling: column/horizontal X and row/vertical Y coordinate</hint>
+				</M_dCenter>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Orientation [Rad]">
+					<hint>orientation Angle ind radian</hint>
+				</M_dAngle>
+				<M_dScaleC default="0" typ="double" internal_name="dScaleC" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="horizontal Scaling [mm/PIX]">
+					<hint>horizontal scaling in mm/pixel</hint>
+				</M_dScaleC>
+				<M_dScaleR default="0" typ="double" internal_name="dScaleR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="vertical Scaling [mm/PIX]">
+					<hint>verticalscaling in mm/pixel</hint>
+				</M_dScaleR>
+				<M_dArea default="0" typ="double" internal_name="dArea" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Area">
+					<hint>area of biggest/smallest blob</hint>
+				</M_dArea>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Calibrate>
+		<WriteCalData klasse="calibration" icon="" name="WriteCalData" text="WriteCalData" executionText="iErr,szMsg=imgProcTLS.WriteCalData(328,247,0,1,1)">
+			<hint>Saves calibration data found by Calibrate function. This saves only the calibration data in the lib file, not in the application!  (28.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.WriteCalData(
+		Col,
+		Row,
+		dAngle,
+		dScaleC,
+		dScaleR
+		)
+</hint>
+			<InputParameter>
+				<M_dCenter default="0" typ="dPT" internal_name="dCenter" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="True Center [Pix]">
+					<hint>center point for Scaling: column/horizontal X and row/vertical Y coordinate</hint>
+				</M_dCenter>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Orientation [Rad]">
+					<hint>orientation Angle ind radian</hint>
+				</M_dAngle>
+				<M_dScaleC default="0" typ="double" internal_name="dScaleC" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="horizontal Scaling [mm/PIX]">
+					<hint>horizontal scaling in mm/pixel</hint>
+				</M_dScaleC>
+				<M_dScaleR default="0" typ="double" internal_name="dScaleR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="vertical Scaling [mm/PIX]">
+					<hint>verticalscaling in mm/pixel</hint>
+				</M_dScaleR>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</WriteCalData>
+		<ReadCalData klasse="calibration" icon="" name="ReadCalData" text="ReadCalData" executionText="dCenterC,dCenterR,dAngle,dScaleC,dScaleR,iErr,szMsg=imgProcTLS.ReadCalData()">
+			<hint>Reads saved calibration data. (28.09.2021 TLS563RE)
+
+	  dCenterC,dCenterR,dAngle,dScaleC,dScaleR,iErr,szMsg=imgProcTLS.ReadCalData()
+</hint>
+			<InputParameter />
+			<OutputParameter>
+				<M_dCenter default="0" typ="dPT" internal_name="dCenter" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="True Center [Pix]">
+					<hint>center point for Scaling: column/horizontal X and row/vertical Y coordinate</hint>
+				</M_dCenter>
+				<M_dAngle default="0" typ="double" internal_name="dAngle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Orientation [Rad]">
+					<hint>orientation Angle ind radian</hint>
+				</M_dAngle>
+				<M_dScaleC default="0" typ="double" internal_name="dScaleC" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="horizontal Scaling [mm/PIX]">
+					<hint>horizontal scaling in mm/pixel</hint>
+				</M_dScaleC>
+				<M_dScaleR default="0" typ="double" internal_name="dScaleR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="vertical Scaling [mm/PIX]">
+					<hint>verticalscaling in mm/pixel</hint>
+				</M_dScaleR>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ReadCalData>
+		<TransPixel2World klasse="misc" icon="" name="TransPixel2World" text="TransPixel2World" executionText="ColumnX,RowY,iErr,szMsg= imgProcTLS.TransPixel2World (Col,Row,iCamNum)">
+			<hint>This function transforms coordinates from MM Scale to Pixels/ from machine coordinate system to image processing system. (30.09.2021 TLS563RE)
+
+	  ColumnX,RowY,iErr,szMsg=imgProcTLS.TransPixel2World(
+		Col,
+		Row,
+		iCamNum
+		)
+</hint>
+			<InputParameter>
+				<M_dImagePt default="0" typ="dPT" internal_name="dPoint" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Image Point">
+					<hint>
+						Image Processing point: column/horizontal X and row/vertical Y coordinatelt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dImagePt>
+			</InputParameter>
+			<OutputParameter>
+				<M_dWorldPt default="0" typ="dPT" internal_name="dPoint" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="World Point">
+					<hint>
+						world point: column/horizontal X and row/vertical Y coordinate;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dWorldPt>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</TransPixel2World>
+		<TransWorld2Pixel klasse="misc" icon="" name="TransWorld2Pixel" text="TransWorld2Pixel" executionText="ColumnX,RowY,iErr,szMsg= imgProcTLS.TransWorld2Pixel (Col,Row,iCamNum)">
+			<hint>This function transforms coordinates from Pixels to MM Scale/ from image processing system to machine coordinate system. (30.09.2021 TLS563RE)
+
+	  ColumnX,RowY,iErr,szMsg=imgProcTLS.TransWorld2Pixel(
+		Col,
+		Row,
+		iCamNum
+		)
+</hint>
+			<InputParameter>
+				<M_dWorldPt default="0" typ="dPT" internal_name="dPoint" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="World Point">
+					<hint>
+						world point: column/horizontal X and row/vertical Y coordinate;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dWorldPt>
+			</InputParameter>
+			<OutputParameter>
+				<M_dImagePt default="0" typ="dPT" internal_name="dPoint" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Image Point">
+					<hint>
+						Image Processing point: column/horizontal X and row/vertical Y coordinate;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dImagePt>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</TransWorld2Pixel>
+		<GetVersion klasse="misc" icon="" name="GetVersion" text="GetVersion" executionText="iVersion,iMajorVersion,iMinorVersion,ierr,szMsg=imgProcTLS.GetVersion()">
+			<hint>This function gets the internal owned Algorithm Error Memory parameter. (30.09.2021 TLS563RE)
+
+	  iVersion;iMajorVersion,iMinorVersion,ierr,szMsg=imgProcTLS.GetVersion()
+</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M_iVersion default="0" typ="INT32" internal_name="iVersion" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="version number">
+					<hint>version number consists out of year month and date</hint>
+				</M_iVersion>
+				<M_iVersionMajor default="0" typ="INT32" internal_name="iVersionMajor" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="major version">
+					<hint>major version of Panel Version</hint>
+				</M_iVersionMajor>
+				<M_iVersionMinor default="0" typ="INT32" internal_name="iVersionMinor" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="minor version">
+					<hint>minor version of Panel Version</hint>
+				</M_iVersionMinor>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GetVersion>
+		<OpenLogFile klasse="debugging" icon="" name="OpenLogFile" text="OpenLogFile" level="100" executionText="ierr,szMsg=imgProcTLS.OpenLogFile(1,10000000,\&quot;szDirName(c:/tmp/\&quot;,0)">
+			<hint>This function opens a debug file for detailed algorithm debug infos.</hint>
+			<InputParameter>
+				<M_iLogging default="0" typ="INT32" internal_name="iLogging" dialogtyp="no_dialog" allowed="all" min="0" max="9" text="enable Logging">
+					<hint>0: disable 1:only specific 2:everything</hint>
+				</M_iLogging>
+				<M_iLoggingMaxSize default="10000000" typ="INT32" internal_name="iLoggingMaxSize" dialogtyp="no_dialog" allowed="all" min="0" max="all" text="max Size Log File">
+					<hint>maximum Size of log file; if file size exceeds limit file will be copied to filename.0</hint>
+				</M_iLoggingMaxSize>
+				<M__szDirName password="false" size="200" default="0" typ="TEXT" internal_name="szDirName[BUFFLEN]" readonly="true" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Directory Name">
+					<hint>Name of Directory; Filename is created automatically including date and time and loggingTRU.txt</hint>
+				</M__szDirName>
+				<M_iDaemonNum default="0" typ="INT32" internal_name="iDaemonNum" dialogtyp="no_dialog" allowed="all" min="0" max="6" text="Daemon Num">
+					<hint>adds integer to filename</hint>
+				</M_iDaemonNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OpenLogFile>
+		<LogText klasse="debugging" icon="" name="LogText" text="LogText" executionText="ierr,szMsg=imgProcTLS.LogText(&quot;Text&quot;)">
+			<hint>This function opens a debug file for detailed algorithm debug infos. (29.09.2021 TLS563RE)
+
+	  ierr,szMsg=imgProcTLS.LogText(
+		"Text"
+		)
+</hint>
+			<InputParameter>
+				<M__szLogInfo password="false" size="200" default="0" typ="TEXT" internal_name="szLogInfo[BUFFLEN]" readonly="true" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Logging Info">
+					<hint>Writes logging information into the damon log file.</hint>
+				</M__szLogInfo>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</LogText>
+		<CloseLogFile klasse="debugging" icon="" name="CloseLogFile" text="Close Log File" level="100" executionText="ierr,szMsg=imgProcTLS.OpenLogFile(\&quot;szDirName(c:/tmp/\&quot;)">
+			<hint>This function closes a debug file for detailed algorithm debug infos.</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</CloseLogFile>
+		<ResetOverlay klasse="system" icon="" name="ResetOverlay" text="ResetOverlay" executionText="iErr,szMsg= imgProcTLS.ResetOverlay ()">
+			<hint>Resets overlay image. (30.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.ResetOverlay()
+</hint>
+			<InputParameter />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ResetOverlay>
+		<ResetWorkingImage klasse="system" icon="" name="ResetWorkingImage" text="ResetWorkingImage" executionText="iErr,szMsg= imgProcTLS.ResetWorkingImage ()">
+			<hint>Resets working image. All pixels have value 0. (30.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.ResetWorkingImage()
+</hint>
+			<InputParameter />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ResetWorkingImage>
+		<ResetStitchedImage klasse="system" icon="" name="ResetStitchedImage" text="ResetStitchedImage" executionText="iErr,szMsg= imgProcTLS.ResetStitchedImage (dGrayValue)">
+			<hint>Resets stichting image. All pixels will be set to the input value. (30.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.ResetStitchedImage(
+		dGrayValue
+		)
+</hint>
+			<InputParameter>
+				<M_iPresetGrayValue default="0" typ="INT32" internal_name="iPresetGrayValue" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="Preset Value.">
+					<hint>Gray value for all pixels (0-255).</hint>
+				</M_iPresetGrayValue>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ResetStitchedImage>
+		<ResetAlgoErrorMem klasse="system" icon="" name="ResetAlgoErrorMem" text="ResetAlgoErrorMem" executionText="iErr,szMsg= imgProcTLS.ResetAlgoErrorMem ()">
+			<hint>Global Error flag will be set to 0 (=error free). (30.09.2021 TLS563RE)
+
+	  iErr,szMsg= imgProcTLS.ResetAlgoErrorMem ()
+</hint>
+			<InputParameter />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</ResetAlgoErrorMem>
+		<GetAlgoErrorMem klasse="system" icon="" name="GetAlgoErrorMem" text="GetAlgoErrorMem" executionText="ierr,szMsg=imgProcTLS.GetAlgoErrorMem()">
+			<hint>This function gets the internal owned Algorithm Error Memory parameter. (30.09.2021 TLS563RE)
+
+	  ierr,szMsg=imgProcTLS.GetAlgoErrorMem()
+</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GetAlgoErrorMem>
+		<SetAlgoErrorMem klasse="system" icon="" name="SetAlgoErrorMem" text="SetAlgoErrorMem" executionText="iErr,szMsg= imgProcTLS.SetAlgoErrorMem ()">
+			<hint>Global Error flag will be set to an unspecifeid Error General. (30.09.2021 TLS563RE)
+
+	  iErr,szMsg= imgProcTLS.SetAlgoErrorMem ()
+</hint>
+			<InputParameter />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</SetAlgoErrorMem>
+		<SetAlgoErrorMem2 klasse="system" icon="" name="SetAlgoErrorMem2" text="SetAlgoErrorMem2" executionText="iE,szM=imgProcTLS.SetAlgoErrorMem2(&quot;Error No Segment Intersection found&quot;,1025)">
+			<hint>Global Error flag will be set to an unspecifeid Error General. Values should be greater than 1025 (30.09.2021 TLS563RE)
+
+	  iE,szM=imgProcTLS.SetAlgoErrorMem2(
+		sErrortext,
+		idErrorNumber
+		)
+</hint>
+			<InputParameter>
+				<M__szMsg password="false" size="200" default="0" typ="TEXT" internal_name="szError[BUFFLEN]" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Error Message">
+					<hint>error message</hint>
+				</M__szMsg>
+				<M__iErr password="false" default="0" typ="INT32" internal_name="iErr" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="erro number">
+					<hint>the number of the error. Please choose value between 1025 and 1279</hint>
+				</M__iErr>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</SetAlgoErrorMem2>
+		<CopyStitchedImage klasse="system" icon="" name="CopyStitchedImage" text="CopyStitchedImage" executionText="iErr,szMsg= imgProcTLS.CopyStitchedImage(dGrayValue)">
+			<hint>Copies working image into stitching image. (30.09.2021 TLS563RE)
+
+
+	  iErr,szMsg= imgProcTLS.CopyStitchedImage(
+		dGrayValue
+		)
+</hint>
+			<InputParameter>
+				<M_iPresetGrayValue default="0" typ="INT32" internal_name="iPresetGrayValue" dialogtyp="no_dialog" allowed="all" min="0" max="255" text="Preset Value.">
+					<hint>Gray value for all pixels.</hint>
+				</M_iPresetGrayValue>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</CopyStitchedImage>
+		<LoadImg klasse="misc" icon="" name="LoadImg" text="Load Image" executionText="iW,iH,iErr,szMsg= imgProcTLS.LoadImg (&quot;C:/tmp/image.BMP&quot;,[tiCamNum])">
+			<hint>This function loads a bitmap image.  (30.09.2021 TLS563RE)
+
+	  iW,iH,iErr,szMsg=imgProcTLS.LoadImg(
+		"Path/File"
+		[tiCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M__szfileName password="false" size="200" default="0" typ="TEXT" internal_name="szfileName[BUFFLEN]" readonly="true" visible="true" dialogtyp="pathfile" allowed="all" min="all" max="all" text="File Name">
+					<hint>filename including pathname</hint>
+				</M__szfileName>
+				<M_tiCamNum default="0.5" typ="double" internal_name="tiCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="tiCamNum">
+					<hint>?</hint>
+				</M_tiCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M_iWidth default="0" typ="INT32" internal_name="iWidth" dialogtyp="no_dialog" allowed="all" min="0" max="10000" text="Image Width">
+					<hint>Width of the image</hint>
+				</M_iWidth>
+				<M_iHeight default="0" typ="INT32" internal_name="iHeight" dialogtyp="no_dialog" allowed="all" min="0" max="10000" text="Image Height">
+					<hint>Height of the image</hint>
+				</M_iHeight>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</LoadImg>
+		<SaveImg klasse="misc" icon="" name="SaveImg" text="Save Image" executionText="iErr,szMsg = imgProcTLS.SaveImg (&quot;C:/tmp/image.BMP&quot;,imgMode,tiCamNum)">
+			<hint>This function saves a bitmap image. (30.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.SaveImg(
+		"C:/tmp/image.BMP",
+		imgMode,
+		[tiCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M__szfileName password="false" size="200" default="0" typ="TEXT" internal_name="szfileName[BUFFLEN]" readonly="true" visible="true" dialogtyp="pathfile" allowed="all" min="all" max="all" text="File Name">
+					<hint>filename including pathname</hint>
+				</M__szfileName>
+				<M_imgMode default="0" typ="INT32" internal_name="imgMode" dialogtyp="no_dialog" allowed="all" min="0" max="10000" text="Image Type">
+					<hint>type of image:&lt;BR&gt;&amp;nbsp;0: camera&lt;BR&gt;&amp;nbsp;1: working image&lt;BR&gt;&amp;nbsp;2: Overlays&lt;BR&gt;&amp;nbsp;3:Camera Image with Overlays&lt;BR&gt;&amp;nbsp;4: working image with Overlays&lt;BR&gt;&amp;nbsp;5: stitched image</hint>
+				</M_imgMode>
+				<M_tiCamNum default="0.5" typ="double" internal_name="tiCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="tiCamNum">
+					<hint>?</hint>
+				</M_tiCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</SaveImg>
+		<DrawText klasse="graphics" icon="" name="DrawText" text="Draw Text" executionText="iErr,szMsg = imgProcTLS.DrawText (&quot;Trumpf&quot;,50,50,0)">
+			<hint>Draws a given text into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.DrawText(
+		Text,
+		Col,
+		Row,
+		Color,
+		Scaling,
+		Line with,
+		Camera Number
+		)</hint>
+			<InputParameter>
+				<M__szTextToBeDrawn password="false" size="200" default="0" typ="TEXT" internal_name="szTextToBeDrawn[BUFFLEN]" readonly="true" visible="true" dialogtyp="pathfile" allowed="all" min="all" max="all" text="Text">
+					<hint>Text to be drawn (27.09.2021 TLS563RE)</hint>
+				</M__szTextToBeDrawn>
+				<M_dPt default="0" typ="dPT" internal_name="dPt" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Point">
+					<hint>
+						column/horizontal X and row/vertical Y coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dPt>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dialogtyp="no_dialog" allowed="all" min="0" max="254" text="Text Color">
+					<hint>
+						4: color of the text 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green&lt;BR&gt;&amp;nbsp;</color1>
+						<color2> 2: red&lt;BR&gt;&amp;nbsp;</color2>
+						<color3> 3: blau&lt;BR&gt;&amp;nbsp;</color3>
+						<color4> 4: pink&lt;BR&gt;&amp;nbsp;</color4>
+						<color5> 5: cyan&lt;BR&gt;&amp;nbsp;</color5>
+						<color6> 6: yellow&lt;BR&gt;&amp;nbsp;</color6>
+						<color7> 7: light red&lt;BR&gt;&amp;nbsp;</color7>
+						<color8> 8: purple&lt;BR&gt;&amp;nbsp;</color8>
+					</hint>
+				</M_iColor>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawText>
+		<DrawCircle klasse="graphics" icon="" name="DrawCircle" text="Draw Circle" executionText="iErr,szMsg=imgProcTLS.DrawCircle(0,0,xxxScale*100,0,2,0,0)">
+			<hint>Draws a given circle with radius into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.DrawCircle(
+		Col,
+		Row,
+		Radius,
+		Color,
+		iThicknessPix,
+		bRadInPixel,
+		bCenterInPixel
+		)
+</hint>
+			<InputParameter>
+				<M_dLine default="0" typ="dLINE" internal_name="dLine" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dialogtyp="no_dialog" allowed="all" min="0" max="254" text="Graphic Color">
+					<hint>
+						4: color of the graphic 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green&lt;BR&gt;&amp;nbsp;</color1>
+						<color2> 2: red&lt;BR&gt;&amp;nbsp;</color2>
+						<color3> 3: blau&lt;BR&gt;&amp;nbsp;</color3>
+						<color4> 4: pink&lt;BR&gt;&amp;nbsp;</color4>
+						<color5> 5: cyan&lt;BR&gt;&amp;nbsp;</color5>
+						<color6> 6: yellow&lt;BR&gt;&amp;nbsp;</color6>
+						<color7> 7: light red&lt;BR&gt;&amp;nbsp;</color7>
+						<color8> 8: purple&lt;BR&gt;&amp;nbsp;</color8>
+					</hint>
+				</M_iColor>
+				<M_iThickness default="0" typ="INT32" internal_name="iThickness" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Thickness [Pix]">
+					<hint>thickness of circle line in pixel</hint>
+				</M_iThickness>
+				<M_bCoordinatesInPixel default="0" typ="INT32" internal_name="bCoordinatesInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Coordinates in Pixel">
+					<hint>1 if coordinates in Pixel or 0 scaled Coordinates in mm</hint>
+				</M_bCoordinatesInPixel>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawCircle>
+		<DrawLine klasse="graphics" icon="" name="DrawLine" text="Draw Line" executionText="iErr,szMsg=imgProcTLS.DrawLine(0,0,xxxScale*100,xxxScale*100,0,2,0)">
+			<hint>Draws a given line with start and end point into an overlay with a chosen color. (27.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.DrawLine(
+		Col,
+		Row,
+		Col,
+		Row,
+		Color,
+		bSizeInPixel,
+		bSizeInPixel
+		)
+</hint>
+			<InputParameter>
+				<M_dLine default="0" typ="dLINE" internal_name="dLine" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="2 point Line">
+					<hint>
+						starting Linepoint: column/horizontal X + row/vertical Y coordinate and ending Linepoint: column + row coordinate
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row Point1:   Position X-Value of Point1 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point1:   Position Y-Value of Point1 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<row>Row Point2:   Position X-Value of Point2 in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col Point2:   Position Y-Value of Point2 in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_dLine>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dialogtyp="no_dialog" allowed="all" min="0" max="254" text="Graphic Color">
+					<hint>
+						4: color of the graphic 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green&lt;BR&gt;&amp;nbsp;</color1>
+						<color2> 2: red&lt;BR&gt;&amp;nbsp;</color2>
+						<color3> 3: blau&lt;BR&gt;&amp;nbsp;</color3>
+						<color4> 4: pink&lt;BR&gt;&amp;nbsp;</color4>
+						<color5> 5: cyan&lt;BR&gt;&amp;nbsp;</color5>
+						<color6> 6: yellow&lt;BR&gt;&amp;nbsp;</color6>
+						<color7> 7: light red&lt;BR&gt;&amp;nbsp;</color7>
+						<color8> 8: purple&lt;BR&gt;&amp;nbsp;</color8>
+					</hint>
+				</M_iColor>
+				<M_iThickness default="0" typ="INT32" internal_name="iThickness" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Thickness [Pix]">
+					<hint>thickness of circle line in pixel</hint>
+				</M_iThickness>
+				<M_bCoordinatesInPixel default="0" typ="INT32" internal_name="bCoordinatesInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Coordinates in Pixel">
+					<hint>1 if Coordinates in Pixel or 0 scaled Coordinates in mm</hint>
+				</M_bCoordinatesInPixel>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawLine>
+		<DrawCross klasse="graphics" icon="" name="DrawCross" text="Draw Cross" executionText="iErr,szMsg=imgProcTLS.DrawCross(0,0,xxxScale*100,xxxScale*100,0,2,0)">
+			<hint>Draws a given line with start and end point into an overlay with a chosen color. (27.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.DrawCross(
+		Col,
+		Row,
+		Size,
+		Color,
+		iThicknessPix,
+		bCoordinatesInPixel,
+		Camera Number
+		)
+</hint>
+			<InputParameter>
+				<M_dPt default="0" typ="dPT" internal_name="dPt" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Point">
+					<hint>Poit to draw the Cross&lt;BR&gt;&amp;nbsp;1: column/horizontal X coordinate&lt;BR&gt;&amp;nbsp;2: row/vertical Y coordinate</hint>
+				</M_dPt>
+				<M_iSize default="0" typ="INT32" internal_name="iSize" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Size in [Pix/mm]">
+					<hint>3: Size of cross line in pixel or mm</hint>
+				</M_iSize>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dialogtyp="no_dialog" allowed="all" min="0" max="254" text="Graphic Color">
+					<hint>
+						4: color of the graphic 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green&lt;BR&gt;&amp;nbsp;</color1>
+						<color2> 2: red&lt;BR&gt;&amp;nbsp;</color2>
+						<color3> 3: blau&lt;BR&gt;&amp;nbsp;</color3>
+						<color4> 4: pink&lt;BR&gt;&amp;nbsp;</color4>
+						<color5> 5: cyan&lt;BR&gt;&amp;nbsp;</color5>
+						<color6> 6: yellow&lt;BR&gt;&amp;nbsp;</color6>
+						<color7> 7: light red&lt;BR&gt;&amp;nbsp;</color7>
+						<color8> 8: purple&lt;BR&gt;&amp;nbsp;</color8>
+					</hint>
+				</M_iColor>
+				<M_bSizeInPixel default="0" typ="INT32" internal_name="bSizeInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Size in [Pixel/mm]">
+					<hint>5: 1 if size in Pixel or 0 scaled size in mm</hint>
+				</M_bSizeInPixel>
+				<M_bCenterInPixel default="0" typ="INT32" internal_name="bCenterInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Center in [Pixel/mm]">
+					<hint>6: 1 if center in Pixel or 0 scaled size in mm</hint>
+				</M_bCenterInPixel>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="message">
+					<hint>0 if operation succeeded</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="message">
+					<hint>error text</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawCross>
+		<DrawRectangle klasse="graphics" icon="" name="DrawRectangle" text="Draw Rectangle" executionText="iErr,szMsg=imgProcTLS.DrawRectangle(0,0,0,xxxScale*200,xxxScale*100,0,2,0,0)">
+			<hint>10th parameter is optional. Default=0.Draws a given rectangle with size (width/height)into an overlay at position Point pt and a chosen color. (27.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.Rectangle(
+		Col,
+		Row,
+		Angle,
+		Width,
+		Hight,
+		Color,
+		iThicknessPix,
+		bSizeInPixel,
+		bCenterInPixel,
+		bWithOutCal,
+		Camera Number
+		)
+</hint>
+			<InputParameter>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dialogtyp="no_dialog" allowed="all" min="0" max="254" text="Graphic Color">
+					<hint>
+						4: color of the graphic 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green&lt;BR&gt;&amp;nbsp;</color1>
+						<color2> 2: red&lt;BR&gt;&amp;nbsp;</color2>
+						<color3> 3: blau&lt;BR&gt;&amp;nbsp;</color3>
+						<color4> 4: pink&lt;BR&gt;&amp;nbsp;</color4>
+						<color5> 5: cyan&lt;BR&gt;&amp;nbsp;</color5>
+						<color6> 6: yellow&lt;BR&gt;&amp;nbsp;</color6>
+						<color7> 7: light red&lt;BR&gt;&amp;nbsp;</color7>
+						<color8> 8: purple&lt;BR&gt;&amp;nbsp;</color8>
+					</hint>
+				</M_iColor>
+				<M_iThickness default="0" typ="INT32" internal_name="iThickness" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Thickness [Pix]">
+					<hint>thickness of circle line in pixel</hint>
+				</M_iThickness>
+				<M_bSizeInPixel default="0" typ="INT32" internal_name="bSizeInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="sizein Pixel">
+					<hint>1 if size in Pixel or 0 scaled size in mm</hint>
+				</M_bSizeInPixel>
+				<M_bCenterInPixel default="0" typ="INT32" internal_name="bCenterInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Center in Pixel">
+					<hint>1 if center point in Pixel or 0 scaled center point in mm</hint>
+				</M_bCenterInPixel>
+				<M_bWithOutCal default="0" typ="INT32" internal_name="bWithoutCal" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Without Calibration">
+					<hint>calibration is not considered.</hint>
+				</M_bWithOutCal>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawRectangle>
+		<DrawRectangleID klasse="graphics" icon="" name="DrawRectangleID" text="Draw RectangleID" executionText="iErr,szMsg=imgProcTLS.DrawRectangleID(0,0,0,xxxScale*200,xxxScale*100,0,0,1)">
+			<hint>Draws a given rectangle with size (width/height)into an overlay at position Point pt with a chosen color and an identification number of the rectangle. (27.09.2021 TLS563RE)
+
+	  Err,szMsg=imgProcTLS.DrawRectangleID(
+		  Row,
+		  Col,
+		  Angle,
+		  Hight,
+		  Width,
+		  Color,
+		  size in Pixel,
+		  Center in Pixel,
+		  ID,
+		  Camera Number
+		  )
+</hint>
+			<InputParameter>
+				<M_drotRectRoi default="0" typ="drotRECT" internal_name="drotRectRoi" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="rotated Rect Roi">
+					<hint>
+						Region of Interest: Center Point of RoI (column and row) of the rotated (angle) rectangle with Width and Height
+		  &lt;BR&gt;&amp;nbsp;&lt;BR&gt;&amp;nbsp;
+						<row>Row:   Position X-Value in mm</row>
+						&lt;BR&gt;&amp;nbsp;
+						<col>Col:   Position Y-Value in mm</col>
+						&lt;BR&gt;&amp;nbsp;
+						<angle>Angle: Angle in Degree</angle>
+						&lt;BR&gt;&amp;nbsp;
+						<hight>Hight: Size in mm</hight>
+						&lt;BR&gt;&amp;nbsp;
+						<width>Width: Size in mm</width>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_drotRectRoi>
+				<M_iColor default="0" typ="INT32" internal_name="iColor" dihalogtyp="no_dialog" allowed="all" min="0" max="254" text="Color">
+					<hint>
+						color of the graphic 0..254&lt;BR&gt;&amp;nbsp;
+						<color1>1: green</color1>
+						&lt;BR&gt;&amp;nbsp;
+						<color2> 2: red</color2>
+						&lt;BR&gt;&amp;nbsp;
+						<color3> 3: blau</color3>
+						&lt;BR&gt;&amp;nbsp;
+						<color4> 4: pink</color4>
+						&lt;BR&gt;&amp;nbsp;
+						<color5> 5: cyan</color5>
+						&lt;BR&gt;&amp;nbsp;
+						<color6> 6: yellow</color6>
+						&lt;BR&gt;&amp;nbsp;
+						<color7> 7: light red</color7>
+						&lt;BR&gt;&amp;nbsp;
+						<color8> 8: purple</color8>
+						&lt;BR&gt;&amp;nbsp;
+					</hint>
+				</M_iColor>
+				<M_bSizeInPixel default="0" typ="INT32" internal_name="bSizeInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Lapel Position">
+					<hint>1 if label on Corner &lt;BR&gt;&amp;nbsp;
+		  0 label in center</hint>
+				</M_bSizeInPixel>
+				<M_bCenterInPixel default="0" typ="INT32" internal_name="bCenterInPixel" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Center in Pixel">
+					<hint>1 if center point in Pixel or 0 scaled center point in mm</hint>
+				</M_bCenterInPixel>
+				<M_iID default="1" typ="INT32" internal_name="iID" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="ID">
+					<hint>Number of ROI.</hint>
+				</M_iID>
+				<M_iCamNum default="1" typ="INT32" internal_name="iCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="[Camera Number]">
+					<hint>Number of Camera. [Optional Value]</hint>
+				</M_iCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</DrawRectangleID>
+		<GetScheibenDicke klasse="Halcon" icon="" name="GetScheibenDicke" text="GetScheibenDicke" level="100" executionText="NumberFoundHorizontalCircles,NumberFoundverticalCircles,radiusH1,radiusV1,radiusH2,radiusV2,radiusH3,radiusV3,iErr,szMsg=imgProcTLS.GetScheibenDicke(15,10,0,&quot;/tmp/aaa&quot;)">
+			<hint>this function evaluates thickness of a disc</hint>
+			<InputParameter>
+				<M_dTolForLeftRightRadius default="10" typ="double" internal_name="dTolForLeftRightRadius" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Tolerance Radius ">
+					<hint>radius horiontally to the left and right / vertically above and below will be found; the center point will be determine independandly; if left and right radius are about the same a right radius will be a result; default value=15Pix</hint>
+				</M_dTolForLeftRightRadius>
+				<M_iLocalMinTol default="0" typ="INT32" internal_name="iLocalMinTol" dialogtyp="no_dialog" allowed="all" min="1" max="20" text="Minimum Tolerance">
+					<hint>tolerance for local minumum; default:10</hint>
+				</M_iLocalMinTol>
+				<M_iSaveImgs default="0" typ="INT32" internal_name="iSaveImgs" dialogtyp="no_dialog" allowed="0,1" min="all" max="all" text="Save Images">
+					<hint>Edge criteria&lt;BR&gt;&amp;nbsp;0: deactivated&lt;BR&gt;&amp;nbsp;1: activated</hint>
+				</M_iSaveImgs>
+				<M_szFilename password="false" size="200" default="0" typ="TEXT" internal_name="szFilename[BUFFLEN]" readonly="true" visible="true" dialogtyp="pathfile" allowed="all" min="all" max="all" text="File Name">
+					<hint>start of filename without ".bmp" including pathname</hint>
+				</M_szFilename>
+				<M_iOverlayMode default="0" typ="INT32" internal_name="iOverlayMode" dialogtyp="no_dialog" allowed="OFF,Take Over,Erase&amp;New" min="all" max="all" text="OverlayMode">
+					<hint>defines appearance of output overlay&lt;BR&gt;&amp;nbsp;0: OFF; no overlay created&lt;BR&gt;&amp;nbsp;1: take over overlay from former operators &lt;BR&gt;&amp;nbsp;2: erases former overlays and displays only Find Line Overlays</hint>
+				</M_iOverlayMode>
+			</InputParameter>
+			<OutputParameter>
+				<M_iAnzFoundHCircle default="0" typ="INT32" internal_name="iAnzFoundHCircle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Num H Circle">
+					<hint>Number of found horizontal circles</hint>
+				</M_iAnzFoundHCircle>
+				<M_iAnzFoundVCircle default="0" typ="INT32" internal_name="iAnzFoundVCircle" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Num V Circle">
+					<hint>Number of found verticalcircles</hint>
+				</M_iAnzFoundVCircle>
+				<M_dRadiusH1 default="0" typ="double" internal_name="dRadiusH1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius H1 [mm]">
+					<hint>first radius of horizontal projection</hint>
+				</M_dRadiusH1>
+				<M_dRadiusV1 default="0" typ="double" internal_name="dRadiusV1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius V1 [mm]">
+					<hint>first radius of vertical projection</hint>
+				</M_dRadiusV1>
+				<M_dRadiusH2 default="0" typ="double" internal_name="dRadiusH2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius H2 [mm]">
+					<hint>second radius of horizontal projection</hint>
+				</M_dRadiusH2>
+				<M_dRadiusV2 default="0" typ="double" internal_name="dRadiusV2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius V2 [mm]">
+					<hint>second radius of vertical projection</hint>
+				</M_dRadiusV2>
+				<M_dRadiusH3 default="0" typ="double" internal_name="dRadiusH3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius H3 [mm]">
+					<hint>third radius of horizontal projection</hint>
+				</M_dRadiusH3>
+				<M_dRadiusV3 default="0" typ="double" internal_name="dRadiusV3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Radius V3 [mm]">
+					<hint>third radius of vertical projection</hint>
+				</M_dRadiusV3>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GetScheibenDicke>
+		<OpcGetImage klasse="camera" icon="" name="OpcGetImage" text="OpcGetImage" executionText="iErr,szMsg=imgProcTLS.OpcGetImage(iCamNum,iExposureTime,dGain,[sFlash],[bLowPrio],[tiCamNum])">
+			<hint>Get an Image via OPC from Computer Vision GUI (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.OpcGetImage(
+		iCamNum,
+		iExposureTime,
+		dGain,
+		[sFlash],
+		[bLowPrio],
+		[tiCamNum]
+		)
+</hint>
+			<InputParameter>
+				<M_iCamNum default="0" typ="INT32" internal_name="iCamNum" dialogtyp="no_dialog" allowed="0,1,2,3,4,5" min="all" max="all" text="Camera Number">
+					<hint>Camera Number set in Computer Vision GUI</hint>
+				</M_iCamNum>
+				<M_iExpT default="700" typ="INT32" internal_name="iExpT" dialogtyp="no_dialog" allowed="all" min="4" max="60000000" text="Exposure Time">
+					<hint>Exposure Time of chosen camera via OPC.</hint>
+				</M_iExpT>
+				<M_dGain default="0.5" typ="double" internal_name="dGain" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="Gain">
+					<hint>Gain of chosen camera via OPC.</hint>
+				</M_dGain>
+
+				<M_sFlash default="0.5" typ="double" internal_name="sFlash" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="sFlash">
+					<hint>?</hint>
+				</M_sFlash>
+				<M_bLowPrio default="0.5" typ="double" internal_name="bLowPrio" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="bLowPrio">
+					<hint>?</hint>
+				</M_bLowPrio>
+				<M_tiCamNum default="0.5" typ="double" internal_name="tiCamNum" dialogtyp="no_dialog" allowed="all" min="0" max="1" text="tiCamNum">
+					<hint>?</hint>
+				</M_tiCamNum>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OpcGetImage>
+		<OpcSendOverlay klasse="camera" icon="" name="OpcSendOverlay" text="OpcSendOverlay" executionText="iErr,szMsg=imgProcTLS.OpcSendOverlay(iCamNum,[dScanPosX],[dScanPosY],[dScanPosZ],[dScanPosDefocus],[tiMode])">
+			<hint>Get an Image via OPC from Computer Vision GUI (29.09.2021 TLS563RE)
+
+	  iErr,szMsg=imgProcTLS.OpcSendOverlay(
+		iCamNum,
+		[dScanPosX],
+		[dScanPosY],
+		[dScanPosZ],
+		[dScanPosDefocus],
+		[tiMode]
+		)
+</hint>
+			<InputParameter>
+				<M_iCamNum default="0" typ="INT32" internal_name="iCamNum" dialogtyp="no_dialog" allowed="0,1,2,3,4,5" min="all" max="all" text="Camera Number">
+					<hint>Camera Number set in Computer Vision GUI</hint>
+				</M_iCamNum>
+				<M_dScanPosX default="0" typ="INT32" internal_name="dScanPosX" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Scan PosX]">
+					<hint>Scan PosX [Optional Value]</hint>
+				</M_dScanPosX>
+				<M_dScanPosY default="0" typ="INT32" internal_name="dScanPosY" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Scan PosY]">
+					<hint>Scan PosY [Optional Value]</hint>
+				</M_dScanPosY>
+				<M_dScanPosZ default="0" typ="INT32" internal_name="dScanPosZ" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Scan PosZ]">
+					<hint>Scan PosZ [Optional Value]</hint>
+				</M_dScanPosZ>
+				<M_dScanPosDefocus default="0" typ="INT32" internal_name="dScanPosDefocus" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[Scan Pos Defocus]">
+					<hint>Scan Pos Defocus [Optional Value]</hint>
+				</M_dScanPosDefocus>
+				<M_tiMode default="0" typ="INT32" internal_name="tiMode" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="[tiMode]">
+					<hint>tiMode [Optional Value]</hint>
+				</M_tiMode>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OpcSendOverlay>
+		<SetPFOmm2Hex klasse="Interface" icon="" name="SetPFOmm2Hex" text="SetPFOmm2Hex" executionText="iErr,internResultString=imgProcTLS.SetPFOmm2Hex(dScanPosX,dScanPosY,dScanPosZ,dScanPosDefocus)">
+			<hint>Prepares PFO coordinates. Transforms coordinates from mm to 10µm and HEX Values and build result string. Absolutely necessary before SetPFO2Wait. Must have at least 2 parameter x/y. Can have up to 4 parameters x,y,z,defocus. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.SetPFOmm2Hex(
+		dScanPosX,
+		dScanPosY,
+		dScanPosZ,
+		dScanPosDefocus
+		)
+</hint>
+			<InputParameter>
+				<M_dScanPosX default="0" typ="double" internal_name="dScanPosX" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scan Pos X">
+					<hint>Scanner Position X. Minimum and Maximum values depends on used optic.</hint>
+				</M_dScanPosX>
+				<M_dScanPosY default="0" typ="double" internal_name="dScanPosY" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scan Pos Y">
+					<hint>Scanner Position Y. Minimum and Maximum values depends on used optic.</hint>
+				</M_dScanPosY>
+				<M_dScanPosZ default="0" typ="double" internal_name="dScanPosZ" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scan Pos Z">
+					<hint>Scanner Position Z. Minimum and Maximum values depends on used optic. Only considered when PFO-3D used, other neglected.</hint>
+				</M_dScanPosZ>
+				<M_dScanPosDefocus default="0" typ="double" internal_name="dScanPosDefocus" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scan Pos Defocs">
+					<hint>Scanner Position Defocus. Minimum and Maximum values depends on used optic. Only considered when PFO-3D used, other neglected.</hint>
+				</M_dScanPosDefocus>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</SetPFOmm2Hex>
+		<SetPFO2Wait klasse="Interface" icon="" name="SetPFO2Wait" text="SetPFO2Wait" executionText="assert(imgProcTLS.SetPFO2Wait(),&quot;Error Waiting for Thread; Algo Error&quot;)">
+			<hint>To be used only in conjunction with SetPFOmm2Hex. Hex Values will be send to the Laser Control Unit and wait for an answer. Script execution will be interruptes as lng as an answer will be received from laser control unit. Uses of this function is blocked in the GUI. (30.09.2021 TLS563RE)
+
+	  bOK=imgProcTLS.SetPFO2Wait()
+</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M_iResult default="0" typ="INT32" internal_name="iResult" dialogtyp="no_dialog" allowed="0,1" min="0" max="1" text="Result">
+					<hint>Result&lt;BR&gt;&amp;nbsp;0: Error; Script execution will be stopped and a error will be sent toi the laser control unit&lt;BR&gt;&amp;nbsp;1: successful</hint>
+				</M_iResult>
+			</OutputParameter>
+		</SetPFO2Wait>
+		<Output klasse="Interface" icon="" name="Output" text="Output" executionText="iErr,internResultString=imgProcTLS.Output(iFirstIndex,dValue,dScaleFactor,dValue,dScaleFactor,...)">
+			<hint>OldVersion:Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determine number of values beginning at XVAR1. Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string . iE,internResultString=imgProcTLS.Output(0) if no variable should be transfered. Resets the whole buffer. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.Output(
+		iFirstIndex,
+		dValue,
+		dScaleFactor,
+		dValue,
+		dScaleFactor,
+		.
+		.
+		.
+		dValue,
+		dScaleFactor
+		)
+</hint>
+			<InputParameter>
+				<M_iNumValues default="0" typ="INT32" internal_name="iStartXVAR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Start Value XVARS">
+					<hint>Start Number of XVARS. XVAR offset.</hint>
+				</M_iNumValues>
+				<M_dXvar1 default="1" typ="double" internal_name="dXvar1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 1">
+					<hint>Result Variable 1.</hint>
+				</M_dXvar1>
+				<M_dScale1 default="1" typ="double" internal_name="dScale1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale1 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale1>
+				<M_dXvar2 default="0" typ="double" internal_name="dXvar2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 2">
+					<hint>Result Variable 2.</hint>
+				</M_dXvar2>
+				<M_dScale2 default="1" typ="double" internal_name="dScale2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale2 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale2>
+				<M_dXvar3 default="0" typ="double" internal_name="dXvar3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 3">
+					<hint>Result Variable 3.</hint>
+				</M_dXvar3>
+				<M_dScale3 default="1" typ="double" internal_name="dScale3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale3 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale3>
+				<M_dXvar4 default="0" typ="double" internal_name="dXvar4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 4">
+					<hint>Result Variable 4.</hint>
+				</M_dXvar4>
+				<M_dScale4 default="1" typ="double" internal_name="dScale4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale4 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale4>
+				<M_dXvar5 default="0" typ="double" internal_name="dXvar5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 5">
+					<hint>Result Variable 5.</hint>
+				</M_dXvar5>
+				<M_dScale5 default="1" typ="double" internal_name="dScale5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale5 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale5>
+				<M_dXvar6 default="0" typ="double" internal_name="dXvar6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 6">
+					<hint>Result Variable 6.</hint>
+				</M_dXvar6>
+				<M_dScale6 default="1" typ="double" internal_name="dScale6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale6 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale6>
+				<M_dXvar7 default="0" typ="double" internal_name="dXvar7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 7">
+					<hint>Result Variable 7.</hint>
+				</M_dXvar7>
+				<M_dScale7 default="1" typ="double" internal_name="dScale7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale7 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale7>
+				<M_dXvar8 default="0" typ="double" internal_name="dXvar8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 8">
+					<hint>Result Variable 8.</hint>
+				</M_dXvar8>
+				<M_dScale8 default="1" typ="double" internal_name="dScale8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale8 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale8>
+				<M_dXvar9 default="0" typ="double" internal_name="dXvar9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 9">
+					<hint>Result Variable 9.</hint>
+				</M_dXvar9>
+				<M_dScale9 default="1" typ="double" internal_name="dScale9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale9 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale9>
+				<M_dXvar10 default="0" typ="double" internal_name="dXvar10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVAR 10">
+					<hint>Result Variable 10.</hint>
+				</M_dXvar10>
+				<M_dScale10 default="1" typ="double" internal_name="dScale10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Scale10 for XVAR">
+					<hint>Scaling factor for Result Variable. Variable in mm. x/y translations sould be scaled for 100um. Angles should be in steps: Angle in degrees *65536/360. All other values should be scaled to 1. Scaling set to 0 means: no consideration of this variable.</hint>
+				</M_dScale10>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Output>
+		<OutputN1 klasse="Interface" icon="" name="OutputN1" text="OutputN1" executionText="iErr,internResultString=imgProcTLS.OutputN1(iFirstIndex,dValue,dScaleFactor,gResNameTable[&quot;X&quot;],1,65536/360,gResNameTable[&quot;Alpha&quot;])">
+			<hint>Writes to 1st Buffer.Resets Buffer. Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.OutputN1(
+		iFirstIndex,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		.
+		.
+		.
+		dValue,
+		dScaleFactor,
+		gResNameTable
+		)
+</hint>
+			<InputParameter>
+				<M_iNumValues default="0" typ="INT32" internal_name="iStartXVAR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Start Value XVARS">
+					<hint>Start Number of XVARS. XVAR offset.</hint>
+				</M_iNumValues>
+				<M_dXVAR1 default="0" typ="dXVAR" internal_name="dXvar1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 1">
+					<hint>Result Variable 1. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR1>
+				<M_dXVAR2 default="0" typ="dXVAR" internal_name="dXvar2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 2">
+					<hint>Result Variable 2. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR2>
+				<M_dXVAR3 default="0" typ="dXVAR" internal_name="dXvar3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 3">
+					<hint>Result Variable 3. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR3>
+				<M_dXVAR4 default="0" typ="dXVAR" internal_name="dXvar4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 4">
+					<hint>Result Variable 4. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR4>
+				<M_dXVAR5 default="0" typ="dXVAR" internal_name="dXvar5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 5">
+					<hint>Result Variable 5. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR5>
+				<M_dXVAR6 default="0" typ="dXVAR" internal_name="dXvar6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 6">
+					<hint>Result Variable 6. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR6>
+				<M_dXVAR7 default="0" typ="dXVAR" internal_name="dXvar7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 7">
+					<hint>Result Variable 7. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR7>
+				<M_dXVAR8 default="0" typ="dXVAR" internal_name="dXvar8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 8">
+					<hint>Result Variable 8. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR8>
+				<M_dXVAR9 default="0" typ="dXVAR" internal_name="dXvar9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 9">
+					<hint>Result Variable 9. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR9>
+				<M_dXVAR10 default="0" typ="dXVAR" internal_name="dXvar10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 10">
+					<hint>Result Variable 10. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR10>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OutputN1>
+		<OutputNTemp1 klasse="Interface" icon="" name="OutputNTemp1" text="OutputNTemp1" executionText="iErr,internResultString=imgProcTLS.OutputNTemp1(iFirstIndex,dValue,dScaleFactor,gResNameTable[&quot;X&quot;],1,65536/360,gResNameTable[&quot;Alpha&quot;])">
+			<hint>Writes to 1st Buffer. Buffer is not reset!! Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string.  (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.OutputNTemp1(
+		iFirstIndex,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		.
+		.
+		.
+		dValue,
+		dScaleFactor,
+		gResNameTable
+		)
+</hint>
+			<InputParameter>
+				<M_iNumValues default="0" typ="INT32" internal_name="iStartXVAR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Start Value XVARS">
+					<hint>Start Number of XVARS. XVAR offset.</hint>
+				</M_iNumValues>
+				<M_dXVAR1 default="0" typ="dXVAR" internal_name="dXvar1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 1">
+					<hint>Result Variable 1. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR1>
+				<M_dXVAR2 default="0" typ="dXVAR" internal_name="dXvar2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 2">
+					<hint>Result Variable 2. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR2>
+				<M_dXVAR3 default="0" typ="dXVAR" internal_name="dXvar3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 3">
+					<hint>Result Variable 3. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR3>
+				<M_dXVAR4 default="0" typ="dXVAR" internal_name="dXvar4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 4">
+					<hint>Result Variable 4. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR4>
+				<M_dXVAR5 default="0" typ="dXVAR" internal_name="dXvar5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 5">
+					<hint>Result Variable 5. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR5>
+				<M_dXVAR6 default="0" typ="dXVAR" internal_name="dXvar6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 6">
+					<hint>Result Variable 6. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR6>
+				<M_dXVAR7 default="0" typ="dXVAR" internal_name="dXvar7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 7">
+					<hint>Result Variable 7. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR7>
+				<M_dXVAR8 default="0" typ="dXVAR" internal_name="dXvar8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 8">
+					<hint>Result Variable 8. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR8>
+				<M_dXVAR9 default="0" typ="dXVAR" internal_name="dXvar9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 9">
+					<hint>Result Variable 9. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR9>
+				<M_dXVAR10 default="0" typ="dXVAR" internal_name="dXvar10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 10">
+					<hint>Result Variable 10. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR10>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OutputNTemp1>
+		<OutputArray2 klasse="Interface" icon="" name="OutputArray2" text="OutputArray2" executionText="iErr,internResultString=imgProcTLS.OutputArray2(iFirstIndex,dValue,dScaleFactor,gResNameTable[&quot;X&quot;],1,65536/360,gResNameTable[&quot;Alpha&quot;])">
+			<hint>Writes to 2nd Buffer.Resets Buffer. Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.OutputArray2(
+		iFirstIndex,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		.
+		.
+		.
+		dValue,
+		dScaleFactor,
+		gResNameTable
+		)
+</hint>
+			<InputParameter>
+				<M_iNumValues default="0" typ="INT32" internal_name="iStartXVAR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Start Value XVARS">
+					<hint>Start Number of XVARS. XVAR offset.</hint>
+				</M_iNumValues>
+				<M_dXVAR1 default="0" typ="dXVAR" internal_name="dXvar1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 1">
+					<hint>Result Variable 1. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR1>
+				<M_dXVAR2 default="0" typ="dXVAR" internal_name="dXvar2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 2">
+					<hint>Result Variable 2. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR2>
+				<M_dXVAR3 default="0" typ="dXVAR" internal_name="dXvar3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 3">
+					<hint>Result Variable 3. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR3>
+				<M_dXVAR4 default="0" typ="dXVAR" internal_name="dXvar4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 4">
+					<hint>Result Variable 4. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR4>
+				<M_dXVAR5 default="0" typ="dXVAR" internal_name="dXvar5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 5">
+					<hint>Result Variable 5. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR5>
+				<M_dXVAR6 default="0" typ="dXVAR" internal_name="dXvar6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 6">
+					<hint>Result Variable 6. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR6>
+				<M_dXVAR7 default="0" typ="dXVAR" internal_name="dXvar7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 7">
+					<hint>Result Variable 7. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR7>
+				<M_dXVAR8 default="0" typ="dXVAR" internal_name="dXvar8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 8">
+					<hint>Result Variable 8. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR8>
+				<M_dXVAR9 default="0" typ="dXVAR" internal_name="dXvar9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 9">
+					<hint>Result Variable 9. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR9>
+				<M_dXVAR10 default="0" typ="dXVAR" internal_name="dXvar10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 10">
+					<hint>Result Variable 10. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR10>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OutputArray2>
+		<OutputNTemp2 klasse="Interface" icon="" name="OutputNTemp1" text="OutputNTemp1" executionText="iErr,internResultString=imgProcTLS.OutputNTemp1(iFirstIndex,dValue,dScaleFactor,gResNameTable[&quot;X&quot;],1,65536/360,gResNameTable[&quot;Alpha&quot;])">
+			<hint>Writes to 2nd Buffer. Buffer is not reset!! Prepares Result coordinates; values which will be send to XVARS to the laser control unit. 1st value determines start XVAR (x minimum 1 XVAR1). Must be executed at the end of the sript. Otherwise an error will be send. More than 10 values does not make any sense because of limit space for string. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.OutputNTemp1(
+		iFirstIndex,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		dValue,
+		dScaleFactor,
+		gResNameTable,
+		.
+		.
+		.
+		dValue,
+		dScaleFactor,
+		gResNameTable
+		)
+</hint>
+			<InputParameter>
+				<M_iNumValues default="0" typ="INT32" internal_name="iStartXVAR" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Start Value XVARS">
+					<hint>Start Number of XVARS. XVAR offset.</hint>
+				</M_iNumValues>
+				<M_dXVAR1 default="0" typ="dXVAR" internal_name="dXvar1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 1">
+					<hint>Result Variable 1. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR1>
+				<M_dXVAR2 default="0" typ="dXVAR" internal_name="dXvar2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 2">
+					<hint>Result Variable 2. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR2>
+				<M_dXVAR3 default="0" typ="dXVAR" internal_name="dXvar3" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 3">
+					<hint>Result Variable 3. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR3>
+				<M_dXVAR4 default="0" typ="dXVAR" internal_name="dXvar4" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 4">
+					<hint>Result Variable 4. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR4>
+				<M_dXVAR5 default="0" typ="dXVAR" internal_name="dXvar5" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 5">
+					<hint>Result Variable 5. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR5>
+				<M_dXVAR6 default="0" typ="dXVAR" internal_name="dXvar6" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 6">
+					<hint>Result Variable 6. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR6>
+				<M_dXVAR7 default="0" typ="dXVAR" internal_name="dXvar7" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 7">
+					<hint>Result Variable 7. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR7>
+				<M_dXVAR8 default="0" typ="dXVAR" internal_name="dXvar8" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 8">
+					<hint>Result Variable 8. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR8>
+				<M_dXVAR9 default="0" typ="dXVAR" internal_name="dXvar9" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 9">
+					<hint>Result Variable 9. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR9>
+				<M_dXVAR10 default="0" typ="dXVAR" internal_name="dXvar10" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="XVar 10">
+					<hint>Result Variable 10. &lt;BR&gt;&amp;nbsp;Value: in mm. &lt;BR&gt;&amp;nbsp;Scaling: 100 in case of x/y translation. &lt;BR&gt;&amp;nbsp;Scaling: 65536/360 in case of angles &lt;BR&gt;&amp;nbsp;Scaling: 1 in other case &lt;BR&gt;&amp;nbsp;Meaning of variable for plausibilty checks in MulitScripting.</hint>
+				</M_dXVAR10>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OutputNTemp2>
+		<OutputTransfer2Array1 klasse="Interface" icon="" name="OutputTransfer2Array1" text="OutputTransfer2Array1" executionText="iErr,internResultString=imgProcTLS.OutputTransfer2Array1(iXVarOffset)">
+			<hint>This function transfers 2nd value buffer to 1st buffer. Offset value means starting address of 2nd buffer. Values will be copield to 1st XVAR of 1st buffer. (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.OutputTransfer2Array1(
+		iXVarOffset
+		)
+</hint>
+			<InputParameter>
+				<M_iXVarOffset default="0" typ="INT32" internal_name="iXVarOffset" dialogtyp="no_dialog" allowed="all" min="1" max="1000" text="Start address">
+					<hint>Starting address of 2nd buffer to be copied always 64 values from 2nd buffer to 1st buffer</hint>
+				</M_iXVarOffset>
+			</InputParameter>
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</OutputTransfer2Array1>
+		<GetValuesFromBufferWithType klasse="Interface" icon="" name="GetValuesFromBufferWithType" text="GetValuesFromBufferWithType" executionText="tmpVal,tmpName,iErr,szMsg=imgProcTLS.GetValuesFromBufferWithType(iXVarOffset,iNumOfVars)">
+			<hint>Read out n values stored in the XVAR result buffer and stores value in tmpVal table and meaning in the tmpName table (30.09.2021 TLS563RE)
+
+	  tmpVal,tmpName,iErr,szMsg=imgProcTLS.GetValuesFromBufferWithType(
+		iXVarOffset,
+		iNumOfVars
+		)
+</hint>
+			<InputParameter>
+				<M_iXVarOffset default="0" typ="INT32" internal_name="iXVarOffset" dialogtyp="no_dialog" allowed="all" min="1" max="1000" text="Start address">
+					<hint>Starting address of reading XVAR buffer (1st one)</hint>
+				</M_iXVarOffset>
+				<M_iNumOfVars default="0" typ="INT32" internal_name="iNumOfVars" dialogtyp="no_dialog" allowed="all" min="1" max="1000" text="number of vars">
+					<hint>number of vars to be read</hint>
+				</M_iNumOfVars>
+			</InputParameter>
+			<OutputParameter>
+				<M_dTableValues default="0" typ="double" internal_name="dTableValues" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Table Values">
+					<hint>Table of Values read from the XVAR buffer. Tables are not supported yet.</hint>
+				</M_dTableValues>
+				<M_dTableNames default="0" typ="double" internal_name="dTableNames" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Table of Names">
+					<hint>Table of Names read from the XVAR buffer for plausibilty check. Tables are not supported yet.</hint>
+				</M_dTableNames>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GetValuesFromBufferWithType>
+		<CreateArray klasse="Misc" icon="" name="CreateArray" text="CreateArray" level="100" executionText="tableOut1,tableOut2,dval=imgProcTLS.CreateArray(tableIn)">
+			<hint>Creates Example Table</hint>
+			<InputParameter>
+				<M_dTableIn default="0" typ="doubleTable" internal_name="dTableIn" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableIn">
+					<hint>Table as a variable</hint>
+				</M_dTableIn>
+			</InputParameter>
+			<OutputParameter>
+				<M_dTableOut1 default="0" typ="doubleTable" internal_name="dTableOut1" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableOut1">
+					<hint>Table as a variable</hint>
+				</M_dTableOut1>
+				<M_dTableOut2 default="0" typ="doubleTable" internal_name="dTableOut2" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dTableOut2">
+					<hint>Table as a variable</hint>
+				</M_dTableOut2>
+				<M_dVal default="0" typ="double" internal_name="dVal" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="dVal">
+					<hint>demo double Val</hint>
+				</M_dVal>
+			</OutputParameter>
+		</CreateArray>
+		<StartTime klasse="misc" icon="" name="StartTime" text="StartTime" executionText="iErr,internResultString=imgProcTLS.StartTime()">
+			<hint>Starts Timer. (29.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.StartTime()
+</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</StartTime>
+		<GetDiffTime klasse="misc" icon="" name="GetDiffTime" text="GetDiffTime" executionText="dDiffTime,iErr,internResultString=imgProcTLS.GetDiffTime()">
+			<hint>Get differntial Time since last Start of Time. Timer has to be started before. (30.09.2021 TLS563RE)
+
+	  dDiffTime,iErr,internResultString=imgProcTLS.GetDiffTime()
+</hint>
+			<InputParameter typ="void" internal_name="void" text="void" />
+			<OutputParameter>
+				<M_dDiffTime default="0" typ="double" internal_name="dDiffTime" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="differential Time">
+					<hint>Differntial Time since last Start of Time</hint>
+				</M_dDiffTime>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</GetDiffTime>
+		<Sleep klasse="misc" icon="" name="Sleep" text="Sleep" executionText="iErr,internResultString=imgProcTLS.Sleep(dTime)">
+			<hint>Sleeps/Delays for x ms.  (30.09.2021 TLS563RE)
+
+	  iErr,internResultString=imgProcTLS.Sleep(
+		dTime
+		)
+</hint>
+			<InputParameter>
+				<M_iTimeInMS default="500" typ="INT32" internal_name="iTimeInMS" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="time">
+					<hint>Sleep time in ms.</hint>
+				</M_iTimeInMS>
+			</InputParameter>
+			<OutputParameter>
+				<M_dDiffTime default="0" typ="double" internal_name="dDiffTime" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="differential Time">
+					<hint>Differntial Time since last Start of Time</hint>
+				</M_dDiffTime>
+				<M__State password="false" default="0" typ="State" internal_name="State" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="State">
+					<hint> 0 if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  1 if operation failed</hint>
+				</M__State>
+				<M__message password="false" default="0" typ="MESSAGE" internal_name="message" readonly="false" visible="true" dialogtyp="no_dialog" allowed="all" min="all" max="all" text="Message">
+					<hint> no text if operation succeeded&lt;BR&gt;&amp;nbsp;
+		  error text if operation failed</hint>
+				</M__message>
+			</OutputParameter>
+		</Sleep>
+	</functions>
+</PluginListing>
